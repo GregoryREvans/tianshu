@@ -3,16 +3,17 @@
 \version "2.19.82"
 \language "english"
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 13)
+#(set-global-staff-size 15)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
 \header {
 	tagline = ##f
 	breakbefore = ##t
+	dedication = \markup \override #'(font-name . "Didot") \fontsize #7 {"for Ensemble Ibis"}
 	title =  \markup \override #'(font-name . "Didot") \fontsize #15 \bold\center-column {"Tianshu" }
 	subtitle = \markup \override #'(font-name . "Didot") {" "}
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for Ensemble Ibis"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for twelve players"}
 	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
@@ -79,13 +80,13 @@
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 18) (minimum-distance . 18) (padding . 0))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 24) (minimum-distance . 24) (padding . 0))
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
-		proportionalNotationDuration = #(ly:make-moment 1 40)
+		proportionalNotationDuration = #(ly:make-moment 1 42)
         autoBeaming = ##f
         tupletFullLength = ##t
     }

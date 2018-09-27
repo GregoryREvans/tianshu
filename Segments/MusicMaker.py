@@ -57,9 +57,14 @@ class MusicMaker:
         leaf_maker = abjad.LeafMaker()
         container = abjad.Container(selections)
         old_ties = [tie for tie in abjad.iterate(
-            container).logical_ties(pitched=True)]
+            container).logical_ties()]
         pitches, durations, old_leaves = self._collect_pitches_durations_leaves(
             old_ties, pitches)
+        # print(selections)
+        # print(pitches)
+        # print(durations)
+        # print(old_leaves)
+        # print()
         new_leaves = [leaf for leaf in leaf_maker(pitches, durations)]
         for old_leaf, new_leaf in zip(old_leaves, new_leaves):
             indicators = abjad.inspect(old_leaf).indicators()

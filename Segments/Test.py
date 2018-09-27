@@ -87,19 +87,19 @@ attachment_handler_three = AttachmentHandler(
 
 # Initialize MusicMakers with the rhythm-makers.
 #####oboe#####
-oboemusicmaker_one = MusicMaker(
+flutemusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
-oboemusicmaker_two = MusicMaker(
+flutemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
-oboemusicmaker_three = MusicMaker(
+flutemusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
@@ -111,21 +111,18 @@ violin1musicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=oboemusicmaker_one.state,
 )
 violin1musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=oboemusicmaker_two.state,
 )
 violin1musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=oboemusicmaker_three.state,
 )
 #####trumpet#####
 trumpetmusicmaker_one = MusicMaker(
@@ -133,21 +130,18 @@ trumpetmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=violin1musicmaker_one.state,
 )
 trumpetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=violin1musicmaker_two.state,
 )
 trumpetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=violin1musicmaker_three.state,
 )
 #####clarinet#####
 clarinetmusicmaker_one = MusicMaker(
@@ -155,21 +149,18 @@ clarinetmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=trumpetmusicmaker_one.state,
 )
 clarinetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=trumpetmusicmaker_two.state,
 )
 clarinetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=trumpetmusicmaker_three.state,
 )
 #####violin2#####
 violin2musicmaker_one = MusicMaker(
@@ -177,21 +168,18 @@ violin2musicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=clarinetmusicmaker_one.state,
 )
 violin2musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=clarinetmusicmaker_two.state,
 )
 violin2musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=clarinetmusicmaker_three.state,
 )
 #####viola#####
 violamusicmaker_one = MusicMaker(
@@ -199,21 +187,18 @@ violamusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=violin2musicmaker_one.state,
 )
 violamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=violin2musicmaker_two.state,
 )
 violamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=violin2musicmaker_three.state,
 )
 #####bassoon#####
 bassoonmusicmaker_one = MusicMaker(
@@ -221,21 +206,18 @@ bassoonmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=violamusicmaker_one.state,
 )
 bassoonmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=violamusicmaker_two.state,
 )
 bassoonmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=violamusicmaker_three.state,
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
@@ -243,21 +225,18 @@ trombonemusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=bassoonmusicmaker_one.state,
 )
 trombonemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=bassoonmusicmaker_two.state,
 )
 trombonemusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=bassoonmusicmaker_three.state,
 )
 #####cello#####
 cellomusicmaker_one = MusicMaker(
@@ -265,21 +244,18 @@ cellomusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=trombonemusicmaker_one.state,
 )
 cellomusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=trombonemusicmaker_two.state,
 )
 cellomusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=trombonemusicmaker_three.state,
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
@@ -287,21 +263,18 @@ hornmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=cellomusicmaker_one.state,
 )
 hornmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=cellomusicmaker_two.state,
 )
 hornmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=cellomusicmaker_three.state,
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
@@ -309,21 +282,18 @@ tubamusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=hornmusicmaker_one.state,
 )
 tubamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=hornmusicmaker_two.state,
 )
 tubamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=hornmusicmaker_three.state,
 )
 #####bass#####
 bassmusicmaker_one = MusicMaker(
@@ -331,21 +301,18 @@ bassmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
-    state=tubamusicmaker_one.state,
 )
 bassmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
-    state=tubamusicmaker_two.state,
 )
 bassmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
-    state=tubamusicmaker_three.state,
 )
 
 silence_maker = abjadext.rmakers.NoteRhythmMaker(
@@ -384,11 +351,11 @@ voice_1_timespan_list = abjad.TimespanList([
         ),
     )
     for start_offset, stop_offset, music_maker in [
-        [(9, 4), (10, 4), oboemusicmaker_one],
-        [(15, 4), (18, 4), oboemusicmaker_two],
-        [(22, 4), (25, 4), oboemusicmaker_three],
-        [(27, 4), (30, 4), oboemusicmaker_one],
-        [(30, 4), (32, 4), oboemusicmaker_one],
+        [(9, 4), (10, 4), flutemusicmaker_one],
+        [(15, 4), (18, 4), flutemusicmaker_two],
+        [(22, 4), (25, 4), flutemusicmaker_three],
+        [(27, 4), (30, 4), flutemusicmaker_one],
+        [(30, 4), (32, 4), flutemusicmaker_one],
     ]
 ])
 
@@ -927,7 +894,7 @@ markup = abjad.Markup(r'\bold { A }')
 mark = abjad.RehearsalMark(markup=markup)
 
 instruments1 = cyc([
-    abjad.Oboe(),
+    abjad.Flute(),
     abjad.ClarinetInBFlat(),
     abjad.Bassoon(),
 ])
@@ -969,7 +936,7 @@ clefs3 = cyc([
 ])
 
 abbreviations1 = cyc([
-    abjad.MarginMarkup(markup=abjad.Markup('ob.'),),
+    abjad.MarginMarkup(markup=abjad.Markup('fl.'),),
     abjad.MarginMarkup(markup=abjad.Markup('cl.'),),
     abjad.MarginMarkup(markup=abjad.Markup('bssn.'),),
 ])
@@ -990,7 +957,7 @@ abbreviations3 = cyc([
 ])
 
 names1 = cyc([
-    abjad.StartMarkup(markup=abjad.Markup('Oboe'),),
+    abjad.StartMarkup(markup=abjad.Markup('Flute'),),
     abjad.StartMarkup(markup=abjad.Markup('Clarinet'),),
     abjad.StartMarkup(markup=abjad.Markup('Bassoon'),),
 ])

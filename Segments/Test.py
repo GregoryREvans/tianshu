@@ -6,6 +6,8 @@ import time
 import abjadext.rmakers
 from MusicMaker import MusicMaker
 from AttachmentHandler import AttachmentHandler
+from random import random
+from random import seed
 
 print('Interpreting file ...')
 
@@ -21,6 +23,305 @@ time_signatures = [
 ]
 
 bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
+
+#Define Pitch Material
+def reduceMod2(rw):
+    return [(x % 3) for x in rw]
+
+def reduceMod3(rw):
+    return [(x % 4) for x in rw]
+
+def reduceMod4(rw):
+    return [(x % 5) for x in rw]
+
+def reduceMod5(rw):
+    return [(x % 6) for x in rw]
+
+def reduceMod6(rw):
+    return [(x % 7) for x in rw]
+
+def reduceMod7(rw):
+    return [(x % 8) for x in rw]
+
+def reduceMod8(rw):
+    return [(x % 9) for x in rw]
+
+seed(1)
+flute_random_walk_one = []
+flute_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = flute_random_walk_one[i-1] + movement
+    flute_random_walk_one.append(value)
+flute_random_walk_one = [abs(x) for x in flute_random_walk_one]
+flute_chord_one = [5, 8, 14, 23, 27, 28, 30, 37, ]
+flute_notes_one = [flute_chord_one[x] for x in reduceMod7(flute_random_walk_one)]
+
+seed(2)
+clarinet_random_walk_one = []
+clarinet_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = clarinet_random_walk_one[i-1] + movement
+    clarinet_random_walk_one.append(value)
+clarinet_random_walk_one = [abs(x) for x in clarinet_random_walk_one]
+clarinet_chord_one = [-3, 5, 8, 14, 23, 27, ]
+clarinet_notes_one = [clarinet_chord_one[x] for x in reduceMod5(clarinet_random_walk_one)]
+
+seed(3)
+bassoon_random_walk_one = []
+bassoon_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = bassoon_random_walk_one[i-1] + movement
+    bassoon_random_walk_one.append(value)
+bassoon_random_walk_one = [abs(x) for x in bassoon_random_walk_one]
+bassoon_chord_one = [-24, -14, -3, 5, 8, ]
+bassoon_notes_one = [bassoon_chord_one[x] for x in reduceMod4(bassoon_random_walk_one)]
+
+seed(4)
+horn_random_walk_one = []
+horn_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = horn_random_walk_one[i-1] + movement
+    horn_random_walk_one.append(value)
+horn_random_walk_one = [abs(x) for x in horn_random_walk_one]
+horn_chord_one = [-24, -14, -3, 5, 8, ]
+horn_notes_one = [horn_chord_one[x] for x in reduceMod4(horn_random_walk_one)]
+
+seed(5)
+trumpet_random_walk_one = []
+trumpet_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = trumpet_random_walk_one[i-1] + movement
+    trumpet_random_walk_one.append(value)
+trumpet_random_walk_one = [abs(x) for x in trumpet_random_walk_one]
+trumpet_chord_one = [-3, 5, 8, 14, 23, ]
+trumpet_notes_one = [trumpet_chord_one[x] for x in reduceMod4(trumpet_random_walk_one)]
+
+seed(6)
+trombone_random_walk_one = []
+trombone_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = trombone_random_walk_one[i-1] + movement
+    trombone_random_walk_one.append(value)
+trombone_random_walk_one = [abs(x) for x in trombone_random_walk_one]
+trombone_chord_one = [-14, -3, 5, ]
+trombone_notes_one = [trombone_chord_one[x] for x in reduceMod2(trombone_random_walk_one)]
+
+seed(7)
+tuba_random_walk_one = []
+tuba_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = tuba_random_walk_one[i-1] + movement
+    tuba_random_walk_one.append(value)
+tuba_random_walk_one = [abs(x) for x in tuba_random_walk_one]
+tuba_chord_one = [-29, -24, -14, -3, 5, ]
+tuba_notes_one = [tuba_chord_one[x] for x in reduceMod4(tuba_random_walk_one)]
+
+seed(8)
+violin1_random_walk_one = []
+violin1_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = violin1_random_walk_one[i-1] + movement
+    violin1_random_walk_one.append(value)
+violin1_random_walk_one = [abs(x) for x in violin1_random_walk_one]
+violin1_chord_one = [-3, 5, 8, 14, 23, 27, 28, 30, 37, ]
+violin1_notes_one = [violin1_chord_one[x] for x in reduceMod8(violin1_random_walk_one)]
+
+seed(9)
+violin2_random_walk_one = []
+violin2_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = violin2_random_walk_one[i-1] + movement
+    violin2_random_walk_one.append(value)
+violin2_random_walk_one = [abs(x) for x in violin2_random_walk_one]
+violin2_chord_one = [-3, 5, 8, 14, 23, 27, 28, ]
+violin2_notes_one = [violin2_chord_one[x] for x in reduceMod6(violin2_random_walk_one)]
+
+seed(10)
+viola_random_walk_one = []
+viola_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = viola_random_walk_one[i-1] + movement
+    viola_random_walk_one.append(value)
+viola_random_walk_one = [abs(x) for x in viola_random_walk_one]
+viola_chord_one = [-3, 5, 8, 14, 23, 27, 28, ]
+viola_notes_one = [viola_chord_one[x] for x in reduceMod6(viola_random_walk_one)]
+
+seed(11)
+cello_random_walk_one = []
+cello_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = cello_random_walk_one[i-1] + movement
+    cello_random_walk_one.append(value)
+cello_random_walk_one = [abs(x) for x in cello_random_walk_one]
+cello_chord_one = [-24, -14, -3, 5, 8, 14, ]
+cello_notes_one = [cello_chord_one[x] for x in reduceMod5(cello_random_walk_one)]
+
+seed(12)
+bass_random_walk_one = []
+bass_random_walk_one.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = bass_random_walk_one[i-1] + movement
+    bass_random_walk_one.append(value)
+bass_random_walk_one = [abs(x) for x in bass_random_walk_one]
+bass_chord_one = [-29, -24, -14, -3, ]
+bass_notes_one = [bass_chord_one[x] for x in reduceMod3(bass_random_walk_one)]
+
+flute_scale = [30, 23, 5, ]
+clarinet_scale = [23, 5, ]
+bassoon_scale = [-24, ]
+horn_scale = [5, ]
+trumpet_scale = [23, ]
+trombone_scale = [5, ]
+tuba_scale = [-24, ]
+violin1_scale = [30, 29.5, 29, 28.5, 28, 27.5, 27, 26.5, 26, 25.5, 25, 24.5, 24, 23.5, 23, 22.5, 22, 21.5, 21, 20.5, 20, 19.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, ]
+violin2_scale = [19, 18.5, 18, 17.5, 17, 16.5, 16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, ]
+viola_scale = [8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, 0, -0.5, -1, -1.5, -2, -2.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, ]
+cello_scale = [-3, -3.5, -4, -4.5, -5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5 -13, -13.5 -14, -13.5, -13, -12.5, -12, -11.5, -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, ]
+bass_scale = [-14, -14.5, -15, -15.5, -16, -16.5, -17, -17.5, -18, -18.5, -19, -19.5, -20, -20.5, -21, -21.5, -22, -22.5, -23, -23.5, -24, -24.5, -25, -24.5, -24, -23.5, -23, -22.5, -22, -21.5, -21, -20.5, -20, -19.5, -19, -18.5, -18, -17.5, -17, -16.5, -16, -15.5, -15, -14.5, -14]
+
+seed(1)
+flute_random_walk_two = []
+flute_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = flute_random_walk_two[i-1] + movement
+    flute_random_walk_two.append(value)
+flute_random_walk_two = [abs(x) for x in flute_random_walk_two]
+flute_chord_two = [5, 10, 16, 23, 25, 26, ]
+flute_notes_two = [flute_chord_two[x] for x in reduceMod5(flute_random_walk_two)]
+
+seed(2)
+clarinet_random_walk_two = []
+clarinet_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = clarinet_random_walk_two[i-1] + movement
+    clarinet_random_walk_two.append(value)
+clarinet_random_walk_two = [abs(x) for x in clarinet_random_walk_two]
+clarinet_chord_two = [-5, 5, 10, 16, 23, 25, 26, ]
+clarinet_notes_two = [clarinet_chord_two[x] for x in reduceMod6(clarinet_random_walk_two)]
+
+seed(3)
+bassoon_random_walk_two = []
+bassoon_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = bassoon_random_walk_two[i-1] + movement
+    bassoon_random_walk_two.append(value)
+bassoon_random_walk_two = [abs(x) for x in bassoon_random_walk_two]
+bassoon_chord_two = [-24, -16, -5, 5, ]
+bassoon_notes_two = [bassoon_chord_two[x] for x in reduceMod3(bassoon_random_walk_two)]
+
+seed(4)
+horn_random_walk_two = []
+horn_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = horn_random_walk_two[i-1] + movement
+    horn_random_walk_two.append(value)
+horn_random_walk_two = [abs(x) for x in horn_random_walk_two]
+horn_chord_two = [-16, -5, 5, 10, ]
+horn_notes_two = [horn_chord_two[x] for x in reduceMod3(horn_random_walk_two)]
+
+seed(5)
+trumpet_random_walk_two = []
+trumpet_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = trumpet_random_walk_two[i-1] + movement
+    trumpet_random_walk_two.append(value)
+trumpet_random_walk_two = [abs(x) for x in trumpet_random_walk_two]
+trumpet_chord_two = [-5, 5, 10, 16, 23, ]
+trumpet_notes_two = [trumpet_chord_two[x] for x in reduceMod4(trumpet_random_walk_two)]
+
+seed(6)
+trombone_random_walk_two = []
+trombone_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = trombone_random_walk_two[i-1] + movement
+    trombone_random_walk_two.append(value)
+trombone_random_walk_two = [abs(x) for x in trombone_random_walk_two]
+trombone_chord_two = [-16, -5, 5, ]
+trombone_notes_two = [trombone_chord_two[x] for x in reduceMod2(trombone_random_walk_two)]
+
+seed(7)
+tuba_random_walk_two = []
+tuba_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = tuba_random_walk_two[i-1] + movement
+    tuba_random_walk_two.append(value)
+tuba_random_walk_two = [abs(x) for x in tuba_random_walk_two]
+tuba_chord_two = [-27, -24, -16, -5, ]
+tuba_notes_two = [tuba_chord_two[x] for x in reduceMod3(tuba_random_walk_two)]
+
+seed(8)
+violin1_random_walk_two = []
+violin1_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = violin1_random_walk_two[i-1] + movement
+    violin1_random_walk_two.append(value)
+violin1_random_walk_two = [abs(x) for x in violin1_random_walk_two]
+violin1_chord_two = [-5, 5, 10, 16, 23, 25, 26, 30, 38, ]
+violin1_notes_two = [violin1_chord_two[x] for x in reduceMod8(violin1_random_walk_two)]
+
+seed(9)
+violin2_random_walk_two = []
+violin2_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = violin2_random_walk_two[i-1] + movement
+    violin2_random_walk_two.append(value)
+violin2_random_walk_two = [abs(x) for x in violin2_random_walk_two]
+violin2_chord_two = [-5, 5, 10, 16, 23, 25, 26, ]
+violin2_notes_two = [violin2_chord_two[x] for x in reduceMod6(violin2_random_walk_two)]
+
+seed(10)
+viola_random_walk_two = []
+viola_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = viola_random_walk_two[i-1] + movement
+    viola_random_walk_two.append(value)
+viola_random_walk_two = [abs(x) for x in viola_random_walk_two]
+viola_chord_two = [-5, 5, 10, 16, 23]
+viola_notes_two = [viola_chord_two[x] for x in reduceMod4(viola_random_walk_two)]
+
+seed(11)
+cello_random_walk_two = []
+cello_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = cello_random_walk_two[i-1] + movement
+    cello_random_walk_two.append(value)
+cello_random_walk_two = [abs(x) for x in cello_random_walk_two]
+cello_chord_two = [-24, -16, 5, 5, 10, 16, 23]
+cello_notes_two = [cello_chord_two[x] for x in reduceMod6(cello_random_walk_two)]
+
+seed(12)
+bass_random_walk_two = []
+bass_random_walk_two.append(-1 if random() < 0.5 else 1)
+for i in range(1, 1000):
+    movement = -1 if random() < 0.5 else 1
+    value = bass_random_walk_two[i-1] + movement
+    bass_random_walk_two.append(value)
+bass_random_walk_two = [abs(x) for x in bass_random_walk_two]
+bass_chord_two = [-27, -24, -16, -5]
+bass_notes_two = [bass_chord_two[x] for x in reduceMod3(bass_random_walk_two)]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
@@ -91,228 +392,228 @@ attachment_handler_three = AttachmentHandler(
 #####oboe#####
 flutemusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=flute_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 flutemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=flute_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 flutemusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=flute_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####violin1#####
 violin1musicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
+    pitches=violin1_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 violin1musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=violin1_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 violin1musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=violin1_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####trumpet#####
 trumpetmusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=trumpet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 trumpetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[-4],
+    pitches=trumpet_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 trumpetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=trumpet_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####clarinet#####
 clarinetmusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=clarinet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 clarinetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=clarinet_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 clarinetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=clarinet_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####violin2#####
 violin2musicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
+    pitches=violin2_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 violin2musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=violin2_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 violin2musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=violin2_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####viola#####
 violamusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
+    pitches=viola_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 violamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=viola_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 violamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=viola_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####bassoon#####
 bassoonmusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=bassoon_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 bassoonmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=bassoon_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 bassoonmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=bassoon_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=trombone_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 trombonemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[-10],
+    pitches=trombone_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 trombonemusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=trombone_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####cello#####
 cellomusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
+    pitches=cello_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 cellomusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=cello_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 cellomusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=cello_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=horn_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 hornmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[-11],
+    pitches=horn_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 hornmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=horn_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
+    pitches=tuba_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 tubamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[-12],
+    pitches=tuba_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 tubamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=tuba_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
 #####bass#####
 bassmusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
-    pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
+    pitches=bass_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
 )
 bassmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=bass_notes_two,
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
 bassmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
-    pitches=[6, [9, 7], 8, 4],
+    pitches=bass_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
@@ -993,8 +1294,8 @@ def cyc(lst):
 #attach instruments and clefs
 
 print('Adding attachments ...')
-bar_line = abjad.BarLine('||')
-metro = abjad.MetronomeMark((1, 4), 90)
+bar_line = abjad.BarLine('|.')
+metro = abjad.MetronomeMark((1, 4), 108)
 markup = abjad.Markup(r'\bold { A }')
 mark = abjad.RehearsalMark(markup=markup)
 
@@ -1028,7 +1329,7 @@ clefs1 = cyc([
 clefs2 = cyc([
     abjad.Clef('treble'),
     abjad.Clef('treble'),
-    abjad.Clef('treble'),
+    abjad.Clef('bass'),
     abjad.Clef('bass'),
 ])
 
@@ -1169,3 +1470,4 @@ if path.exists():
 # for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 #     abjad.show(staff)
 # abjad.show(score)
+# abjad.play(score)

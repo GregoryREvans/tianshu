@@ -25,26 +25,27 @@ time_signatures = [
 bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
 
 #Define Pitch Material
-def reduceMod2(rw):
-    return [(x % 3) for x in rw]
 
 def reduceMod3(rw):
     return [(x % 4) for x in rw]
 
-def reduceMod4(rw):
-    return [(x % 5) for x in rw]
-
 def reduceMod5(rw):
     return [(x % 6) for x in rw]
-
-def reduceMod6(rw):
-    return [(x % 7) for x in rw]
 
 def reduceMod7(rw):
     return [(x % 8) for x in rw]
 
-def reduceMod8(rw):
-    return [(x % 9) for x in rw]
+def reduceMod9(rw):
+    return [(x % 10) for x in rw]
+
+def reduceMod11(rw):
+    return [(x % 12) for x in rw]
+
+def reduceMod13(rw):
+    return [(x % 14) for x in rw]
+
+def reduceMod15(rw):
+    return [(x % 16) for x in rw]
 
 seed(1)
 flute_random_walk_one = []
@@ -54,8 +55,8 @@ for i in range(1, 1000):
     value = flute_random_walk_one[i-1] + movement
     flute_random_walk_one.append(value)
 flute_random_walk_one = [abs(x) for x in flute_random_walk_one]
-flute_chord_one = [5, 8, 14, 23, 27, 28, 30, 37, ]
-flute_notes_one = [flute_chord_one[x] for x in reduceMod7(flute_random_walk_one)]
+flute_chord_one = [5, 8, 14, 23, 27, 28, 30, 37, 30, 28, 27, 23, 14, 8, ]
+flute_notes_one = [flute_chord_one[x] for x in reduceMod13(flute_random_walk_one)]
 
 seed(2)
 clarinet_random_walk_one = []
@@ -65,8 +66,8 @@ for i in range(1, 1000):
     value = clarinet_random_walk_one[i-1] + movement
     clarinet_random_walk_one.append(value)
 clarinet_random_walk_one = [abs(x) for x in clarinet_random_walk_one]
-clarinet_chord_one = [-3, 5, 8, 14, 23, 27, ]
-clarinet_notes_one = [clarinet_chord_one[x] for x in reduceMod5(clarinet_random_walk_one)]
+clarinet_chord_one = [-3, 5, 8, 14, 23, 27, 23, 14, 8, 5, ]
+clarinet_notes_one = [clarinet_chord_one[x] for x in reduceMod9(clarinet_random_walk_one)]
 
 seed(3)
 bassoon_random_walk_one = []
@@ -76,8 +77,8 @@ for i in range(1, 1000):
     value = bassoon_random_walk_one[i-1] + movement
     bassoon_random_walk_one.append(value)
 bassoon_random_walk_one = [abs(x) for x in bassoon_random_walk_one]
-bassoon_chord_one = [-24, -14, -3, 5, 8, ]
-bassoon_notes_one = [bassoon_chord_one[x] for x in reduceMod4(bassoon_random_walk_one)]
+bassoon_chord_one = [-24, -14, -3, 5, 8, 5, -3, -14, ]
+bassoon_notes_one = [bassoon_chord_one[x] for x in reduceMod7(bassoon_random_walk_one)]
 
 seed(4)
 horn_random_walk_one = []
@@ -87,8 +88,8 @@ for i in range(1, 1000):
     value = horn_random_walk_one[i-1] + movement
     horn_random_walk_one.append(value)
 horn_random_walk_one = [abs(x) for x in horn_random_walk_one]
-horn_chord_one = [-24, -14, -3, 5, 8, ]
-horn_notes_one = [horn_chord_one[x] for x in reduceMod4(horn_random_walk_one)]
+horn_chord_one = [-24, -14, -3, 5, 8, 5, -3, -14, ]
+horn_notes_one = [horn_chord_one[x] for x in reduceMod7(horn_random_walk_one)]
 
 seed(5)
 trumpet_random_walk_one = []
@@ -98,8 +99,8 @@ for i in range(1, 1000):
     value = trumpet_random_walk_one[i-1] + movement
     trumpet_random_walk_one.append(value)
 trumpet_random_walk_one = [abs(x) for x in trumpet_random_walk_one]
-trumpet_chord_one = [-3, 5, 8, 14, 23, ]
-trumpet_notes_one = [trumpet_chord_one[x] for x in reduceMod4(trumpet_random_walk_one)]
+trumpet_chord_one = [-3, 5, 8, 14, 23, 14, 8, 5, ]
+trumpet_notes_one = [trumpet_chord_one[x] for x in reduceMod7(trumpet_random_walk_one)]
 
 seed(6)
 trombone_random_walk_one = []
@@ -109,8 +110,8 @@ for i in range(1, 1000):
     value = trombone_random_walk_one[i-1] + movement
     trombone_random_walk_one.append(value)
 trombone_random_walk_one = [abs(x) for x in trombone_random_walk_one]
-trombone_chord_one = [-14, -3, 5, ]
-trombone_notes_one = [trombone_chord_one[x] for x in reduceMod2(trombone_random_walk_one)]
+trombone_chord_one = [-14, -3, 5, -3, ]
+trombone_notes_one = [trombone_chord_one[x] for x in reduceMod3(trombone_random_walk_one)]
 
 seed(7)
 tuba_random_walk_one = []
@@ -120,8 +121,8 @@ for i in range(1, 1000):
     value = tuba_random_walk_one[i-1] + movement
     tuba_random_walk_one.append(value)
 tuba_random_walk_one = [abs(x) for x in tuba_random_walk_one]
-tuba_chord_one = [-29, -24, -14, -3, 5, ]
-tuba_notes_one = [tuba_chord_one[x] for x in reduceMod4(tuba_random_walk_one)]
+tuba_chord_one = [-29, -24, -14, -3, 5, -3, -14, -24, ]
+tuba_notes_one = [tuba_chord_one[x] for x in reduceMod7(tuba_random_walk_one)]
 
 seed(8)
 violin1_random_walk_one = []
@@ -131,8 +132,8 @@ for i in range(1, 1000):
     value = violin1_random_walk_one[i-1] + movement
     violin1_random_walk_one.append(value)
 violin1_random_walk_one = [abs(x) for x in violin1_random_walk_one]
-violin1_chord_one = [-3, 5, 8, 14, 23, 27, 28, 30, 37, ]
-violin1_notes_one = [violin1_chord_one[x] for x in reduceMod8(violin1_random_walk_one)]
+violin1_chord_one = [-3, 5, 8, 14, 23, 27, 28, 30, 37, 30, 28, 27, 23, 14, 8, 5, ]
+violin1_notes_one = [violin1_chord_one[x] for x in reduceMod15(violin1_random_walk_one)]
 
 seed(9)
 violin2_random_walk_one = []
@@ -142,8 +143,8 @@ for i in range(1, 1000):
     value = violin2_random_walk_one[i-1] + movement
     violin2_random_walk_one.append(value)
 violin2_random_walk_one = [abs(x) for x in violin2_random_walk_one]
-violin2_chord_one = [-3, 5, 8, 14, 23, 27, 28, ]
-violin2_notes_one = [violin2_chord_one[x] for x in reduceMod6(violin2_random_walk_one)]
+violin2_chord_one = [-3, 5, 8, 14, 23, 27, 28, 27, 23, 14, 8, 5, ]
+violin2_notes_one = [violin2_chord_one[x] for x in reduceMod11(violin2_random_walk_one)]
 
 seed(10)
 viola_random_walk_one = []
@@ -153,8 +154,8 @@ for i in range(1, 1000):
     value = viola_random_walk_one[i-1] + movement
     viola_random_walk_one.append(value)
 viola_random_walk_one = [abs(x) for x in viola_random_walk_one]
-viola_chord_one = [-3, 5, 8, 14, 23, 27, 28, ]
-viola_notes_one = [viola_chord_one[x] for x in reduceMod6(viola_random_walk_one)]
+viola_chord_one = [-3, 5, 8, 14, 23, 27, 28, 27, 23, 14, 8, 5, ]
+viola_notes_one = [viola_chord_one[x] for x in reduceMod11(viola_random_walk_one)]
 
 seed(11)
 cello_random_walk_one = []
@@ -164,8 +165,8 @@ for i in range(1, 1000):
     value = cello_random_walk_one[i-1] + movement
     cello_random_walk_one.append(value)
 cello_random_walk_one = [abs(x) for x in cello_random_walk_one]
-cello_chord_one = [-24, -14, -3, 5, 8, 14, ]
-cello_notes_one = [cello_chord_one[x] for x in reduceMod5(cello_random_walk_one)]
+cello_chord_one = [-24, -14, -3, 5, 8, 14, 8, 5, -3, -14]
+cello_notes_one = [cello_chord_one[x] for x in reduceMod9(cello_random_walk_one)]
 
 seed(12)
 bass_random_walk_one = []
@@ -175,21 +176,21 @@ for i in range(1, 1000):
     value = bass_random_walk_one[i-1] + movement
     bass_random_walk_one.append(value)
 bass_random_walk_one = [abs(x) for x in bass_random_walk_one]
-bass_chord_one = [-29, -24, -14, -3, ]
-bass_notes_one = [bass_chord_one[x] for x in reduceMod3(bass_random_walk_one)]
+bass_chord_one = [-29, -24, -14, -3, -14, -24, ]
+bass_notes_one = [bass_chord_one[x] for x in reduceMod5(bass_random_walk_one)]
 
-flute_scale = [30, 23, 5, ]
+flute_scale = [30, 23, 5, 23, ]
 clarinet_scale = [23, 5, ]
 bassoon_scale = [-24, ]
 horn_scale = [5, ]
 trumpet_scale = [23, ]
 trombone_scale = [5, ]
 tuba_scale = [-24, ]
-violin1_scale = [30, 29.5, 29, 28.5, 28, 27.5, 27, 26.5, 26, 25.5, 25, 24.5, 24, 23.5, 23, 22.5, 22, 21.5, 21, 20.5, 20, 19.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, ]
-violin2_scale = [19, 18.5, 18, 17.5, 17, 16.5, 16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, ]
-viola_scale = [8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, 0, -0.5, -1, -1.5, -2, -2.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, ]
-cello_scale = [-3, -3.5, -4, -4.5, -5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5 -13, -13.5 -14, -13.5, -13, -12.5, -12, -11.5, -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, ]
-bass_scale = [-14, -14.5, -15, -15.5, -16, -16.5, -17, -17.5, -18, -18.5, -19, -19.5, -20, -20.5, -21, -21.5, -22, -22.5, -23, -23.5, -24, -24.5, -25, -24.5, -24, -23.5, -23, -22.5, -22, -21.5, -21, -20.5, -20, -19.5, -19, -18.5, -18, -17.5, -17, -16.5, -16, -15.5, -15, -14.5, -14]
+violin1_scale = [30, 29.5, 29, 28.5, 28, 27.5, 27, 26.5, 26, 25.5, 25, 24.5, 24, 23.5, 23, 22.5, 22, 21.5, 21, 20.5, 20, 19.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, ]
+violin2_scale = [19, 18.5, 18, 17.5, 17, 16.5, 16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, ]
+viola_scale = [8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, 0, -0.5, -1, -1.5, -2, -2.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, ]
+cello_scale = [-3, -3.5, -4, -4.5, -5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5 -13, -13.5 -14, -13.5, -13, -12.5, -12, -11.5, -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, ]
+bass_scale = [-14, -14.5, -15, -15.5, -16, -16.5, -17, -17.5, -18, -18.5, -19, -19.5, -20, -20.5, -21, -21.5, -22, -22.5, -23, -23.5, -24, -24.5, -25, -24.5, -24, -23.5, -23, -22.5, -22, -21.5, -21, -20.5, -20, -19.5, -19, -18.5, -18, -17.5, -17, -16.5, -16, -15.5, -15, -14.5, ]
 
 seed(1)
 flute_random_walk_two = []
@@ -199,8 +200,8 @@ for i in range(1, 1000):
     value = flute_random_walk_two[i-1] + movement
     flute_random_walk_two.append(value)
 flute_random_walk_two = [abs(x) for x in flute_random_walk_two]
-flute_chord_two = [5, 10, 16, 23, 25, 26, ]
-flute_notes_two = [flute_chord_two[x] for x in reduceMod5(flute_random_walk_two)]
+flute_chord_two = [5, 10, 16, 23, 25, 26, 25, 23, 16, 10, ]
+flute_notes_two = [flute_chord_two[x] for x in reduceMod9(flute_random_walk_two)]
 
 seed(2)
 clarinet_random_walk_two = []
@@ -210,8 +211,8 @@ for i in range(1, 1000):
     value = clarinet_random_walk_two[i-1] + movement
     clarinet_random_walk_two.append(value)
 clarinet_random_walk_two = [abs(x) for x in clarinet_random_walk_two]
-clarinet_chord_two = [-5, 5, 10, 16, 23, 25, 26, ]
-clarinet_notes_two = [clarinet_chord_two[x] for x in reduceMod6(clarinet_random_walk_two)]
+clarinet_chord_two = [-5, 5, 10, 16, 23, 25, 26, 25, 23, 16, 10, 5, ]
+clarinet_notes_two = [clarinet_chord_two[x] for x in reduceMod11(clarinet_random_walk_two)]
 
 seed(3)
 bassoon_random_walk_two = []
@@ -221,8 +222,8 @@ for i in range(1, 1000):
     value = bassoon_random_walk_two[i-1] + movement
     bassoon_random_walk_two.append(value)
 bassoon_random_walk_two = [abs(x) for x in bassoon_random_walk_two]
-bassoon_chord_two = [-24, -16, -5, 5, ]
-bassoon_notes_two = [bassoon_chord_two[x] for x in reduceMod3(bassoon_random_walk_two)]
+bassoon_chord_two = [-24, -16, -5, 5, -5, -16, ]
+bassoon_notes_two = [bassoon_chord_two[x] for x in reduceMod5(bassoon_random_walk_two)]
 
 seed(4)
 horn_random_walk_two = []
@@ -232,8 +233,8 @@ for i in range(1, 1000):
     value = horn_random_walk_two[i-1] + movement
     horn_random_walk_two.append(value)
 horn_random_walk_two = [abs(x) for x in horn_random_walk_two]
-horn_chord_two = [-16, -5, 5, 10, ]
-horn_notes_two = [horn_chord_two[x] for x in reduceMod3(horn_random_walk_two)]
+horn_chord_two = [-16, -5, 5, 10, 5, -5, ]
+horn_notes_two = [horn_chord_two[x] for x in reduceMod5(horn_random_walk_two)]
 
 seed(5)
 trumpet_random_walk_two = []
@@ -243,8 +244,8 @@ for i in range(1, 1000):
     value = trumpet_random_walk_two[i-1] + movement
     trumpet_random_walk_two.append(value)
 trumpet_random_walk_two = [abs(x) for x in trumpet_random_walk_two]
-trumpet_chord_two = [-5, 5, 10, 16, 23, ]
-trumpet_notes_two = [trumpet_chord_two[x] for x in reduceMod4(trumpet_random_walk_two)]
+trumpet_chord_two = [-5, 5, 10, 16, 23, 16, 10, 5, ]
+trumpet_notes_two = [trumpet_chord_two[x] for x in reduceMod7(trumpet_random_walk_two)]
 
 seed(6)
 trombone_random_walk_two = []
@@ -254,8 +255,8 @@ for i in range(1, 1000):
     value = trombone_random_walk_two[i-1] + movement
     trombone_random_walk_two.append(value)
 trombone_random_walk_two = [abs(x) for x in trombone_random_walk_two]
-trombone_chord_two = [-16, -5, 5, ]
-trombone_notes_two = [trombone_chord_two[x] for x in reduceMod2(trombone_random_walk_two)]
+trombone_chord_two = [-16, -5, 5, -5, ]
+trombone_notes_two = [trombone_chord_two[x] for x in reduceMod3(trombone_random_walk_two)]
 
 seed(7)
 tuba_random_walk_two = []
@@ -265,8 +266,8 @@ for i in range(1, 1000):
     value = tuba_random_walk_two[i-1] + movement
     tuba_random_walk_two.append(value)
 tuba_random_walk_two = [abs(x) for x in tuba_random_walk_two]
-tuba_chord_two = [-27, -24, -16, -5, ]
-tuba_notes_two = [tuba_chord_two[x] for x in reduceMod3(tuba_random_walk_two)]
+tuba_chord_two = [-27, -24, -16, -5, -16, -24, ]
+tuba_notes_two = [tuba_chord_two[x] for x in reduceMod5(tuba_random_walk_two)]
 
 seed(8)
 violin1_random_walk_two = []
@@ -276,8 +277,8 @@ for i in range(1, 1000):
     value = violin1_random_walk_two[i-1] + movement
     violin1_random_walk_two.append(value)
 violin1_random_walk_two = [abs(x) for x in violin1_random_walk_two]
-violin1_chord_two = [-5, 5, 10, 16, 23, 25, 26, 30, 38, ]
-violin1_notes_two = [violin1_chord_two[x] for x in reduceMod8(violin1_random_walk_two)]
+violin1_chord_two = [-5, 5, 10, 16, 23, 25, 26, 30, 38, 30, 26, 25, 23, 16, 10, 5, ]
+violin1_notes_two = [violin1_chord_two[x] for x in reduceMod15(violin1_random_walk_two)]
 
 seed(9)
 violin2_random_walk_two = []
@@ -287,8 +288,8 @@ for i in range(1, 1000):
     value = violin2_random_walk_two[i-1] + movement
     violin2_random_walk_two.append(value)
 violin2_random_walk_two = [abs(x) for x in violin2_random_walk_two]
-violin2_chord_two = [-5, 5, 10, 16, 23, 25, 26, ]
-violin2_notes_two = [violin2_chord_two[x] for x in reduceMod6(violin2_random_walk_two)]
+violin2_chord_two = [-5, 5, 10, 16, 23, 25, 26, 25, 23, 16, 10, 5, ]
+violin2_notes_two = [violin2_chord_two[x] for x in reduceMod11(violin2_random_walk_two)]
 
 seed(10)
 viola_random_walk_two = []
@@ -298,8 +299,8 @@ for i in range(1, 1000):
     value = viola_random_walk_two[i-1] + movement
     viola_random_walk_two.append(value)
 viola_random_walk_two = [abs(x) for x in viola_random_walk_two]
-viola_chord_two = [-5, 5, 10, 16, 23]
-viola_notes_two = [viola_chord_two[x] for x in reduceMod4(viola_random_walk_two)]
+viola_chord_two = [-5, 5, 10, 16, 23, 16, 10, 5, ]
+viola_notes_two = [viola_chord_two[x] for x in reduceMod7(viola_random_walk_two)]
 
 seed(11)
 cello_random_walk_two = []
@@ -309,8 +310,8 @@ for i in range(1, 1000):
     value = cello_random_walk_two[i-1] + movement
     cello_random_walk_two.append(value)
 cello_random_walk_two = [abs(x) for x in cello_random_walk_two]
-cello_chord_two = [-24, -16, 5, 5, 10, 16, 23]
-cello_notes_two = [cello_chord_two[x] for x in reduceMod6(cello_random_walk_two)]
+cello_chord_two = [-24, -16, -5, 5, 10, 16, 23, 16, 10, 5, -5, -16]
+cello_notes_two = [cello_chord_two[x] for x in reduceMod11(cello_random_walk_two)]
 
 seed(12)
 bass_random_walk_two = []
@@ -320,8 +321,8 @@ for i in range(1, 1000):
     value = bass_random_walk_two[i-1] + movement
     bass_random_walk_two.append(value)
 bass_random_walk_two = [abs(x) for x in bass_random_walk_two]
-bass_chord_two = [-27, -24, -16, -5]
-bass_notes_two = [bass_chord_two[x] for x in reduceMod3(bass_random_walk_two)]
+bass_chord_two = [-27, -24, -16, -5, -16, -24, ]
+bass_notes_two = [bass_chord_two[x] for x in reduceMod5(bass_random_walk_two)]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 

@@ -14,7 +14,9 @@ print('Interpreting file ...')
 time_signatures = [
     abjad.TimeSignature(pair) for pair in [
         (5, 4), (2, 4), (4, 4), (3, 4), (4, 4), (4, 4),
-        (4, 4), (4, 4), (5, 4),
+        (4, 4), (4, 4), (5, 4), (5, 4), (3, 4), (3, 4),
+        (4, 4), (4, 4), (5, 4), (5, 4), (3, 4), (3, 4),
+        (2, 4),
     ]
 ]
 
@@ -356,6 +358,16 @@ voice_1_timespan_list = abjad.TimespanList([
         [(22, 4), (25, 4), flutemusicmaker_three],
         [(27, 4), (30, 4), flutemusicmaker_one],
         [(30, 4), (32, 4), flutemusicmaker_one],
+        [(35, 4), (39, 4), flutemusicmaker_two],
+        [(42, 4), (43, 4), flutemusicmaker_three],
+        [(43, 4), (44, 4), flutemusicmaker_three],
+        [(45, 4), (46, 4), flutemusicmaker_one],
+        [(46, 4), (50, 4), flutemusicmaker_one],
+        [(54, 4), (57, 4), flutemusicmaker_two],
+        [(59, 4), (60, 4), flutemusicmaker_three],
+        [(65, 4), (67, 4), flutemusicmaker_one],
+        [(67, 4), (69, 4), flutemusicmaker_one],
+        [(69, 4), (72, 4), silence_maker],#temporary fix
     ]
 ])
 
@@ -374,6 +386,15 @@ voice_5_timespan_list = abjad.TimespanList([
         [(23, 4), (25, 4), trumpetmusicmaker_three],
         [(27, 4), (30, 4), trumpetmusicmaker_one],
         [(30, 4), (32, 4), trumpetmusicmaker_one],
+        [(35, 4), (39, 4), trumpetmusicmaker_two],
+        [(42, 4), (43, 4), trumpetmusicmaker_three],
+        [(43, 4), (44, 4), trumpetmusicmaker_three],
+        [(45, 4), (46, 4), trumpetmusicmaker_one],
+        [(46, 4), (50, 4), trumpetmusicmaker_one],
+        [(54, 4), (57, 4), trumpetmusicmaker_two],
+        [(59, 4), (60, 4), trumpetmusicmaker_three],
+        [(65, 4), (67, 4), trumpetmusicmaker_one],
+        [(67, 4), (69, 4), trumpetmusicmaker_one],
     ]
 ])
 
@@ -391,6 +412,15 @@ voice_8_timespan_list = abjad.TimespanList([
         [(14, 4), (18, 4), violin1musicmaker_two],
         [(22, 4), (25, 4), violin1musicmaker_three],
         [(27, 4), (30, 4), violin1musicmaker_one],
+        [(35, 4), (39, 4), violin1musicmaker_two],
+        [(42, 4), (43, 4), violin1musicmaker_three],
+        [(43, 4), (44, 4), violin1musicmaker_three],
+        [(45, 4), (46, 4), violin1musicmaker_one],
+        [(46, 4), (50, 4), violin1musicmaker_one],
+        [(54, 4), (57, 4), violin1musicmaker_two],
+        [(59, 4), (60, 4), violin1musicmaker_three],
+        [(65, 4), (67, 4), violin1musicmaker_one],
+        [(67, 4), (69, 4), violin1musicmaker_one],
     ]
 ])
 
@@ -411,6 +441,14 @@ voice_2_timespan_list = abjad.TimespanList([
         [(16, 4), (18, 4), clarinetmusicmaker_three],
         [(21, 4), (22, 4), clarinetmusicmaker_one],
         [(22, 4), (25, 4), clarinetmusicmaker_one],
+        [(35, 4), (40, 4), clarinetmusicmaker_one],
+        [(44, 4), (46, 4), clarinetmusicmaker_two],
+        [(46, 4), (47, 4), clarinetmusicmaker_two],
+        [(49, 4), (50, 4), clarinetmusicmaker_three],
+        [(55, 4), (59, 4), clarinetmusicmaker_one],
+        [(62, 4), (64, 4), clarinetmusicmaker_two],
+        [(65, 4), (67, 4), clarinetmusicmaker_three],
+        [(67, 4), (70, 4), clarinetmusicmaker_three],
     ]
 ])
 
@@ -430,6 +468,14 @@ voice_9_timespan_list = abjad.TimespanList([
         [(16, 4), (18, 4), violin2musicmaker_three],
         [(21, 4), (22, 4), violin2musicmaker_one],
         [(22, 4), (23, 4), violin2musicmaker_one],
+        [(35, 4), (40, 4), violin2musicmaker_one],
+        [(44, 4), (46, 4), violin2musicmaker_two],
+        [(46, 4), (47, 4), violin2musicmaker_two],
+        [(49, 4), (50, 4), violin2musicmaker_three],
+        [(55, 4), (59, 4), violin2musicmaker_one],
+        [(62, 4), (64, 4), violin2musicmaker_two],
+        [(65, 4), (67, 4), violin2musicmaker_three],
+        [(67, 4), (70, 4), violin2musicmaker_three],
     ]
 ])
 
@@ -451,6 +497,14 @@ voice_10_timespan_list = abjad.TimespanList([
         [(22, 4), (25, 4), violamusicmaker_one],
         [(29, 4), (30, 4), violamusicmaker_two],
         [(30, 4), (32, 4), violamusicmaker_two],
+        [(35, 4), (40, 4), violamusicmaker_one],
+        [(44, 4), (46, 4), violamusicmaker_two],
+        [(46, 4), (47, 4), violamusicmaker_two],
+        [(49, 4), (50, 4), violamusicmaker_three],
+        [(55, 4), (59, 4), violamusicmaker_one],
+        [(62, 4), (64, 4), violamusicmaker_two],
+        [(65, 4), (67, 4), violamusicmaker_three],
+        [(67, 4), (70, 4), violamusicmaker_three],
     ]
 ])
 
@@ -471,6 +525,15 @@ voice_3_timespan_list = abjad.TimespanList([
         [(22, 4), (23, 4), bassoonmusicmaker_three],
         [(27, 4), (30, 4), bassoonmusicmaker_one],
         [(32, 4), (35, 4), bassoonmusicmaker_two],
+        [(35, 4), (36, 4), bassoonmusicmaker_three],
+        [(37, 4), (40, 4), bassoonmusicmaker_two],
+        [(40, 4), (42, 4), bassoonmusicmaker_two],
+        [(46, 4), (49, 4), bassoonmusicmaker_one],
+        [(51, 4), (52, 4), bassoonmusicmaker_three],
+        [(57, 4), (59, 4), bassoonmusicmaker_two],
+        [(59, 4), (61, 4), bassoonmusicmaker_two],
+        [(64, 4), (66, 4), bassoonmusicmaker_one],
+        [(67, 4), (70, 4), bassoonmusicmaker_three],
     ]
 ])
 
@@ -489,6 +552,15 @@ voice_6_timespan_list = abjad.TimespanList([
         [(19, 4), (22, 4), trombonemusicmaker_three],
         [(22, 4), (23, 4), trombonemusicmaker_three],
         [(27, 4), (29, 4), trombonemusicmaker_one],
+        [(35, 4), (36, 4), trombonemusicmaker_three],
+        [(37, 4), (40, 4), trombonemusicmaker_two],
+        [(40, 4), (42, 4), trombonemusicmaker_two],
+        [(46, 4), (49, 4), trombonemusicmaker_one],
+        [(51, 4), (52, 4), trombonemusicmaker_three],
+        [(57, 4), (59, 4), trombonemusicmaker_two],
+        [(59, 4), (61, 4), trombonemusicmaker_two],
+        [(64, 4), (66, 4), trombonemusicmaker_one],
+        [(67, 4), (70, 4), trombonemusicmaker_three],
     ]
 ])
 
@@ -507,6 +579,15 @@ voice_11_timespan_list = abjad.TimespanList([
         [(21, 4), (22, 4), cellomusicmaker_three],
         [(22, 4), (23, 4), cellomusicmaker_three],
         [(27, 4), (30, 4), cellomusicmaker_one],
+        [(35, 4), (36, 4), cellomusicmaker_three],
+        [(37, 4), (40, 4), cellomusicmaker_two],
+        [(40, 4), (42, 4), cellomusicmaker_two],
+        [(46, 4), (49, 4), cellomusicmaker_one],
+        [(51, 4), (52, 4), cellomusicmaker_three],
+        [(57, 4), (59, 4), cellomusicmaker_two],
+        [(59, 4), (61, 4), cellomusicmaker_two],
+        [(64, 4), (66, 4), cellomusicmaker_one],
+        [(67, 4), (70, 4), cellomusicmaker_three],
     ]
 ])
 
@@ -526,6 +607,14 @@ voice_4_timespan_list = abjad.TimespanList([
         [(14, 4), (18, 4), hornmusicmaker_three],
         [(21, 4), (22, 4), hornmusicmaker_one],
         [(22, 4), (23, 4), hornmusicmaker_one],
+        [(38, 4), (40, 4), hornmusicmaker_two],
+        [(41, 4), (43, 4), hornmusicmaker_one],
+        [(43, 4), (46, 4), hornmusicmaker_one],
+        [(50, 4), (53, 4), hornmusicmaker_three],
+        [(55, 4), (56, 4), hornmusicmaker_two],
+        [(61, 4), (64, 4), hornmusicmaker_one],
+        [(64, 4), (65, 4), hornmusicmaker_one],
+        [(68, 4), (70, 4), hornmusicmaker_three],
     ]
 ])
 
@@ -545,6 +634,14 @@ voice_7_timespan_list = abjad.TimespanList([
         [(21, 4), (22, 4), tubamusicmaker_one],
         [(22, 4), (23, 4), tubamusicmaker_one],
         [(26, 4), (30, 4), tubamusicmaker_two],
+        [(38, 4), (40, 4), tubamusicmaker_two],
+        [(41, 4), (43, 4), tubamusicmaker_one],
+        [(43, 4), (46, 4), tubamusicmaker_one],
+        [(50, 4), (53, 4), tubamusicmaker_three],
+        [(55, 4), (56, 4), tubamusicmaker_two],
+        [(61, 4), (64, 4), tubamusicmaker_one],
+        [(64, 4), (65, 4), tubamusicmaker_one],
+        [(68, 4), (70, 4), tubamusicmaker_three],
     ]
 ])
 
@@ -563,6 +660,14 @@ voice_12_timespan_list = abjad.TimespanList([
         [(14, 4), (18, 4), bassmusicmaker_three],
         [(21, 4), (22, 4), bassmusicmaker_one],
         [(22, 4), (23, 4), bassmusicmaker_one],
+        [(38, 4), (40, 4), bassmusicmaker_two],
+        [(41, 4), (43, 4), bassmusicmaker_one],
+        [(43, 4), (46, 4), bassmusicmaker_one],
+        [(50, 4), (53, 4), bassmusicmaker_three],
+        [(55, 4), (56, 4), bassmusicmaker_two],
+        [(61, 4), (64, 4), bassmusicmaker_one],
+        [(64, 4), (65, 4), bassmusicmaker_one],
+        [(68, 4), (70, 4), bassmusicmaker_three],
     ]
 ])
 

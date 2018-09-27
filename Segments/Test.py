@@ -362,8 +362,8 @@ silence_maker = abjadext.rmakers.NoteRhythmMaker(
 
 class MusicSpecifier:
 
-    def __init__(self, rhythm_maker, voice_name):
-        self.rhythm_maker = rhythm_maker
+    def __init__(self, music_maker, voice_name):
+        self.music_maker = music_maker
         self.voice_name = voice_name
 
 # Define an initial timespan structure, annotated with music specifiers. This
@@ -379,11 +379,11 @@ voice_1_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 1',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(9, 4), (10, 4), oboemusicmaker_one],
         [(15, 4), (18, 4), oboemusicmaker_two],
         [(22, 4), (25, 4), oboemusicmaker_three],
@@ -397,11 +397,11 @@ voice_5_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 5',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(9, 4), (10, 4), violin1musicmaker_one],
         [(14, 4), (18, 4), violin1musicmaker_two],
         [(23, 4), (25, 4), violin1musicmaker_three],
@@ -415,11 +415,11 @@ voice_8_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 8',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(9, 4), (10, 4), trumpetmusicmaker_one],
         [(14, 4), (18, 4), trumpetmusicmaker_two],
         [(22, 4), (25, 4), trumpetmusicmaker_three],
@@ -433,11 +433,11 @@ voice_2_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 2',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(2, 4), (5, 4), clarinetmusicmaker_one],
         [(10, 4), (11, 4), clarinetmusicmaker_two],
         [(11, 4), (13, 4), clarinetmusicmaker_two],
@@ -452,11 +452,11 @@ voice_9_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 9',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(2, 4), (5, 4), violin2musicmaker_one],
         [(9, 4), (11, 4), violin2musicmaker_two],
         [(11, 4), (13, 4), violin2musicmaker_two],
@@ -471,11 +471,11 @@ voice_10_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 10',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(2, 4), (5, 4), violamusicmaker_one],
         [(9, 4), (11, 4), violamusicmaker_two],
         [(11, 4), (13, 4), violamusicmaker_two],
@@ -493,11 +493,11 @@ voice_3_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 3',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(7, 4), (11, 4), bassoonmusicmaker_one],
         [(15, 4), (16, 4), bassoonmusicmaker_two],
         [(19, 4), (22, 4), bassoonmusicmaker_three],
@@ -512,11 +512,11 @@ voice_6_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 6',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(7, 4), (11, 4), trombonemusicmaker_one],
         [(14, 4), (16, 4), trombonemusicmaker_two],
         [(19, 4), (22, 4), trombonemusicmaker_three],
@@ -530,11 +530,11 @@ voice_11_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 11',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(7, 4), (11, 4), cellomusicmaker_one],
         [(14, 4), (16, 4), cellomusicmaker_two],
         [(21, 4), (22, 4), cellomusicmaker_three],
@@ -549,11 +549,11 @@ voice_4_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 4',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(0, 4), (5, 4), hornmusicmaker_one],
         [(8, 4), (10, 4), hornmusicmaker_two],
         [(14, 4), (18, 4), hornmusicmaker_three],
@@ -567,11 +567,11 @@ voice_7_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 7',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(0, 4), (5, 4), tubamusicmaker_one],
         [(8, 4), (10, 4), tubamusicmaker_two],
         [(14, 4), (18, 4), tubamusicmaker_three],
@@ -586,11 +586,11 @@ voice_12_timespan_list = abjad.TimespanList([
         start_offset=start_offset,
         stop_offset=stop_offset,
         annotation=MusicSpecifier(
-            rhythm_maker=rhythm_maker,
+            music_maker=music_maker,
             voice_name='Voice 12',
         ),
     )
-    for start_offset, stop_offset, rhythm_maker in [
+    for start_offset, stop_offset, music_maker in [
         [(0, 4), (5, 4), bassmusicmaker_one],
         [(8, 4), (10, 4), bassmusicmaker_two],
         [(14, 4), (18, 4), bassmusicmaker_three],
@@ -651,7 +651,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
                 start_offset=silence_timespan.start_offset,
                 stop_offset=silence_timespan.stop_offset,
                 annotation=MusicSpecifier(
-                    rhythm_maker=None,
+                    music_maker=None,
                     voice_name=voice_name,
                 ),
             )
@@ -724,8 +724,8 @@ for time_signature in time_signatures:
 
 print('Making containers ...')
 
-def make_container(rhythm_maker, durations, state):
-    selections = rhythm_maker(duration, previous_state=state)
+def make_container(music_maker, durations, state):
+    selections = music_maker(duration, previous_state=state)
     container = abjad.Container([])
     container.extend(selections)
     # # Add analysis brackets so we can see the phrasing graphically
@@ -757,10 +757,10 @@ def key_function(timespan):
     Get the timespan's annotation's rhythm-maker.
     If the annotation's rhythm-maker is None, return the silence maker.
     """
-    return timespan.annotation.rhythm_maker or silence_maker
+    return timespan.annotation.music_maker or silence_maker
 
 for voice_name, timespan_list in all_timespan_lists.items():
-    for rhythm_maker, grouper in itertools.groupby(
+    for music_maker, grouper in itertools.groupby(
         timespan_list,
         key=key_function,
     ):
@@ -774,7 +774,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
         # voice they belong to because their annotation records that
         # information.
         durations = [timespan.duration for timespan in grouper]
-        container = make_container(rhythm_maker, durations, state)
+        container = make_container(music_maker, durations, state)
         voice = score[voice_name]
         voice.append(container)
 

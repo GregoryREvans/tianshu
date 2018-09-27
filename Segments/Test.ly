@@ -63,7 +63,7 @@
                         \markup { ob. }
                         \set Staff.instrumentName =
                         \markup { Oboe }
-                        \tempo 4=120
+                        \tempo 4=90
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         \clef "treble"
                         r2.
@@ -520,7 +520,7 @@
                         \markup { hr. }
                         \set Staff.instrumentName =
                         \markup { Horn }
-                        \tempo 4=120
+                        \tempo 4=90
                         \clef "treble"
                         g'2.
                         \p
@@ -1127,7 +1127,7 @@
                         \markup { vln.I }
                         \set Staff.instrumentName =
                         \markup { "Violin I" }
-                        \tempo 4=120
+                        \tempo 4=90
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         \clef "treble"
                         r2.

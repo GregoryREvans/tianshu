@@ -85,7 +85,7 @@ attachment_handler_three = AttachmentHandler(
     articulation='staccato',
 )
 
-# Initialize two MusicMakers with the rhythm-makers.
+# Initialize MusicMakers with the rhythm-makers.
 #####oboe#####
 oboemusicmaker_one = MusicMaker(
     rmaker=rmaker_one,
@@ -111,18 +111,21 @@ violin1musicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=oboemusicmaker_one.state,
 )
 violin1musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=oboemusicmaker_two.state,
 )
 violin1musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=oboemusicmaker_three.state,
 )
 #####trumpet#####
 trumpetmusicmaker_one = MusicMaker(
@@ -130,18 +133,21 @@ trumpetmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=violin1musicmaker_one.state,
 )
 trumpetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=violin1musicmaker_two.state,
 )
 trumpetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=violin1musicmaker_three.state,
 )
 #####clarinet#####
 clarinetmusicmaker_one = MusicMaker(
@@ -149,18 +155,21 @@ clarinetmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=trumpetmusicmaker_one.state,
 )
 clarinetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=trumpetmusicmaker_two.state,
 )
 clarinetmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=trumpetmusicmaker_three.state,
 )
 #####violin2#####
 violin2musicmaker_one = MusicMaker(
@@ -168,18 +177,21 @@ violin2musicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=clarinetmusicmaker_one.state,
 )
 violin2musicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=clarinetmusicmaker_two.state,
 )
 violin2musicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=clarinetmusicmaker_three.state,
 )
 #####viola#####
 violamusicmaker_one = MusicMaker(
@@ -187,18 +199,21 @@ violamusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=violin2musicmaker_one.state,
 )
 violamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=violin2musicmaker_two.state,
 )
 violamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=violin2musicmaker_three.state,
 )
 #####bassoon#####
 bassoonmusicmaker_one = MusicMaker(
@@ -206,18 +221,21 @@ bassoonmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=violamusicmaker_one.state,
 )
 bassoonmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=violamusicmaker_two.state,
 )
 bassoonmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=violamusicmaker_three.state,
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
@@ -225,18 +243,21 @@ trombonemusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=bassoonmusicmaker_one.state,
 )
 trombonemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=bassoonmusicmaker_two.state,
 )
 trombonemusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=bassoonmusicmaker_three.state,
 )
 #####cello#####
 cellomusicmaker_one = MusicMaker(
@@ -244,18 +265,21 @@ cellomusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=trombonemusicmaker_one.state,
 )
 cellomusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=trombonemusicmaker_two.state,
 )
 cellomusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=trombonemusicmaker_three.state,
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
@@ -263,18 +287,21 @@ hornmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=cellomusicmaker_one.state,
 )
 hornmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=cellomusicmaker_two.state,
 )
 hornmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=cellomusicmaker_three.state,
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
@@ -282,18 +309,21 @@ tubamusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, 3, 5, 10, 4, 8, 7, 9, 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=hornmusicmaker_one.state,
 )
 tubamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=hornmusicmaker_two.state,
 )
 tubamusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, 9, 7, 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=hornmusicmaker_three.state,
 )
 #####bass#####
 bassmusicmaker_one = MusicMaker(
@@ -301,18 +331,21 @@ bassmusicmaker_one = MusicMaker(
     pitches=[0, 2, 1, [3, 5, 10], 4, 8, [7, 9], 6],
     continuous=True,
     attachment_handler=attachment_handler_one,
+    state=tubamusicmaker_one.state,
 )
 bassmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_two,
+    state=tubamusicmaker_two.state,
 )
 bassmusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=[6, [9, 7], 8, 4],
     continuous=True,
     attachment_handler=attachment_handler_three,
+    state=tubamusicmaker_three.state,
 )
 
 silence_maker = abjadext.rmakers.NoteRhythmMaker(
@@ -691,8 +724,8 @@ for time_signature in time_signatures:
 
 print('Making containers ...')
 
-def make_container(rhythm_maker, durations):
-    selections = rhythm_maker(durations)
+def make_container(rhythm_maker, durations, state):
+    selections = rhythm_maker(duration, previous_state=state)
     container = abjad.Container([])
     container.extend(selections)
     # # Add analysis brackets so we can see the phrasing graphically
@@ -741,7 +774,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
         # voice they belong to because their annotation records that
         # information.
         durations = [timespan.duration for timespan in grouper]
-        container = make_container(rhythm_maker, durations)
+        container = make_container(rhythm_maker, durations, state)
         voice = score[voice_name]
         voice.append(container)
 
@@ -866,7 +899,6 @@ for staff in abjad.iterate(score['Staff Group 2']).components(abjad.Staff):
         elif isinstance(previous_leaf, abjad.Rest):
             pass
 
-
 for staff in abjad.iterate(score['Staff Group 3']).components(abjad.Staff):
     for rest in abjad.iterate(staff).components(abjad.Rest):
         previous_leaf = abjad.inspect(rest).leaf(-1)
@@ -890,7 +922,7 @@ def cyc(lst):
 
 print('Adding attachments ...')
 bar_line = abjad.BarLine('||')
-metro = abjad.MetronomeMark((1, 4), 120)
+metro = abjad.MetronomeMark((1, 4), 90)
 markup = abjad.Markup(r'\bold { A }')
 mark = abjad.RehearsalMark(markup=markup)
 
@@ -1040,29 +1072,28 @@ score_file = abjad.LilyPondFile.new(
 abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
 
-# directory = '/Users/evansdsg2/Scores/tianshu/Segments'
-# pdf_path = f'{directory}/Test.pdf'
-# path = pathlib.Path('Test.pdf')
-# if path.exists():
-#     print(f'Removing {pdf_path} ...')
-#     path.unlink()
-# time_1 = time.time()
-# print(f'Persisting {pdf_path} ...')
-# result = abjad.persist(score_file).as_pdf(pdf_path)
-# print(result[0])
-# print(result[1])
-# print(result[2])
-# success = result[3]
-# if success is False:
-#         print('LilyPond failed!')
-# time_2 = time.time()
-# total_time = time_2 - time_1
-# print(f'Total time: {total_time} seconds')
-# if path.exists():
-#     print(f'Opening {pdf_path} ...')
-#     os.system(f'open {pdf_path}')
+directory = '/Users/evansdsg2/Scores/tianshu/Segments'
+pdf_path = f'{directory}/Test.pdf'
+path = pathlib.Path('Test.pdf')
+if path.exists():
+    print(f'Removing {pdf_path} ...')
+    path.unlink()
+time_1 = time.time()
+print(f'Persisting {pdf_path} ...')
+result = abjad.persist(score_file).as_pdf(pdf_path)
+print(result[0])
+print(result[1])
+print(result[2])
+success = result[3]
+if success is False:
+        print('LilyPond failed!')
+time_2 = time.time()
+total_time = time_2 - time_1
+print(f'Total time: {total_time} seconds')
+if path.exists():
+    print(f'Opening {pdf_path} ...')
+    os.system(f'open {pdf_path}')
 
 # for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 #     abjad.show(staff)
 # abjad.show(score)
-abjad.play(score)

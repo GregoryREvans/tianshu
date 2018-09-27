@@ -2,17 +2,17 @@
 
 \version "2.19.82"
 \language "english"
-#(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 13)
+#(set-default-paper-size "11x17landscape")
+#(set-global-staff-size 12)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	title =  \markup \override #'(font-name . "Didot") \fontsize #15 \bold\center-column {"Tianshu" }
+	title =  \markup \override #'(font-name . "Didot") \fontsize #15 \bold\center-column {"Hamon shū" }
 	subtitle = \markup \override #'(font-name . "Didot") {" "}
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for Ensemble Ibis"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"string quartet no.1"}
 	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
@@ -47,7 +47,7 @@
 		\override MetronomeMark.break-align-symbols = #'(left-edge)
 		\override MetronomeMark.extra-offset = #'(0 . 4)
 		\override MetronomeMark.font-size = 3
-		\override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
+		%\override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
 		\override RehearsalMark.X-extent = #'(0 . 0)
 		\override RehearsalMark.X-offset = 6
 		\override RehearsalMark.Y-offset = -2.25
@@ -62,7 +62,7 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #7
+        \override TimeSignature.font-size = #5
 		%\override TimeSignature.font-size = #1
         \override TimeSignature.self-alignment-X = #center
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))

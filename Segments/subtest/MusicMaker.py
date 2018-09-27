@@ -8,26 +8,24 @@ class MusicMaker:
         attachment_handler=None,
         pitches=None,
         continuous=False,
-        state=None,
     ):
         self.attachment_handler = attachment_handler
         self.rmaker = rmaker
         self.pitches = pitches
         self.continuous = continuous
-        self.state = self.rmaker.state
         self._count = 0
+        self._state = self.rmaker.state
 
     def __call__(self, durations):
-        return self._make_music(durations, previous_state)
+        return self._make_music(durations)
 
-    def _make_basic_rhythm(self, durations, previous_state):
-        state = self.state
-        selections = self.rmaker(durations, previous_state=state)
-        self.state = self.rmaker.state
+    def _make_basic_rhythm(self, durations):
+        selections = self.rmaker(durations, previous_state=self._state)
+        self._state = self.rmaker.state
         return selections
 
-    def _make_music(self, durations, previous_state):
-        selections = self._make_basic_rhythm(durations, previous_state)
+    def _make_music(self, durations):
+        selections = self._make_basic_rhythm(durations)
         if self.pitches == None:
             selections = self.attachment_handler.add_attachments(selections)
             return selections

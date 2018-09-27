@@ -283,16 +283,22 @@
                     }
                     {
                         \times 8/9 {
-                            gs'8.
-                            \mp
-                            ~
-                            [
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
                             gs'8
+                            \mp
+                            - \staccato
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 2
+                            b'16
+                            ~
                             b'4
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            a'16
+                            - \staccato
+                            bf'16
                             \ff
                             - \staccato
                             - \tweak stencil #constante-hairpin
@@ -416,29 +422,24 @@
                         [
                         a'16
                         - \staccato
-                        g'16
-                        - \staccato
-                        af'16
-                        - \staccato
-                        e'8
-                        - \staccato
-                        fs'16
-                        - \staccato
+                        ~
                         a'16
-                        - \staccato
-                        ~
-                        a'8
                         g'16
                         - \staccato
-                        \set stemLeftBeamCount = 2
+                        af'8.
+                        - \staccato
+                        \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        af'16
-                        ~
+                        e'16
+                        - \staccato
+                        fs'4
+                        - \staccato
                     }
                     {
                         % [Voice 3 measure 7] %! COMMENT_MEASURE_NUMBERS
-                        af'4
+                        a'4
                         \ff
+                        - \staccato
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
@@ -512,24 +513,24 @@
                         \stopStaff \startStaff
                     }
                     {
-                        cs''16
+                        gs16
                         \fff
                         - \tenuto
                         \>
                         [
-                        e''16
+                        gs16
                         - \tenuto
-                        d''16
+                        gs16
                         - \tenuto
-                        ef''16
+                        gs16
                         - \tenuto
-                        b'16
+                        gs16
                         - \tenuto
-                        cs''16
+                        gs16
                         - \tenuto
-                        e''16
+                        gs16
                         - \tenuto
-                        d''16
+                        gs16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -548,32 +549,31 @@
                     }
                     {
                         % [Voice 4 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        cs''8.
+                        cs''8
                         \mp
                         - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        \set stemLeftBeamCount = 1
-                        \set stemRightBeamCount = 2
                         e''16
-                        ~
-                        e''4
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
+                        - \staccato
                         d''16
                         - \staccato
                         ef''16
                         - \staccato
                         b'16
                         - \staccato
-                        cs''16
-                        - \staccato
                         ~
+                        b'16
                         cs''16
-                        e''16
                         - \staccato
-                        d''8
+                        e''8.
+                        - \staccato
+                        \set stemLeftBeamCount = 1
+                        \set stemRightBeamCount = 2
+                        d''16
+                        - \staccato
+                        ef''4
                         \ff
                         - \staccato
                         - \tweak stencil #constante-hairpin
@@ -666,26 +666,26 @@
                     {
                         \times 8/9 {
                             % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
-                            fs'8
+                            af8
                             \fff
                             - \tenuto
                             \>
                             [
-                            <g' a'>8
+                            af8
                             - \tenuto
-                            af'8
+                            af8
                             - \tenuto
-                            e'8
+                            af8
                             - \tenuto
-                            fs'8
+                            af8
                             - \tenuto
-                            <g' a'>8
+                            af8
                             - \tenuto
-                            af'8
+                            af8
                             - \tenuto
-                            e'8
+                            af8
                             - \tenuto
-                            fs'8
+                            af8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -706,17 +706,20 @@
                     }
                     {
                         \times 8/9 {
-                            fs'16
+                            fs'8.
                             \mp
-                            - \staccato
+                            ~
+                            [
+                            fs'8
                             - \tweak stencil #abjad-flared-hairpin
                             \<
-                            [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <g' a'>16
+                            a'16
                             - \staccato
-                            af'4..
+                            g'16
+                            - \staccato
+                            af'16
+                            - \staccato
+                            e'16
                             \ff
                             - \staccato
                             - \tweak stencil #constante-hairpin
@@ -796,24 +799,24 @@
                     }
                     {
                         % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        fs'16
+                        d16
                         \fff
                         - \tenuto
                         \>
                         [
-                        a'16
+                        d16
                         - \tenuto
-                        g'16
+                        d16
                         - \tenuto
-                        af'16
+                        d16
                         - \tenuto
-                        e'16
+                        d16
                         - \tenuto
-                        fs'16
+                        d16
                         - \tenuto
-                        a'16
+                        d16
                         - \tenuto
-                        g'16
+                        d16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -831,40 +834,36 @@
                         \stopStaff \startStaff
                     }
                     {
-                        fs'4
+                        fs'16
                         \mp
+                        - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
-                        ~
                         [
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
-                        fs'16
                         a'16
                         - \staccato
-                        g'16
+                        g'8
                         - \staccato
+                        ~
+                        g'16
                         af'16
                         - \staccato
                         e'8
                         - \staccato
-                        fs'16
-                        - \staccato
-                        a'16
+                        ~
+                        e'8
+                        \set stemLeftBeamCount = 1
+                        \set stemRightBeamCount = 1
+                        fs'8
                         ~
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 4/3 {
-                            % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
-                            a'8
-                            g'16
-                            \ff
-                            - \staccato
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
+                        % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
+                        fs'4
+                        \ff
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -929,26 +928,26 @@
                     }
                     {
                         \times 8/9 {
-                            fs'16
+                            c16
                             \fff
                             - \tenuto
                             \>
                             [
-                            a'16
+                            c16
                             - \tenuto
-                            g'16
+                            c16
                             - \tenuto
-                            af'16
+                            c16
                             - \tenuto
-                            e'16
+                            c16
                             - \tenuto
-                            fs'16
+                            c16
                             - \tenuto
-                            a'16
+                            c16
                             - \tenuto
-                            g'16
+                            c16
                             - \tenuto
-                            af'16
+                            c16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -968,26 +967,33 @@
                     }
                     {
                         % [Voice 7 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        fs'4..
+                        fs'16
                         \mp
                         - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        \set stemLeftBeamCount = 0
-                        \set stemRightBeamCount = 2
                         a'16
-                        ~
-                        a'4
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
+                        - \staccato
                         g'16
                         - \staccato
                         af'16
                         - \staccato
+                        ~
+                        af'16
                         e'16
                         - \staccato
+                        fs'8
+                        - \staccato
+                        ~
                         fs'16
+                        a'16
+                        - \staccato
+                        g'8
+                        - \staccato
+                        ~
+                        g'8
+                        af'8
                         \ff
                         - \staccato
                         - \tweak stencil #constante-hairpin
@@ -1026,24 +1032,24 @@
                     }
                     {
                         % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
-                        e'8
+                        c8
                         \fff
                         - \tenuto
                         \>
                         [
-                        fs'8
+                        c8
                         - \tenuto
-                        a'8
+                        c8
                         - \tenuto
-                        g'8
+                        c8
                         - \tenuto
-                        af'8
+                        c8
                         - \tenuto
-                        e'8
+                        c8
                         - \tenuto
-                        fs'8
+                        c8
                         - \tenuto
-                        a'8
+                        c8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -1112,9 +1118,7 @@
                         - \tenuto
                         \>
                         [
-                        a'16
-                        - \tenuto
-                        g'16
+                        <g' a'>16
                         - \tenuto
                         af'16
                         - \tenuto
@@ -1122,9 +1126,7 @@
                         - \tenuto
                         fs'16
                         - \tenuto
-                        a'16
-                        - \tenuto
-                        g'16
+                        <g' a'>16
                         - \tenuto
                         af'16
                         - \tenuto
@@ -1132,15 +1134,19 @@
                         - \tenuto
                         fs'16
                         - \tenuto
-                        a'16
-                        - \tenuto
-                        g'16
+                        <g' a'>16
                         - \tenuto
                         af'16
                         - \tenuto
                         e'16
                         - \tenuto
                         fs'16
+                        - \tenuto
+                        <g' a'>16
+                        - \tenuto
+                        af'16
+                        - \tenuto
+                        e'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -1158,21 +1164,27 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/13 {
                             % [Voice 8 measure 7] %! COMMENT_MEASURE_NUMBERS
-                            fs'16
+                            fs'8.
                             \mp
                             - \staccato
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            a'16
+                            <g' a'>16
                             - \staccato
-                            g'8.
-                            - \staccato
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
                             af'16
                             - \staccato
-                            e'4..
+                            e'16
+                            - \staccato
+                            fs'16
+                            - \staccato
+                            ~
+                            fs'16
+                            <g' a'>16
+                            - \staccato
+                            af'8.
+                            - \staccato
+                            e'16
                             \ff
                             - \staccato
                             - \tweak stencil #constante-hairpin
@@ -1288,18 +1300,11 @@
                     {
                         fs'4
                         \mp
+                        - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
-                        ~
                         [
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
-                        fs'16
-                        <g' a'>16
-                        - \staccato
-                        af'16
-                        - \staccato
-                        e'16
+                        <g' a'>4
                         \ff
                         - \staccato
                         - \tweak stencil #constante-hairpin
@@ -1433,13 +1438,15 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
-                            fs'8
+                            fs'16
                             \mp
                             - \staccato
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
                             <g' a'>16
+                            - \staccato
+                            af'16
                             \ff
                             - \staccato
                             - \tweak stencil #constante-hairpin
@@ -1593,21 +1600,29 @@
                         \stopStaff \startStaff
                     }
                     {
-                        fs'8.
+                        fs'16
                         \mp
                         - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        <g' a'>16
+                        <g' a'>8
+                        - \staccato
+                        af'16
                         - \staccato
                     }
                     {
                         \times 4/5 {
                             % [Voice 11 measure 7] %! COMMENT_MEASURE_NUMBERS
-                            af'8.
-                            ~
-                            af'8
+                            e'8.
+                            - \staccato
+                            fs'16
+                            - \staccato
+                            <g' a'>16
+                            \ff
+                            - \staccato
+                            - \tweak stencil #constante-hairpin
+                            \<
                             ]
                         }
                     }
@@ -1688,26 +1703,32 @@
                     }
                     {
                         % [Voice 12 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        fs''8
+                        fs''8.
                         \mp
                         - \staccato
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        <g'' a''>8
+                        \set stemLeftBeamCount = 1
+                        \set stemRightBeamCount = 2
+                        <g'' a''>16
                         ~
-                        <g'' a''>8.
+                        <g'' a''>4
+                        \set stemLeftBeamCount = 2
+                        \set stemRightBeamCount = 2
                         af''16
                         - \staccato
                         e''16
                         - \staccato
                         fs''16
                         - \staccato
-                        <g'' a''>8
+                        <g'' a''>16
                         - \staccato
+                        ~
+                        <g'' a''>16
                         af''16
                         - \staccato
-                        e''8.
+                        e''8
                         \ff
                         - \staccato
                         - \tweak stencil #constante-hairpin

@@ -43,7 +43,7 @@ rmaker_two = abjadext.rmakers.EvenDivisionRhythmMaker(
 
 rmaker_three = abjadext.rmakers.TaleaRhythmMaker(
     talea=abjadext.rmakers.Talea(
-        counts=[1, 1, 1, 2, 1, 3, 1, 7, 5],
+        counts=[1, 1, 1, 2, 1, 3, 1, 4, 5],
         denominator=16,
         ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
@@ -133,7 +133,7 @@ trumpetmusicmaker_one = MusicMaker(
 )
 trumpetmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=[-4],
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
@@ -228,7 +228,7 @@ trombonemusicmaker_one = MusicMaker(
 )
 trombonemusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=[-10],
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
@@ -266,7 +266,7 @@ hornmusicmaker_one = MusicMaker(
 )
 hornmusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=[-11],
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
@@ -285,7 +285,7 @@ tubamusicmaker_one = MusicMaker(
 )
 tubamusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=[6, 9, 7, 8, 4],
+    pitches=[-12],
     continuous=True,
     attachment_handler=attachment_handler_two,
 )
@@ -369,11 +369,11 @@ voice_5_timespan_list = abjad.TimespanList([
         ),
     )
     for start_offset, stop_offset, music_maker in [
-        [(9, 4), (10, 4), violin1musicmaker_one],
-        [(14, 4), (18, 4), violin1musicmaker_two],
-        [(23, 4), (25, 4), violin1musicmaker_three],
-        [(27, 4), (30, 4), violin1musicmaker_one],
-        [(30, 4), (32, 4), violin1musicmaker_one],
+        [(9, 4), (10, 4), trumpetmusicmaker_one],
+        [(14, 4), (18, 4), trumpetmusicmaker_two],
+        [(23, 4), (25, 4), trumpetmusicmaker_three],
+        [(27, 4), (30, 4), trumpetmusicmaker_one],
+        [(30, 4), (32, 4), trumpetmusicmaker_one],
     ]
 ])
 
@@ -387,10 +387,10 @@ voice_8_timespan_list = abjad.TimespanList([
         ),
     )
     for start_offset, stop_offset, music_maker in [
-        [(9, 4), (10, 4), trumpetmusicmaker_one],
-        [(14, 4), (18, 4), trumpetmusicmaker_two],
-        [(22, 4), (25, 4), trumpetmusicmaker_three],
-        [(27, 4), (30, 4), trumpetmusicmaker_one],
+        [(9, 4), (10, 4), violin1musicmaker_one],
+        [(14, 4), (18, 4), violin1musicmaker_two],
+        [(22, 4), (25, 4), violin1musicmaker_three],
+        [(27, 4), (30, 4), violin1musicmaker_one],
     ]
 ])
 

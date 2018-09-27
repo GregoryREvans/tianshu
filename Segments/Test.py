@@ -724,8 +724,8 @@ for time_signature in time_signatures:
 
 print('Making containers ...')
 
-def make_container(music_maker, durations, state):
-    selections = music_maker(duration, previous_state=state)
+def make_container(music_maker, durations):
+    selections = music_maker(durations)
     container = abjad.Container([])
     container.extend(selections)
     # # Add analysis brackets so we can see the phrasing graphically
@@ -774,7 +774,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
         # voice they belong to because their annotation records that
         # information.
         durations = [timespan.duration for timespan in grouper]
-        container = make_container(music_maker, durations, state)
+        container = make_container(music_maker, durations)
         voice = score[voice_name]
         voice.append(container)
 

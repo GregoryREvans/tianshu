@@ -18,16 +18,16 @@ class MusicMaker:
         self._count = 0
 
     def __call__(self, durations):
-        return self._make_music(durations, previous_state)
+        return self._make_music(durations)
 
-    def _make_basic_rhythm(self, durations, previous_state):
+    def _make_basic_rhythm(self, durations):
         state = self.state
-        selections = self.rmaker(durations, previous_state=state)
+        selections = self.rmaker(durations, previous_state=self.rmaker.state)
         self.state = self.rmaker.state
         return selections
 
-    def _make_music(self, durations, previous_state):
-        selections = self._make_basic_rhythm(durations, previous_state)
+    def _make_music(self, durations):
+        selections = self._make_basic_rhythm(durations)
         if self.pitches == None:
             selections = self.attachment_handler.add_attachments(selections)
             return selections

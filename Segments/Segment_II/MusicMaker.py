@@ -8,20 +8,22 @@ class MusicMaker:
         attachment_handler=None,
         pitches=None,
         continuous=False,
+        state=None,
     ):
         self.attachment_handler = attachment_handler
         self.rmaker = rmaker
         self.pitches = pitches
         self.continuous = continuous
+        self.state = self.rmaker.state
         self._count = 0
-        self._state = self.rmaker.state
 
     def __call__(self, durations):
         return self._make_music(durations)
 
     def _make_basic_rhythm(self, durations):
-        selections = self.rmaker(durations, previous_state=self._state)
-        self._state = self.rmaker.state
+        state = self.state
+        selections = self.rmaker(durations, previous_state=self.rmaker.state)
+        self.state = self.rmaker.state
         return selections
 
     def _make_music(self, durations):
@@ -55,9 +57,14 @@ class MusicMaker:
         leaf_maker = abjad.LeafMaker()
         container = abjad.Container(selections)
         old_ties = [tie for tie in abjad.iterate(
-            container).logical_ties(pitched=True)]
+            container).logical_ties()]
         pitches, durations, old_leaves = self._collect_pitches_durations_leaves(
             old_ties, pitches)
+        # print(selections)
+        # print(pitches)
+        # print(durations)
+        # print(old_leaves)
+        # print()
         new_leaves = [leaf for leaf in leaf_maker(pitches, durations)]
         for old_leaf, new_leaf in zip(old_leaves, new_leaves):
             indicators = abjad.inspect(old_leaf).indicators()

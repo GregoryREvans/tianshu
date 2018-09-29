@@ -20,7 +20,11 @@ time_signatures = [
         (4, 4), (4, 4), (5, 4), (5, 4), (3, 4), (3, 4),
         (2, 4), (3, 4), (4, 4), (3, 4), (4, 4), (3, 4),
         (5, 4), (3, 4), (3, 4), (4, 4), (3, 4), (3, 4),
-        (2, 4),#temporary fix
+        (4, 4), (5, 4), (4, 4), (3, 4), (5, 4), (5, 4),
+        (5, 4), (5, 4), (4, 4), (4, 4), (5, 4), (5, 4),
+        (4, 4), (4, 4), (3, 4), (4, 4), (4, 4), (3, 4),
+        (4, 4),
+        (1, 4),
     ]
 ]
 
@@ -326,18 +330,16 @@ bass_random_walk_two = [abs(x) for x in bass_random_walk_two]
 bass_chord_two = [-27, -24, -16, -5, -16, -24, ]
 bass_notes_two = [bass_chord_two[x] for x in reduceMod5(bass_random_walk_two)]
 
-# Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
+# Define rhythm-makers: to be used by the MusicMaker, one for silence.
 
-rmaker_one = abjadext.rmakers.NoteRhythmMaker()
-
-rmaker_two = abjadext.rmakers.EvenDivisionRhythmMaker(
+rmaker_one = abjadext.rmakers.EvenDivisionRhythmMaker(
     denominators=[16, 16, 8, 16, 4, 16, 8],
-    extra_counts_per_division=[0, 1, 0, 0, -1, 0, 1],
+    extra_counts_per_division=[1, 1, 0, -1, 0, 1, -1],
     burnish_specifier=abjadext.rmakers.BurnishSpecifier(
         left_classes=[abjad.Rest],
-        left_counts=[1],
+        left_counts=[1, 2, 3],
         right_classes=[abjad.Rest],
-        right_counts=[1],
+        right_counts=[1, 2, 3],
         outer_divisions_only=True,
         ),
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
@@ -347,25 +349,18 @@ rmaker_two = abjadext.rmakers.EvenDivisionRhythmMaker(
         ),
     )
 
-rmaker_three = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(
-        counts=[1, 1, 1, 2, 1, 3, 1, 4, 5],
-        denominator=16,
+rmaker_two = abjadext.rmakers.IncisedRhythmMaker(
+    incise_specifier=abjadext.rmakers.InciseSpecifier(
+        prefix_talea=[-1],
+        prefix_counts=[0, 1],
+        suffix_talea=[-1],
+        suffix_counts=[1],
+        talea_denominator=16,
         ),
-    beam_specifier=abjadext.rmakers.BeamSpecifier(
-        beam_divisions_together=True,
-        beam_rests=False,
-        ),
-    extra_counts_per_division=[0, 1, 0, -1],
-    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Note, abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
-    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
-        trivialize=True,
-        extract_trivial=True,
-        rewrite_rest_filled=True,
-        ),
+    )
+
+rmaker_three = abjadext.rmakers.TupletRhythmMaker(
+    tuplet_ratios=[(1, 3, 2, 1, 2, 1, 1)],
     )
 
 # Initialize AttachmentHandler
@@ -388,7 +383,7 @@ attachment_handler_three = AttachmentHandler(
     starting_dynamic='mp',
     ending_dynamic='ff',
     hairpin_indicator='<|',
-    articulation='staccato',
+    articulation='',
 )
 
 # Initialize MusicMakers with the rhythm-makers.
@@ -683,7 +678,25 @@ voice_1_timespan_list = abjad.TimespanList([
         [(104, 4), (105, 4), flutemusicmaker_one],
         [(106, 4), (107, 4), flutemusicmaker_two],
         [(107, 4), (108, 4), flutemusicmaker_two],
-        [(109, 4), (112, 4), silence_maker],#temporary fix
+        [(111, 4), (114, 4), flutemusicmaker_one],
+        [(114, 4), (115, 4), flutemusicmaker_one],
+        [(116, 4), (119, 4), flutemusicmaker_one],
+        [(119, 4), (120, 4), flutemusicmaker_one],
+        [(121, 4), (123, 4), flutemusicmaker_one],
+        [(123, 4), (125, 4), flutemusicmaker_one],
+        [(126, 4), (131, 4), flutemusicmaker_two],
+        [(131, 4), (133, 4), flutemusicmaker_two],
+        [(136, 4), (141, 4), flutemusicmaker_two],
+        [(148, 4), (150, 4), flutemusicmaker_two],
+        [(150, 4), (153, 4), flutemusicmaker_three],
+        [(155, 4), (159, 4), flutemusicmaker_three],
+        [(162, 4), (164, 4), flutemusicmaker_three],
+        [(168, 4), (171, 4), flutemusicmaker_three],
+        [(173, 4), (175, 4), flutemusicmaker_three],
+        [(175, 4), (177, 4), flutemusicmaker_three],
+        [(180, 4), (182, 4), flutemusicmaker_three],
+        [(186, 4), (190, 4), flutemusicmaker_three],
+        [(190, 4), (191, 4), silence_maker],
     ]
 ])
 
@@ -723,6 +736,25 @@ voice_5_timespan_list = abjad.TimespanList([
         [(104, 4), (105, 4), trumpetmusicmaker_one],
         [(106, 4), (107, 4), trumpetmusicmaker_two],
         [(107, 4), (108, 4), trumpetmusicmaker_two],
+        [(111, 4), (114, 4), trumpetmusicmaker_one],
+        [(114, 4), (115, 4), trumpetmusicmaker_one],
+        [(116, 4), (119, 4), trumpetmusicmaker_one],
+        [(119, 4), (120, 4), trumpetmusicmaker_one],
+        [(121, 4), (123, 4), trumpetmusicmaker_one],
+        [(123, 4), (125, 4), trumpetmusicmaker_one],
+        [(126, 4), (131, 4), trumpetmusicmaker_two],
+        [(131, 4), (133, 4), trumpetmusicmaker_two],
+        [(136, 4), (141, 4), trumpetmusicmaker_two],
+        [(148, 4), (150, 4), trumpetmusicmaker_two],
+        [(150, 4), (154, 4), trumpetmusicmaker_three],
+        [(157, 4), (159, 4), trumpetmusicmaker_three],
+        [(163, 4), (164, 4), trumpetmusicmaker_three],
+        [(164, 4), (166, 4), trumpetmusicmaker_three],
+        [(168, 4), (172, 4), trumpetmusicmaker_three],
+        [(175, 4), (177, 4), trumpetmusicmaker_three],
+        [(181, 4), (183, 4), trumpetmusicmaker_three],
+        [(183, 4), (184, 4), trumpetmusicmaker_three],
+        [(186, 4), (190, 4), trumpetmusicmaker_three],
     ]
 ])
 
@@ -761,6 +793,25 @@ voice_8_timespan_list = abjad.TimespanList([
         [(104, 4), (105, 4), violin1musicmaker_one],
         [(106, 4), (107, 4), violin1musicmaker_two],
         [(107, 4), (108, 4), violin1musicmaker_two],
+        [(111, 4), (114, 4), violin1musicmaker_one],
+        [(114, 4), (115, 4), violin1musicmaker_one],
+        [(116, 4), (119, 4), violin1musicmaker_one],
+        [(119, 4), (120, 4), violin1musicmaker_one],
+        [(121, 4), (123, 4), violin1musicmaker_one],
+        [(123, 4), (125, 4), violin1musicmaker_one],
+        [(126, 4), (131, 4), violin1musicmaker_two],
+        [(131, 4), (133, 4), violin1musicmaker_two],
+        [(136, 4), (141, 4), violin1musicmaker_two],
+        [(148, 4), (150, 4), violin1musicmaker_two],
+        [(150, 4), (152, 4), violin1musicmaker_three],
+        [(156, 4), (159, 4), violin1musicmaker_three],
+        [(161, 4), (164, 4), violin1musicmaker_three],
+        [(164, 4), (165, 4), violin1musicmaker_three],
+        [(168, 4), (170, 4), violin1musicmaker_three],
+        [(174, 4), (175, 4), violin1musicmaker_three],
+        [(175, 4), (177, 4), violin1musicmaker_three],
+        [(179, 4), (183, 4), violin1musicmaker_three],
+        [(186, 4), (190, 4), violin1musicmaker_three],
     ]
 ])
 
@@ -800,6 +851,24 @@ voice_2_timespan_list = abjad.TimespanList([
         [(100, 4), (101, 4), clarinetmusicmaker_two],
         [(103, 4), (104, 4), clarinetmusicmaker_one],
         [(104, 4), (106, 4), clarinetmusicmaker_one],
+        [(110, 4), (114, 4), clarinetmusicmaker_one],
+        [(115, 4), (119, 4), clarinetmusicmaker_one],
+        [(120, 4), (123, 4), clarinetmusicmaker_one],
+        [(123, 4), (124, 4), clarinetmusicmaker_one],
+        [(125, 4), (126, 4), clarinetmusicmaker_two],
+        [(129, 4), (131, 4), clarinetmusicmaker_two],
+        [(131, 4), (134, 4), clarinetmusicmaker_two],
+        [(141, 4), (144, 4), clarinetmusicmaker_two],
+        [(149, 4), (150, 4), clarinetmusicmaker_two],
+        [(155, 4), (159, 4), clarinetmusicmaker_three],
+        [(162, 4), (164, 4), clarinetmusicmaker_three],
+        [(165, 4), (168, 4), clarinetmusicmaker_three],
+        [(168, 4), (170, 4), clarinetmusicmaker_three],
+        [(174, 4), (175, 4), clarinetmusicmaker_three],
+        [(175, 4), (177, 4), clarinetmusicmaker_three],
+        [(179, 4), (180, 4), clarinetmusicmaker_three],
+        [(185, 4), (186, 4), clarinetmusicmaker_three],
+        [(186, 4), (190, 4), clarinetmusicmaker_three],
     ]
 ])
 
@@ -838,6 +907,24 @@ voice_9_timespan_list = abjad.TimespanList([
         [(100, 4), (101, 4), violin2musicmaker_two],
         [(103, 4), (104, 4), violin2musicmaker_one],
         [(104, 4), (106, 4), violin2musicmaker_one],
+        [(110, 4), (114, 4), violin2musicmaker_one],
+        [(115, 4), (119, 4), violin2musicmaker_one],
+        [(120, 4), (123, 4), violin2musicmaker_one],
+        [(123, 4), (124, 4), violin2musicmaker_one],
+        [(125, 4), (126, 4), violin2musicmaker_two],
+        [(129, 4), (131, 4), violin2musicmaker_two],
+        [(131, 4), (134, 4), violin2musicmaker_two],
+        [(141, 4), (144, 4), violin2musicmaker_two],
+        [(149, 4), (150, 4), violin2musicmaker_two],
+        [(154, 4), (157, 4), violin2musicmaker_three],
+        [(159, 4), (160, 4), violin2musicmaker_three],
+        [(165, 4), (168, 4), violin2musicmaker_three],
+        [(168, 4), (169, 4), violin2musicmaker_three],
+        [(172, 4), (174, 4), violin2musicmaker_three],
+        [(175, 4), (179, 4), violin2musicmaker_three],
+        [(179, 4), (180, 4), violin2musicmaker_three],
+        [(184, 4), (186, 4), violin2musicmaker_three],
+        [(186, 4), (190, 4), violin2musicmaker_three],
     ]
 ])
 
@@ -878,6 +965,25 @@ voice_10_timespan_list = abjad.TimespanList([
         [(100, 4), (101, 4), violamusicmaker_two],
         [(103, 4), (104, 4), violamusicmaker_one],
         [(104, 4), (106, 4), violamusicmaker_one],
+        [(110, 4), (114, 4), violamusicmaker_one],
+        [(115, 4), (119, 4), violamusicmaker_one],
+        [(120, 4), (123, 4), violamusicmaker_one],
+        [(123, 4), (124, 4), violamusicmaker_one],
+        [(125, 4), (126, 4), violamusicmaker_two],
+        [(129, 4), (131, 4), violamusicmaker_two],
+        [(131, 4), (134, 4), violamusicmaker_two],
+        [(141, 4), (144, 4), violamusicmaker_two],
+        [(149, 4), (150, 4), violamusicmaker_two],
+        [(153, 4), (154, 4), violamusicmaker_three],
+        [(154, 4), (155, 4), violamusicmaker_three],
+        [(156, 4), (159, 4), violamusicmaker_three],
+        [(159, 4), (161, 4), violamusicmaker_three],
+        [(165, 4), (168, 4), violamusicmaker_three],
+        [(170, 4), (171, 4), violamusicmaker_three],
+        [(176, 4), (179, 4), violamusicmaker_three],
+        [(179, 4), (180, 4), violamusicmaker_three],
+        [(183, 4), (185, 4), violamusicmaker_three],
+        [(186, 4), (190, 4), violamusicmaker_three],
     ]
 ])
 
@@ -917,6 +1023,25 @@ voice_3_timespan_list = abjad.TimespanList([
         [(97, 4), (98, 4), bassoonmusicmaker_one],
         [(100, 4), (103, 4), bassoonmusicmaker_two],
         [(107, 4), (110, 4), bassoonmusicmaker_three],
+        [(110, 4), (112, 4), bassoonmusicmaker_one],
+        [(113, 4), (114, 4), bassoonmusicmaker_one],
+        [(114, 4), (117, 4), bassoonmusicmaker_one],
+        [(118, 4), (119, 4), bassoonmusicmaker_one],
+        [(119, 4), (122, 4), bassoonmusicmaker_one],
+        [(123, 4), (125, 4), bassoonmusicmaker_one],
+        [(126, 4), (131, 4), bassoonmusicmaker_two],
+        [(138, 4), (141, 4), bassoonmusicmaker_two],
+        [(146, 4), (150, 4), bassoonmusicmaker_two],
+        [(150, 4), (154, 4), bassoonmusicmaker_three],
+        [(154, 4), (155, 4), bassoonmusicmaker_three],
+        [(159, 4), (162, 4), bassoonmusicmaker_three],
+        [(164, 4), (165, 4), bassoonmusicmaker_three],
+        [(170, 4), (172, 4), bassoonmusicmaker_three],
+        [(172, 4), (174, 4), bassoonmusicmaker_three],
+        [(177, 4), (179, 4), bassoonmusicmaker_three],
+        [(180, 4), (183, 4), bassoonmusicmaker_three],
+        [(183, 4), (185, 4), bassoonmusicmaker_three],
+        [(186, 4), (190, 4), bassoonmusicmaker_three],
     ]
 ])
 
@@ -954,6 +1079,24 @@ voice_6_timespan_list = abjad.TimespanList([
         [(97, 4), (98, 4), trombonemusicmaker_one],
         [(100, 4), (103, 4), trombonemusicmaker_two],
         [(107, 4), (110, 4), trombonemusicmaker_three],
+        [(110, 4), (112, 4), trombonemusicmaker_one],
+        [(113, 4), (114, 4), trombonemusicmaker_one],
+        [(114, 4), (117, 4), trombonemusicmaker_one],
+        [(118, 4), (119, 4), trombonemusicmaker_one],
+        [(119, 4), (122, 4), trombonemusicmaker_one],
+        [(123, 4), (125, 4), trombonemusicmaker_one],
+        [(126, 4), (131, 4), trombonemusicmaker_two],
+        [(138, 4), (141, 4), trombonemusicmaker_two],
+        [(146, 4), (150, 4), trombonemusicmaker_two],
+        [(150, 4), (154, 4), trombonemusicmaker_three],
+        [(157, 4), (159, 4), trombonemusicmaker_three],
+        [(160, 4), (164, 4), trombonemusicmaker_three],
+        [(164, 4), (165, 4), trombonemusicmaker_three],
+        [(169, 4), (172, 4), trombonemusicmaker_three],
+        [(174, 4), (175, 4), trombonemusicmaker_three],
+        [(180, 4), (183, 4), trombonemusicmaker_three],
+        [(183, 4), (184, 4), trombonemusicmaker_three],
+        [(186, 4), (190, 4), trombonemusicmaker_three],
     ]
 ])
 
@@ -991,6 +1134,26 @@ voice_11_timespan_list = abjad.TimespanList([
         [(97, 4), (98, 4), cellomusicmaker_one],
         [(100, 4), (103, 4), cellomusicmaker_two],
         [(107, 4), (110, 4), cellomusicmaker_three],
+        [(110, 4), (112, 4), cellomusicmaker_one],
+        [(113, 4), (114, 4), cellomusicmaker_one],
+        [(114, 4), (117, 4), cellomusicmaker_one],
+        [(118, 4), (119, 4), cellomusicmaker_one],
+        [(119, 4), (122, 4), cellomusicmaker_one],
+        [(123, 4), (125, 4), cellomusicmaker_one],
+        [(126, 4), (131, 4), cellomusicmaker_two],
+        [(138, 4), (141, 4), cellomusicmaker_two],
+        [(146, 4), (150, 4), cellomusicmaker_two],
+        [(150, 4), (153, 4), cellomusicmaker_three],
+        [(155, 4), (156, 4), cellomusicmaker_three],
+        [(161, 4), (164, 4), cellomusicmaker_three],
+        [(164, 4), (165, 4), cellomusicmaker_three],
+        [(168, 4), (170, 4), cellomusicmaker_three],
+        [(171, 4), (172, 4), cellomusicmaker_three],
+        [(172, 4), (175, 4), cellomusicmaker_three],
+        [(175, 4), (176, 4), cellomusicmaker_three],
+        [(180, 4), (183, 4), cellomusicmaker_three],
+        [(185, 4), (186, 4), cellomusicmaker_three],
+        [(186, 4), (190, 4), cellomusicmaker_three],
     ]
 ])
 
@@ -1026,6 +1189,27 @@ voice_4_timespan_list = abjad.TimespanList([
         [(95, 4), (97, 4), hornmusicmaker_two],
         [(100, 4), (104, 4), hornmusicmaker_three],
         [(109, 4), (110, 4), hornmusicmaker_two],
+        [(110, 4), (111, 4), hornmusicmaker_one],
+        [(112, 4), (114, 4), hornmusicmaker_one],
+        [(114, 4), (116, 4), hornmusicmaker_one],
+        [(117, 4), (119, 4), hornmusicmaker_one],
+        [(119, 4), (121, 4), hornmusicmaker_one],
+        [(122, 4), (123, 4), hornmusicmaker_one],
+        [(123, 4), (125, 4), hornmusicmaker_one],
+        [(133, 4), (136, 4), hornmusicmaker_two],
+        [(142, 4), (146, 4), hornmusicmaker_two],
+        [(146, 4), (150, 4), hornmusicmaker_two],
+        [(153, 4), (154, 4), hornmusicmaker_three],
+        [(154, 4), (155, 4), hornmusicmaker_three],
+        [(159, 4), (162, 4), hornmusicmaker_three],
+        [(164, 4), (168, 4), hornmusicmaker_three],
+        [(171, 4), (172, 4), hornmusicmaker_three],
+        [(172, 4), (173, 4), hornmusicmaker_three],
+        [(177, 4), (179, 4), hornmusicmaker_three],
+        [(179, 4), (180, 4), hornmusicmaker_three],
+        [(182, 4), (183, 4), hornmusicmaker_three],
+        [(183, 4), (186, 4), hornmusicmaker_three],
+        [(186, 4), (190, 4), hornmusicmaker_three],
     ]
 ])
 
@@ -1061,6 +1245,24 @@ voice_7_timespan_list = abjad.TimespanList([
         [(95, 4), (97, 4), tubamusicmaker_two],
         [(100, 4), (104, 4), tubamusicmaker_three],
         [(109, 4), (110, 4), tubamusicmaker_two],
+        [(110, 4), (111, 4), tubamusicmaker_one],
+        [(112, 4), (114, 4), tubamusicmaker_one],
+        [(114, 4), (116, 4), tubamusicmaker_one],
+        [(117, 4), (119, 4), tubamusicmaker_one],
+        [(119, 4), (121, 4), tubamusicmaker_one],
+        [(122, 4), (123, 4), tubamusicmaker_one],
+        [(123, 4), (125, 4), tubamusicmaker_one],
+        [(133, 4), (136, 4), tubamusicmaker_two],
+        [(142, 4), (146, 4), tubamusicmaker_two],
+        [(146, 4), (150, 4), tubamusicmaker_two],
+        [(154, 4), (157, 4), tubamusicmaker_three],
+        [(159, 4), (163, 4), tubamusicmaker_three],
+        [(166, 4), (168, 4), tubamusicmaker_three],
+        [(172, 4), (175, 4), tubamusicmaker_three],
+        [(177, 4), (179, 4), tubamusicmaker_three],
+        [(179, 4), (181, 4), tubamusicmaker_three],
+        [(184, 4), (186, 4), tubamusicmaker_three],
+        [(186, 4), (190, 4), tubamusicmaker_three],
     ]
 ])
 
@@ -1095,6 +1297,25 @@ voice_12_timespan_list = abjad.TimespanList([
         [(95, 4), (97, 4), bassmusicmaker_two],
         [(100, 4), (104, 4), bassmusicmaker_three],
         [(109, 4), (110, 4), bassmusicmaker_two],
+        [(110, 4), (111, 4), bassmusicmaker_one],
+        [(112, 4), (114, 4), bassmusicmaker_one],
+        [(114, 4), (116, 4), bassmusicmaker_one],
+        [(117, 4), (119, 4), bassmusicmaker_one],
+        [(119, 4), (121, 4), bassmusicmaker_one],
+        [(122, 4), (123, 4), bassmusicmaker_one],
+        [(123, 4), (125, 4), bassmusicmaker_one],
+        [(133, 4), (136, 4), bassmusicmaker_two],
+        [(142, 4), (146, 4), bassmusicmaker_two],
+        [(146, 4), (150, 4), bassmusicmaker_two],
+        [(152, 4), (154, 4), bassmusicmaker_three],
+        [(154, 4), (156, 4), bassmusicmaker_three],
+        [(159, 4), (161, 4), bassmusicmaker_three],
+        [(165, 4), (168, 4), bassmusicmaker_three],
+        [(170, 4), (172, 4), bassmusicmaker_three],
+        [(172, 4), (174, 4), bassmusicmaker_three],
+        [(177, 4), (179, 4), bassmusicmaker_three],
+        [(183, 4), (186, 4), bassmusicmaker_three],
+        [(186, 4), (190, 4), bassmusicmaker_three],
     ]
 ])
 
@@ -1420,10 +1641,20 @@ def cyc(lst):
 #attach instruments and clefs
 
 print('Adding attachments ...')
-bar_line = abjad.BarLine('|.')
-metro = abjad.MetronomeMark((1, 4), 108)
-markup = abjad.Markup(r'\bold { A }')
-mark = abjad.RehearsalMark(markup=markup)
+bar_line = abjad.BarLine('||')
+metro = abjad.MetronomeMark((1, 4), 90)
+markup1 = abjad.Markup(r'\bold { G }')
+markup2 = abjad.Markup(r'\bold { H }')
+markup3 = abjad.Markup(r'\bold { I }')
+markup4 = abjad.Markup(r'\bold { J }')
+markup5 = abjad.Markup(r'\bold { K }')
+markup6 = abjad.Markup(r'\bold { L }')
+mark1 = abjad.RehearsalMark(markup=markup1)
+mark2 = abjad.RehearsalMark(markup=markup2)
+mark3 = abjad.RehearsalMark(markup=markup3)
+mark4 = abjad.RehearsalMark(markup=markup4)
+mark5 = abjad.RehearsalMark(markup=markup5)
+mark6 = abjad.RehearsalMark(markup=markup6)
 
 instruments1 = cyc([
     abjad.Flute(),
@@ -1549,8 +1780,28 @@ for staff in abjad.select(score['Staff Group 3']).components(abjad.Staff)[0]:
     abjad.attach(bar_line, last_leaf)
 
 for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
-    leaf1 = abjad.select(staff).leaves()[0]
-    abjad.attach(mark, leaf1)
+    leaf1 = abjad.select(staff).leaves()[7]
+    abjad.attach(mark1, leaf1)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf2 = abjad.select(staff).leaves()[16]
+    abjad.attach(mark2, leaf2)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf3 = abjad.select(staff).leaves()[22]
+    abjad.attach(mark3, leaf3)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf4 = abjad.select(staff).leaves()[29]
+    abjad.attach(mark4, leaf4)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf5 = abjad.select(staff).leaves()[34]
+    abjad.attach(mark5, leaf5)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf6 = abjad.select(staff).leaves()[39]
+    abjad.attach(mark6, leaf6)
 
 for staff in abjad.iterate(score['Staff Group 1']).components(abjad.Staff):
     abjad.Instrument.transpose_from_sounding_pitch(staff)
@@ -1571,9 +1822,9 @@ score_file = abjad.LilyPondFile.new(
 abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
 
-directory = '/Users/evansdsg2/Scores/tianshu/Segments'
-pdf_path = f'{directory}/Test.pdf'
-path = pathlib.Path('Test.pdf')
+directory = '/Users/evansdsg2/Scores/tianshu/Segments/Segment_II'
+pdf_path = f'{directory}/Segment_II.pdf'
+path = pathlib.Path('Segment_II.pdf')
 if path.exists():
     print(f'Removing {pdf_path} ...')
     path.unlink()

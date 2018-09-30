@@ -332,28 +332,9 @@ bass_notes_two = [bass_chord_two[x] for x in reduceMod5(bass_random_walk_two)]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
-rmaker_one = abjadext.rmakers.NoteRhythmMaker()
-
-rmaker_two = abjadext.rmakers.EvenDivisionRhythmMaker(
-    denominators=[16, 16, 8, 16, 4, 16, 8],
-    extra_counts_per_division=[0, 1, 0, 0, -1, 0, 1, -1],
-    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Rest],
-        left_counts=[1],
-        right_classes=[abjad.Rest],
-        right_counts=[1],
-        outer_divisions_only=True,
-        ),
-    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
-        trivialize=True,
-        extract_trivial=True,
-        rewrite_rest_filled=True,
-        ),
-    )
-
-rmaker_three = abjadext.rmakers.TaleaRhythmMaker(
+rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
     talea=abjadext.rmakers.Talea(
-        counts=[1, 1, 1, 2, 1, 3, 1, 4, 5],
+        counts=[6, 2, 4, 2, 6, 1, 12, 8, 10, ],
         denominator=16,
         ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
@@ -369,6 +350,18 @@ rmaker_three = abjadext.rmakers.TaleaRhythmMaker(
         trivialize=True,
         extract_trivial=True,
         rewrite_rest_filled=True,
+        ),
+    )
+
+rmaker_two = abjadext.rmakers.NoteRhythmMaker()
+
+rmaker_three = abjadext.rmakers.IncisedRhythmMaker(
+    incise_specifier=abjadext.rmakers.InciseSpecifier(
+        prefix_talea=[-1],
+        prefix_counts=[0, 1, 1, 0],
+        suffix_talea=[-1],
+        suffix_counts=[1, 0],
+        talea_denominator=16,
         ),
     )
 

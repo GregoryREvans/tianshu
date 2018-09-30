@@ -250,9 +250,10 @@
                     {
                         % [Voice 1 measure 5] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         bf'16
                         \fff
                         - \tenuto
@@ -275,21 +276,18 @@
                         bf'16
                         - \tenuto
                         e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 1 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -354,11 +352,12 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 16/17 {
                             % [Voice 1 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             bf'16
                             \fff
                             - \tenuto
@@ -366,6 +365,10 @@
                             [
                             e''16
                             - \tenuto
+                            bf'16
+                            - \tenuto
+                            e''16
+                            - \tenuto
                             b''16
                             - \tenuto
                             e''16
@@ -385,14 +388,6 @@
                             bf'16
                             - \tenuto
                             e''16
-                            - \tenuto
-                            b''16
-                            - \tenuto
-                            cs'''16
-                            - \tenuto
-                            d'''16
-                            - \tenuto
-                            cs'''16
                             - \tenuto
                             b''16
                             \mf
@@ -400,12 +395,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 1 measure 11] %! COMMENT_MEASURE_NUMBERS
@@ -464,22 +460,19 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 1 measure 15] %! COMMENT_MEASURE_NUMBERS
-                        e''8
+                        r8
+                        \stopStaff \startStaff
+                        cs'''8
                         \fff
                         - \tenuto
                         \>
                         [
-                        bf'8
+                        d'''8
                         - \tenuto
-                        f'8
-                        - \tenuto
-                        bf'8
-                        - \tenuto
-                        e''8
+                        cs'''8
                         - \tenuto
                         b''8
                         \mf
@@ -487,11 +480,12 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -543,48 +537,46 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 1 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        cs'''16
+                        r16
+                        \stopStaff \startStaff
+                        e''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
                         bf'16
                         - \tenuto
                         f'16
                         - \tenuto
+                        bf'16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        bf'16
+                        cs'''16
                         - \tenuto
                     }
                     {
                         % [Voice 1 measure 20] %! COMMENT_MEASURE_NUMBERS
-                        e''4.
-                        - \tenuto
-                        bf'4.
+                        b''4.
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4.
+                        \!
                     }
                     {
                         % [Voice 1 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -644,29 +636,27 @@
                     {
                         % [Voice 1 measure 25] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        f'16
+                        r16
+                        \stopStaff \startStaff
+                        e''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
                         bf'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -737,10 +727,11 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 2/3 {
+                            r8
+                            \stopStaff \startStaff
                             e''8
                             \fff
                             - \tenuto
@@ -748,30 +739,27 @@
                             [
                             bf'8
                             - \tenuto
-                            e''8
-                            - \tenuto
                         }
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 1 measure 30] %! COMMENT_MEASURE_NUMBERS
-                            b''16
+                            f'16
                             - \tenuto
-                            cs'''16
-                            - \tenuto
-                            d'''16
+                            bf'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 1 measure 31] %! COMMENT_MEASURE_NUMBERS
@@ -845,15 +833,40 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 1 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        cs'''16
+                        r16
+                        \stopStaff \startStaff
+                        e''16
                         \fff
                         - \tenuto
                         \>
                         [
+                        bf'16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
                         d'''16
                         - \tenuto
                         cs'''16
@@ -865,39 +878,11 @@
                         b''16
                         - \tenuto
                         cs'''16
-                        - \tenuto
-                        d'''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        d'''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        d'''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        d'''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        d'''16
                         - \tenuto
                     }
                     {
                         \times 4/5 {
                             % [Voice 1 measure 36] %! COMMENT_MEASURE_NUMBERS
-                            cs'''8
-                            - \tenuto
                             d'''8
                             - \tenuto
                             cs'''8
@@ -910,46 +895,24 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 1 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        b''16
+                        r16
+                        \stopStaff \startStaff
+                        d'''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
+                        cs'''16
                         - \tenuto
                         b''16
                         - \tenuto
@@ -962,43 +925,58 @@
                         b''16
                         - \tenuto
                         cs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        e''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 1 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 1 measure 39] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
-                        d'''2
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        [
+                        r2
+                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 1 measure 40] %! COMMENT_MEASURE_NUMBERS
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
                             e'''8
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             fs'''16
@@ -1273,11 +1251,12 @@
                     {
                         % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
+                            r16
+                            \stopStaff \startStaff
                             g'16
                             \fff
                             - \tenuto
@@ -1285,29 +1264,26 @@
                             [
                             c''16
                             - \tenuto
-                            g'16
-                            - \tenuto
                         }
                     }
                     {
                         % [Voice 2 measure 4] %! COMMENT_MEASURE_NUMBERS
+                        g'8
+                        - \tenuto
                         a8
                         - \tenuto
                         g'8
-                        - \tenuto
-                        c''8
-                        - \tenuto
-                        fs''8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 2 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -1398,10 +1374,11 @@
                     {
                         % [Voice 2 measure 12] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
+                            r16
+                            \stopStaff \startStaff
                             c''16
                             \fff
                             - \tenuto
@@ -1409,6 +1386,10 @@
                             [
                             fs''16
                             - \tenuto
+                            c''16
+                            - \tenuto
+                            fs''16
+                            - \tenuto
                             cs'''16
                             - \tenuto
                             ds'''16
@@ -1416,12 +1397,6 @@
                             cs'''16
                             - \tenuto
                             fs''16
-                            - \tenuto
-                            c''16
-                            - \tenuto
-                            fs''16
-                            - \tenuto
-                            cs'''16
                             - \tenuto
                         }
                     }
@@ -1429,22 +1404,21 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 2 measure 13] %! COMMENT_MEASURE_NUMBERS
-                            ds'''16
+                            c''16
                             - \tenuto
-                            e'''16
-                            - \tenuto
-                            ds'''16
+                            fs''16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -1486,30 +1460,28 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
+                        r8
+                        \stopStaff \startStaff
                         cs'''8
                         \fff
                         - \tenuto
                         \>
                         [
-                        fs''8
-                        - \tenuto
-                        c''8
-                        - \tenuto
-                        g'8
+                        ds'''8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 2 measure 17] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -1542,20 +1514,27 @@
                         cs'''16
 
                         f'''8.
+                        \ff
 
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 2 measure 19] %! COMMENT_MEASURE_NUMBERS
-                            cs'''16
-
-                            e''8
-                            \ff
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 0
+                            cs'''8
+                            \mp
 
                             - \tweak stencil #constante-hairpin
                             \<
-                            ]
                         }
                     }
                     {
@@ -1566,20 +1545,21 @@
                     {
                         % [Voice 2 measure 20] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            a16
+                            r16
+                            \stopStaff \startStaff
+                            e'''16
                             \fff
                             - \tenuto
                             \>
                             [
-                            g'16
+                            ds'''16
                             - \tenuto
-                            a16
+                            cs'''16
                             - \tenuto
-                            g'16
+                            fs''16
                             - \tenuto
                             c''16
                             - \tenuto
@@ -1588,26 +1568,21 @@
                             a16
                             - \tenuto
                             g'16
+                            \mf
                             - \tenuto
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c''16
-                            - \tenuto
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
                         }
                     }
                     {
                         % [Voice 2 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        g'4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 2 measure 22] %! COMMENT_MEASURE_NUMBERS
@@ -1635,10 +1610,11 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 2 measure 24] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         a16
                         \fff
                         - \tenuto
@@ -1646,27 +1622,24 @@
                         [
                         g'16
                         - \tenuto
-                        a16
+                        c''16
                         - \tenuto
                         g'16
                         - \tenuto
-                        c''16
+                        a16
                         - \tenuto
-                        fs''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        ds'''16
+                        g'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 2 measure 25] %! COMMENT_MEASURE_NUMBERS
@@ -1674,23 +1647,23 @@
                         \stopStaff \startStaff
                     }
                     {
-                        bf'8.
+                        e''8.
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
+                        bf'16
+
                         g'16
 
                         b16
 
-                        g'16
+                        g'8
 
-                        b8
+                        b16
 
-                        g'16
-
-                        bf'8.
+                        g'8.
 
                     }
                     {
@@ -1698,9 +1671,9 @@
                             % [Voice 2 measure 26] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            g'16
+                            bf'16
 
-                            b4
+                            g'4
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -1716,20 +1689,13 @@
                     {
                         % [Voice 2 measure 27] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 2 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        e'''4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -1809,54 +1775,51 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        ds'''16
+                        r16
+                        \stopStaff \startStaff
+                        g'16
                         \fff
                         - \tenuto
                         \>
                         [
-                        e'''16
-                        - \tenuto
-                        ds'''16
-                        - \tenuto
-                        e'''16
+                        a16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 2 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            ds'''16
+                            r16
+                            \stopStaff \startStaff
+                            g'16
                             \fff
                             - \tenuto
                             \>
                             [
-                            cs'''16
+                            a16
                             - \tenuto
-                            ds'''16
-                            - \tenuto
-                            cs'''16
-                            - \tenuto
-                            ds'''16
-                            - \tenuto
-                            cs'''16
-                            - \tenuto
-                            fs''16
+                            g'16
                             - \tenuto
                             c''16
                             - \tenuto
                             fs''16
+                            - \tenuto
+                            cs'''16
+                            - \tenuto
+                            ds'''16
+                            - \tenuto
+                            e'''16
                             - \tenuto
                         }
                     }
@@ -1864,89 +1827,79 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/5 {
                             % [Voice 2 measure 36] %! COMMENT_MEASURE_NUMBERS
-                            c''8
+                            ds'''8
                             - \tenuto
-                            g'8
+                            e'''8
                             - \tenuto
-                            c''8
+                            ds'''8
                             - \tenuto
-                            g'8
-                            - \tenuto
-                            a8
+                            e'''8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 2 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2.
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 2 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        g'16
+                        r16
+                        \stopStaff \startStaff
+                        ds'''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        a16
+                        cs'''16
                         - \tenuto
-                        g'16
+                        ds'''16
                         - \tenuto
-                        c''16
+                        cs'''16
                         - \tenuto
-                        g'16
+                        ds'''16
                         - \tenuto
-                        c''16
+                        cs'''16
                         - \tenuto
-                        g'16
-                        - \tenuto
-                        c''16
-                        - \tenuto
-                        g'16
+                        fs''16
                         - \tenuto
                         c''16
                         - \tenuto
-                        g'16
+                        fs''16
                         - \tenuto
-                        a16
+                        c''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 2 measure 39] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
-                        g'4
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
                         % [Voice 2 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                     }
                     {
                         % [Voice 2 measure 41] %! COMMENT_MEASURE_NUMBERS
@@ -1954,7 +1907,7 @@
                         \stopStaff \startStaff
                     }
                     {
-                        g'4
+                        b4
                         \mp
                         - \tweak stencil #abjad-flared-hairpin
                         \<
@@ -1962,24 +1915,24 @@
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
+                        b16
                         g'16
+
                         bf'16
 
                         g'16
 
-                        b16
-
-                        g'8
-
-                        b16
+                        b8
 
                         g'16
+
+                        b16
 
                         ~
-                        g'8
-                        bf'16
+                        b8
+                        g'16
 
-                        e''16
+                        bf'16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -1998,13 +1951,13 @@
                         \times 8/7 {
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 1
-                            cs'''8.
+                            e''8.
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            f'''4
+                            cs'''4
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -2020,39 +1973,39 @@
                         \stopStaff \startStaff
                     }
                     {
-                        cs'''16
+                        f'''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
+                        cs'''16
+
                         f'''16
+
+                        cs'''16
+
+                        e''8
 
                         cs'''16
 
                         e''16
 
-                        cs'''8
-
-                        e''16
-
-                        bf'16
-
                         ~
-                        bf'8
-                        e''16
-
+                        e''8
                         bf'16
+
+                        e''16
                         ~
                     }
                     {
                         \times 8/9 {
                             % [Voice 2 measure 44] %! COMMENT_MEASURE_NUMBERS
-                            bf'8.
                             e''8.
+                            bf'8.
                             ~
-                            e''8
-                            bf'16
+                            bf'8
+                            e''16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -2071,30 +2024,30 @@
                         \stopStaff \startStaff
                     }
                     {
-                        g'16
+                        bf'16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        b16
+                        g'16
 
-                        g'8
+                        b8
 
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
                             % [Voice 2 measure 46] %! COMMENT_MEASURE_NUMBERS
-                            b16
+                            g'16
 
-                            g'8
+                            b8
 
                             ~
-                            g'16
                             b16
+                            g'16
 
-                            g'8
+                            b8
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -2110,13 +2063,13 @@
                     }
                     {
                         % [Voice 2 measure 47] %! COMMENT_MEASURE_NUMBERS
-                        bf'8
+                        g'8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        e''8
+                        bf'8
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -2135,37 +2088,37 @@
                     }
                     {
                         \times 4/5 {
-                            bf'8.
+                            e''8.
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            g'16
+                            bf'16
 
-                            b16
+                            g'16
 
                         }
                     }
                     {
                         % [Voice 2 measure 49] %! COMMENT_MEASURE_NUMBERS
-                        g'16
-
                         b16
+
+                        g'16
 
                         ~
-                        b16
                         g'16
+                        b16
 
-                        b8.
+                        g'8.
 
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        g'16
-
-                        b4
+                        b16
 
                         g'4
+
+                        b4
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -2218,29 +2171,27 @@
                     {
                         % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         af,16
                         \fff
                         - \tenuto
                         \>
                         [
                         c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 3 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -2307,9 +2258,10 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
+                        r8
+                        \stopStaff \startStaff
                         af,8
                         \fff
                         - \tenuto
@@ -2320,14 +2272,15 @@
                         af,8
                         - \tenuto
                         c,8
-                        - \tenuto
-                        af,8
-                        - \tenuto
-                        g8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
+                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
@@ -2335,6 +2288,7 @@
                             a8.
                             \mp
                             ~
+                            [
                             a8
                             - \tweak stencil #abjad-flared-hairpin
                             \<
@@ -2345,47 +2299,44 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
+                            r16
+                            \stopStaff \startStaff
                             af,16
                             \fff
                             - \tenuto
                             \>
                             [
-                            g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
                             c,16
                             - \tenuto
                             af,16
                             - \tenuto
                             g16
                             - \tenuto
-                            f'16
+                            af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            g16
                             - \tenuto
                         }
                     }
                     {
                         % [Voice 3 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        g16
+                        af,16
                         - \tenuto
-                        f'16
+                        c,16
                         - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
+                        af,16
                         - \tenuto
                         g16
                         - \tenuto
@@ -2399,11 +2350,12 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
@@ -2454,22 +2406,21 @@
                     {
                         % [Voice 3 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
+                            r8
+                            \stopStaff \startStaff
                             g8
                             \fff
                             - \tenuto
                             \>
                             [
-                            af,8
+                            f'8
                             - \tenuto
-                            c,8
+                            g8
                             - \tenuto
-                            af,8
-                            - \tenuto
-                            c,8
+                            f'8
                             - \tenuto
                         }
                     }
@@ -2477,17 +2428,15 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
                             % [Voice 3 measure 16] %! COMMENT_MEASURE_NUMBERS
-                            af,16
+                            g16
                             - \tenuto
-                            c,16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            c,16
-                            - \tenuto
-                            af,16
+                            f'16
                             - \tenuto
                             g16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            c,16
                             - \tenuto
                             af,16
                             \mf
@@ -2495,12 +2444,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -2571,16 +2521,15 @@
                     {
                         % [Voice 3 measure 21] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
-                        g4
+                        r4
+                        \stopStaff \startStaff
+                        c,4
                         \fff
                         - \tenuto
                         \>
                         [
-                        af,4
-                        - \tenuto
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
@@ -2588,15 +2537,9 @@
                             % [Voice 3 measure 22] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
-                            - \tenuto
                             af,16
                             - \tenuto
-                            g16
-                            - \tenuto
-                            f'16
-                            - \tenuto
-                            g16
+                            c,16
                             - \tenuto
                             af,16
                             - \tenuto
@@ -2606,7 +2549,11 @@
                             - \tenuto
                             g16
                             - \tenuto
-                            f'16
+                            af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
+                            af,16
                             - \tenuto
                             g16
                             - \tenuto
@@ -2618,13 +2565,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 3 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -2657,19 +2605,24 @@
                     {
                         % [Voice 3 measure 24] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
-                        af,8
+                        r8
+                        \stopStaff \startStaff
+                        f'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        c,8
-                        - \tenuto
                     }
                     {
                         % [Voice 3 measure 25] %! COMMENT_MEASURE_NUMBERS
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        c,16
+                        - \tenuto
                         af,16
                         - \tenuto
                         g16
@@ -2678,31 +2631,24 @@
                         - \tenuto
                         g16
                         - \tenuto
-                        f'16
+                        af,16
                         - \tenuto
                         g16
                         - \tenuto
-                        f'16
+                        af,16
                         - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
+                        c,16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 3 measure 26] %! COMMENT_MEASURE_NUMBERS
@@ -2721,21 +2667,18 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
-                            f'16
+                            r16
+                            \stopStaff \startStaff
+                            af,16
                             \fff
                             - \tenuto
                             \>
                             [
-                            g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
                             g16
                             - \tenuto
                             f'16
@@ -2756,12 +2699,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 3 measure 29] %! COMMENT_MEASURE_NUMBERS
@@ -2870,28 +2814,25 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 3 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        r8
+                        \stopStaff \startStaff
                         g8
                         \fff
                         - \tenuto
                         \>
                         [
-                        af,8
-                        - \tenuto
-                        c,8
-                        - \tenuto
-                        af,8
-                        - \tenuto
-                        g8
-                        - \tenuto
-                        af,8
+                        f'8
                         - \tenuto
                         g8
                         - \tenuto
                         f'8
+                        - \tenuto
+                        g8
+                        - \tenuto
+                        af,8
                         - \tenuto
                         g8
                         - \tenuto
@@ -2901,40 +2842,34 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 3 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 3 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/13 {
+                            r16
+                            \stopStaff \startStaff
                             g16
                             \fff
                             - \tenuto
                             \>
                             [
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
                             f'16
                             - \tenuto
                             g16
                             - \tenuto
-                            af,16
+                            f'16
                             - \tenuto
                             g16
                             - \tenuto
@@ -2945,48 +2880,50 @@
                             af,16
                             - \tenuto
                             c,16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            g16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 3 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
+                            r4
+                            \stopStaff \startStaff
                             af,4
                             \fff
                             - \tenuto
-                            \>
-                            [
-                            g4
-                            - \tenuto
-                            af,4
-                            \mf
-                            - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r4
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
                         % [Voice 3 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \set stemLeftBeamCount = 1
-                        \set stemRightBeamCount = 2
                         a8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        [
                         f'16
 
                         a16
@@ -3279,9 +3216,10 @@
                     {
                         % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         d'16
                         \fff
                         - \tenuto
@@ -3296,20 +3234,17 @@
                         d'16
                         - \tenuto
                         ef16
-                        - \tenuto
-                        d'16
-                        - \tenuto
-                        c''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
@@ -3390,11 +3325,12 @@
                     {
                         % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            f''8
+                            r8
+                            \stopStaff \startStaff
+                            d'8
                             \fff
                             - \tenuto
                             \>
@@ -3402,22 +3338,19 @@
                             c''8
                             - \tenuto
                             f''8
-                            - \tenuto
-                            c''8
-                            - \tenuto
-                            d'8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
                         % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -3483,29 +3416,27 @@
                     {
                         % [Voice 4 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        ef16
+                        r16
+                        \stopStaff \startStaff
+                        c''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        d'16
-                        - \tenuto
-                        ef16
-                        - \tenuto
-                        d'16
+                        f''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
@@ -3559,48 +3490,51 @@
 
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
                     }
                     {
                         % [Voice 4 measure 19] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
+                        \stopStaff \startStaff
                         c''16
                         \fff
                         - \tenuto
                         \>
-                        f''16
+                        [
+                        d'16
                         - \tenuto
-                        c''16
+                        ef16
+                        - \tenuto
+                        d'16
+                        - \tenuto
+                        ef16
                         - \tenuto
                         d'16
                         - \tenuto
                         c''16
-                        - \tenuto
-                        f''16
-                        - \tenuto
-                        c''16
-                        - \tenuto
-                        d'16
                         - \tenuto
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
+                            f''8
+                            - \tenuto
                             c''8
-                            - \tenuto
-                            d'8
-                            - \tenuto
-                            ef8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
@@ -3610,7 +3544,7 @@
                     {
                         % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
                         c''4
-                        \mp
+                        \ff
 
                         - \tweak stencil #constante-hairpin
                         \<
@@ -3619,46 +3553,44 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         d'16
                         \fff
                         - \tenuto
                         \>
                         [
-                        ef16
-                        - \tenuto
-                        d'16
-                        - \tenuto
-                        c''16
-                        - \tenuto
-                        d'16
-                        - \tenuto
-                        ef16
-                        - \tenuto
-                        d'16
-                        - \tenuto
-                        ef16
-                        - \tenuto
-                        d'16
-                        - \tenuto
                         c''16
                         - \tenuto
                         f''16
                         - \tenuto
                         c''16
+                        - \tenuto
+                        d'16
+                        - \tenuto
+                        c''16
+                        - \tenuto
+                        d'16
+                        - \tenuto
+                        ef16
+                        - \tenuto
+                        d'16
+                        - \tenuto
+                        ef16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
@@ -3681,30 +3613,24 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 2/3 {
-                            d'4
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            c''4
-                            - \tenuto
+                            r4
+                            \stopStaff \startStaff
                             d'4
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
-                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r4
+                            \!
                         }
                     }
                     {
                         % [Voice 4 measure 27] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -3751,25 +3677,21 @@
                     {
                         % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
+                            r16
+                            \stopStaff \startStaff
                             c''16
                             \fff
                             - \tenuto
-                            \>
-                            [
-                            f''16
-                            - \tenuto
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c''16
-                            \mf
-                            - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
@@ -3779,7 +3701,6 @@
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -3863,67 +3784,54 @@
                     {
                         % [Voice 4 measure 36] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
-                        f''8
+                        r8
+                        \stopStaff \startStaff
+                        d'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        c''8
+                        ef8
                         - \tenuto
                         d'8
                         - \tenuto
-                        c''8
-                        - \tenuto
-                        d'8
-                        - \tenuto
-                        c''8
+                        ef8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 4 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 4 measure 38] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 16/17 {
+                            r16
+                            \stopStaff \startStaff
                             d'16
                             \fff
                             - \tenuto
                             \>
                             [
-                            ef16
-                            - \tenuto
-                            d'16
-                            - \tenuto
-                            ef16
-                            - \tenuto
-                            d'16
-                            - \tenuto
-                            c''16
-                            - \tenuto
-                            d'16
-                            - \tenuto
                             c''16
                             - \tenuto
                             f''16
                             - \tenuto
                             c''16
                             - \tenuto
-                            f''16
+                            d'16
                             - \tenuto
                             c''16
                             - \tenuto
@@ -3936,17 +3844,21 @@
                             c''16
                             - \tenuto
                             f''16
+                            - \tenuto
+                            c''16
+                            - \tenuto
+                            d'16
+                            - \tenuto
+                            c''16
+                            - \tenuto
+                            d'16
+                            - \tenuto
+                            c''16
                             - \tenuto
                         }
                     }
                     {
                         % [Voice 4 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        c''16
-                        - \tenuto
-                        f''16
-                        - \tenuto
-                        c''16
-                        - \tenuto
                         d'16
                         - \tenuto
                         ef16
@@ -3959,7 +3871,7 @@
                         - \tenuto
                         c''16
                         - \tenuto
-                        f''16
+                        d'16
                         - \tenuto
                         c''16
                         - \tenuto
@@ -3968,6 +3880,10 @@
                         c''16
                         - \tenuto
                         f''16
+                        - \tenuto
+                        c''16
+                        - \tenuto
+                        d'16
                         - \tenuto
                         c''16
                         - \tenuto
@@ -3977,12 +3893,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 4 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -4188,34 +4105,42 @@
                         ef''16
 
                         c''8.
+                        \ff
 
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
                             % [Voice 4 measure 49] %! COMMENT_MEASURE_NUMBERS
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            e'16
-
-                            c''4
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
+                            e'4
+                            \mp
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             ~
+                            [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
+                            e'16
                             c''16
+
                             ef''16
 
                             c''16
 
                             e'16
 
-                            f16
-
                             ~
-                            f16
                             e'16
+                            f16
 
-                            c''8.
+                            e'8.
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -4272,10 +4197,11 @@
                     {
                         % [Voice 5 measure 4] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 5 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        r8
+                        \stopStaff \startStaff
                         f'8
                         \fff
                         - \tenuto
@@ -4290,21 +4216,18 @@
                         e''8
                         - \tenuto
                         bf'8
-                        - \tenuto
-                        e''8
-                        - \tenuto
-                        b''8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                     }
                     {
                         % [Voice 5 measure 7] %! COMMENT_MEASURE_NUMBERS
@@ -4360,17 +4283,22 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
                             % [Voice 5 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             e''16
                             \fff
                             - \tenuto
                             \>
                             [
+                            b''16
+                            - \tenuto
+                            e''16
+                            - \tenuto
                             bf'16
                             - \tenuto
                             f'16
@@ -4390,25 +4318,18 @@
                             b''16
                             - \tenuto
                             e''16
-                            - \tenuto
-                            b''16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            b''16
-                            - \tenuto
-                            e''16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
@@ -4472,28 +4393,22 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 5 measure 15] %! COMMENT_MEASURE_NUMBERS
-                        b''4
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        e''4
-                        - \tenuto
+                        r4
+                        \stopStaff \startStaff
                         b''4
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -4545,11 +4460,12 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
                             % [Voice 5 measure 19] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             e''16
                             \fff
                             - \tenuto
@@ -4559,10 +4475,6 @@
                             - \tenuto
                             e''16
                             - \tenuto
-                            bf'16
-                            - \tenuto
-                            e''16
-                            - \tenuto
                             b''16
                             - \tenuto
                             e''16
@@ -4570,6 +4482,8 @@
                             b''16
                             - \tenuto
                             e''16
+                            - \tenuto
+                            b''16
                             - \tenuto
                         }
                     }
@@ -4577,27 +4491,26 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/5 {
                             % [Voice 5 measure 20] %! COMMENT_MEASURE_NUMBERS
-                            bf'8
-                            - \tenuto
                             e''8
                             - \tenuto
                             bf'8
                             - \tenuto
-                            f'8
+                            e''8
                             - \tenuto
-                            g8
+                            b''8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
                         % [Voice 5 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -4653,29 +4566,27 @@
                     {
                         % [Voice 5 measure 25] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        f'16
+                        r16
+                        \stopStaff \startStaff
+                        e''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
+                        b''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -4744,40 +4655,38 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
+                            r16
+                            \stopStaff \startStaff
                             e''16
                             \fff
                             - \tenuto
                             \>
                             [
-                            b''16
+                            bf'16
                             - \tenuto
                             e''16
                             - \tenuto
-                            b''16
-                            - \tenuto
-                            e''16
+                            bf'16
                             - \tenuto
                         }
                     }
                     {
                         % [Voice 5 measure 30] %! COMMENT_MEASURE_NUMBERS
-                        b''8
-                        - \tenuto
-                        e''8
+                        f'8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 5 measure 31] %! COMMENT_MEASURE_NUMBERS
@@ -4851,15 +4760,40 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 5 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        bf'16
+                        r16
+                        \stopStaff \startStaff
+                        g16
                         \fff
                         - \tenuto
                         \>
                         [
+                        f'16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
+                        e''16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
                         e''16
                         - \tenuto
                         bf'16
@@ -4870,61 +4804,55 @@
                         - \tenuto
                         f'16
                         - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        f'16
+                        g16
                         - \tenuto
                     }
                     {
                         % [Voice 5 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        g4
-                        - \tenuto
                         f'4
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 5 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        bf'16
+                        r16
+                        \stopStaff \startStaff
+                        g16
                         \fff
                         - \tenuto
                         \>
                         [
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        bf'16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        g16
+                        - \tenuto
                         f'16
                         - \tenuto
                         g16
@@ -4935,53 +4863,31 @@
                         - \tenuto
                         f'16
                         - \tenuto
-                        bf'16
+                        g16
                         - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
+                        f'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 5 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 5 measure 39] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
+                            r8
+                            \stopStaff \startStaff
                             bf'8
                             \fff
                             - \tenuto
@@ -4989,15 +4895,16 @@
                             [
                             f'8
                             - \tenuto
-                            g8
-                            - \tenuto
-                            f'8
-                            - \tenuto
                             bf'8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
@@ -5009,6 +4916,7 @@
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
                             d''8.
                             ~
                             d''8
@@ -5292,12 +5200,13 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
                             % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             g16
                             \fff
                             - \tenuto
@@ -5310,21 +5219,18 @@
                             af,16
                             - \tenuto
                             g16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -5416,9 +5322,10 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         af,16
                         \fff
                         - \tenuto
@@ -5438,38 +5345,35 @@
                         - \tenuto
                         g16
                         - \tenuto
-                        f'16
+                        af,16
                         - \tenuto
                         g16
                         - \tenuto
                         f'16
-                        - \tenuto
-                        g16
                         - \tenuto
                     }
                     {
                         \times 4/5 {
                             % [Voice 6 measure 11] %! COMMENT_MEASURE_NUMBERS
+                            g8
+                            - \tenuto
                             f'8
                             - \tenuto
                             g8
                             - \tenuto
-                            af,8
-                            - \tenuto
-                            g8
-                            - \tenuto
-                            af,8
+                            f'8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 6 measure 12] %! COMMENT_MEASURE_NUMBERS
@@ -5496,7 +5400,7 @@
                     }
                     {
                         bf,4
-                        \ff
+                        \mp
 
                         - \tweak stencil #constante-hairpin
                         \<
@@ -5509,9 +5413,10 @@
                     {
                         % [Voice 6 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         g16
                         \fff
                         - \tenuto
@@ -5525,30 +5430,27 @@
                         - \tenuto
                         g16
                         - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
+                        af,16
                         - \tenuto
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        f'16
+                        g16
                         - \tenuto
                     }
                     {
                         % [Voice 6 measure 16] %! COMMENT_MEASURE_NUMBERS
-                        g4
-                        - \tenuto
                         af,4
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -5615,21 +5517,18 @@
                     {
                         % [Voice 6 measure 21] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
+                            r16
+                            \stopStaff \startStaff
                             g16
                             \fff
                             - \tenuto
                             \>
                             [
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
+                            f'16
                             - \tenuto
                             g16
                             - \tenuto
@@ -5637,15 +5536,15 @@
                             - \tenuto
                             g16
                             - \tenuto
+                            af,16
+                            - \tenuto
                         }
                     }
                     {
                         % [Voice 6 measure 22] %! COMMENT_MEASURE_NUMBERS
-                        af,8
-                        - \tenuto
                         g8
                         - \tenuto
-                        f'8
+                        af,8
                         - \tenuto
                         g8
                         - \tenuto
@@ -5657,12 +5556,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 6 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -5699,11 +5599,12 @@
                     {
                         % [Voice 6 measure 24] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            af,16
+                            r16
+                            \stopStaff \startStaff
+                            f'16
                             \fff
                             - \tenuto
                             \>
@@ -5714,16 +5615,12 @@
                             - \tenuto
                             g16
                             - \tenuto
-                            f'16
-                            - \tenuto
                         }
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 6 measure 25] %! COMMENT_MEASURE_NUMBERS
-                            g16
-                            - \tenuto
                             f'16
                             - \tenuto
                             g16
@@ -5732,11 +5629,11 @@
                             - \tenuto
                             g16
                             - \tenuto
-                            f'16
+                            af,16
                             - \tenuto
                             g16
                             - \tenuto
-                            f'16
+                            af,16
                             - \tenuto
                             g16
                             - \tenuto
@@ -5748,12 +5645,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 6 measure 26] %! COMMENT_MEASURE_NUMBERS
@@ -5772,10 +5670,11 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 6 measure 28] %! COMMENT_MEASURE_NUMBERS
+                        r8
+                        \stopStaff \startStaff
                         f'8
                         \fff
                         - \tenuto
@@ -5783,11 +5682,7 @@
                         [
                         g8
                         - \tenuto
-                        f'8
-                        - \tenuto
-                        g8
-                        - \tenuto
-                        f'8
+                        af,8
                         - \tenuto
                         g8
                         \mf
@@ -5795,11 +5690,12 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 6 measure 29] %! COMMENT_MEASURE_NUMBERS
@@ -5908,23 +5804,20 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 20/21 {
                             % [Voice 6 measure 35] %! COMMENT_MEASURE_NUMBERS
-                            af,16
+                            r16
+                            \stopStaff \startStaff
+                            f'16
                             \fff
                             - \tenuto
                             \>
                             [
                             g16
                             - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
                             f'16
                             - \tenuto
                             g16
@@ -5934,10 +5827,6 @@
                             g16
                             - \tenuto
                             f'16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
                             - \tenuto
                             g16
                             - \tenuto
@@ -5954,6 +5843,10 @@
                             g16
                             - \tenuto
                             af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
+                            f'16
                             - \tenuto
                             g16
                             - \tenuto
@@ -5963,83 +5856,80 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 6 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 6 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
+                        r4
+                        \stopStaff \startStaff
                         g4
+                        \fff
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                    }
+                    {
+                        % [Voice 6 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                        r2
+                    }
+                    {
+                        % [Voice 6 measure 39] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
+                        f'16
                         \fff
                         - \tenuto
                         \>
                         [
-                        f'4
+                        g16
                         - \tenuto
-                        g4
+                        af,16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
+                        g16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
-                    }
-                    {
-                        % [Voice 6 measure 38] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                        r2.
+                        r16
                         \!
-                        r2
                         \stopStaff \startStaff
-                    }
-                    {
-                        % [Voice 6 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        f'16
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        g16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
@@ -6050,6 +5940,7 @@
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
                             a16
 
                             f'8.
@@ -6333,30 +6224,24 @@
                     {
                         % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
-                            c,8
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            af,8
-                            - \tenuto
+                            r8
+                            \stopStaff \startStaff
                             c,8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
-                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
@@ -6426,10 +6311,11 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         af,16
                         \fff
                         - \tenuto
@@ -6439,6 +6325,10 @@
                         - \tenuto
                         af,16
                         - \tenuto
+                        c,16
+                        - \tenuto
+                        af,16
+                        - \tenuto
                         g16
                         - \tenuto
                         af,16
@@ -6450,14 +6340,6 @@
                         c,16
                         - \tenuto
                         a,,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        a,,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
                         - \tenuto
                         c,16
                         - \tenuto
@@ -6469,22 +6351,24 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            a,,16
+                            r16
+                            \stopStaff \startStaff
+                            af,16
                             \fff
                             - \tenuto
                             \>
@@ -6499,23 +6383,20 @@
                             - \tenuto
                             c,16
                             - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
+                            a,,16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 7 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -6582,19 +6463,12 @@
                     {
                         % [Voice 7 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        g4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 7 measure 16] %! COMMENT_MEASURE_NUMBERS
@@ -6640,19 +6514,19 @@
 
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
                     }
                     {
                         % [Voice 7 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
-                        af,16
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
+                        \stopStaff \startStaff
+                        a,,16
                         \fff
                         - \tenuto
                         \>
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
+                        [
                         c,16
                         - \tenuto
                         af,16
@@ -6660,17 +6534,17 @@
                         g16
                         - \tenuto
                         af,16
+                        - \tenuto
+                        g16
                         - \tenuto
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        g16
+                        af,16
                         - \tenuto
                     }
                     {
                         \times 2/3 {
                             % [Voice 7 measure 20] %! COMMENT_MEASURE_NUMBERS
-                            af,4
-                            - \tenuto
                             c,4
                             - \tenuto
                             af,4
@@ -6679,12 +6553,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r4
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 7 measure 21] %! COMMENT_MEASURE_NUMBERS
@@ -6715,22 +6590,19 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 7 measure 23] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         c,16
                         \fff
                         - \tenuto
                         \>
                         [
-                        a,,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
                         af,16
                         - \tenuto
-                        c,16
+                        g16
                         - \tenuto
                         af,16
                         - \tenuto
@@ -6744,17 +6616,18 @@
                         - \tenuto
                         c,16
                         - \tenuto
-                        af,16
+                        a,,16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 7 measure 24] %! COMMENT_MEASURE_NUMBERS
@@ -6777,30 +6650,28 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        g8
+                        r8
+                        \stopStaff \startStaff
+                        c,8
                         \fff
                         - \tenuto
                         \>
                         [
-                        af,8
-                        - \tenuto
-                        g8
-                        - \tenuto
                         af,8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 7 measure 27] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -6841,25 +6712,21 @@
                     {
                         % [Voice 7 measure 30] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
+                            r16
+                            \stopStaff \startStaff
                             c,16
                             \fff
                             - \tenuto
-                            \>
-                            [
-                            af,16
-                            - \tenuto
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \mf
-                            - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
@@ -6869,7 +6736,6 @@
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -6953,25 +6819,18 @@
                     {
                         % [Voice 7 measure 36] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         af,16
                         \fff
                         - \tenuto
                         \>
                         [
-                        c,16
+                        g16
                         - \tenuto
                         af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        a,,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        a,,16
                         - \tenuto
                         c,16
                         - \tenuto
@@ -6981,36 +6840,38 @@
                         - \tenuto
                         af,16
                         - \tenuto
-                        c,16
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        g16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 7 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 7 measure 38] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
+                            r8
+                            \stopStaff \startStaff
                             af,8
                             \fff
                             - \tenuto
                             \>
                             [
-                            g8
-                            - \tenuto
-                            af,8
-                            - \tenuto
                             c,8
                             - \tenuto
                             af,8
@@ -7019,9 +6880,11 @@
                             - \tenuto
                             af,8
                             - \tenuto
-                            g8
+                            c,8
                             - \tenuto
                             af,8
+                            - \tenuto
+                            c,8
                             - \tenuto
                         }
                     }
@@ -7029,8 +6892,6 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
                             % [Voice 7 measure 39] %! COMMENT_MEASURE_NUMBERS
-                            c,16
-                            - \tenuto
                             a,,16
                             - \tenuto
                             c,16
@@ -7041,11 +6902,11 @@
                             - \tenuto
                             af,16
                             - \tenuto
-                            g16
+                            c,16
                             - \tenuto
                             af,16
                             - \tenuto
-                            g16
+                            c,16
                             - \tenuto
                             af,16
                             - \tenuto
@@ -7055,21 +6916,22 @@
                             - \tenuto
                             c,16
                             - \tenuto
-                            a,,16
+                            af,16
                             - \tenuto
-                            c,16
+                            g16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 7 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -7361,31 +7223,29 @@
                     {
                         % [Voice 8 measure 4] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 8 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        r4
+                        \stopStaff \startStaff
                         f'4
                         \fff
                         - \tenuto
                         \>
                         [
                         g4
-                        - \tenuto
-                        f'4
-                        - \tenuto
-                        g4
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
                         % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -7442,16 +7302,21 @@
                         r2.
                         \!
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \times 16/17 {
                             % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             f'16
                             \fff
                             - \tenuto
                             \>
                             [
+                            g16
+                            - \tenuto
+                            f'16
+                            - \tenuto
                             bf'16
                             - \tenuto
                             f'16
@@ -7475,25 +7340,18 @@
                             d'''16
                             - \tenuto
                             fs'''16
-                            - \tenuto
-                            d''''16
-                            - \tenuto
-                            fs'''16
-                            - \tenuto
-                            d''''16
-                            - \tenuto
-                            fs'''16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 8 measure 11] %! COMMENT_MEASURE_NUMBERS
@@ -7552,34 +7410,32 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 8 measure 15] %! COMMENT_MEASURE_NUMBERS
-                        d'''8
+                        r8
+                        \stopStaff \startStaff
+                        d''''8
                         \fff
                         - \tenuto
                         \>
                         [
-                        cs'''8
+                        fs'''8
                         - \tenuto
-                        d'''8
+                        d''''8
                         - \tenuto
-                        cs'''8
-                        - \tenuto
-                        d'''8
-                        - \tenuto
-                        cs'''8
+                        fs'''8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -7628,10 +7484,11 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 8 measure 19] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         d'''16
                         \fff
                         - \tenuto
@@ -7645,20 +7502,16 @@
                         - \tenuto
                         d'''16
                         - \tenuto
-                        fs'''16
+                        cs'''16
                         - \tenuto
-                        d''''16
-                        - \tenuto
-                        fs'''16
+                        d'''16
                         - \tenuto
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 8 measure 20] %! COMMENT_MEASURE_NUMBERS
-                            d'''16
-                            - \tenuto
-                            fs'''16
+                            cs'''16
                             - \tenuto
                             d'''16
                             - \tenuto
@@ -7672,23 +7525,24 @@
                             - \tenuto
                             fs'''16
                             - \tenuto
-                            d''''16
+                            d'''16
                             - \tenuto
                             fs'''16
                             - \tenuto
-                            d''''16
+                            d'''16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 8 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -7754,19 +7608,12 @@
                     {
                         % [Voice 8 measure 25] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        fs'''4
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -7829,11 +7676,12 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            d''''16
+                            r16
+                            \stopStaff \startStaff
+                            d'''16
                             \fff
                             - \tenuto
                             \>
@@ -7843,26 +7691,21 @@
                             d''''16
                             - \tenuto
                             fs'''16
+                            \mf
                             - \tenuto
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'''16
-                            - \tenuto
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
                         }
                     }
                     {
                         % [Voice 8 measure 30] %! COMMENT_MEASURE_NUMBERS
-                        cs'''4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 8 measure 31] %! COMMENT_MEASURE_NUMBERS
@@ -7936,15 +7779,36 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 8 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        b''16
+                        r16
+                        \stopStaff \startStaff
+                        d''''16
                         \fff
                         - \tenuto
                         \>
                         [
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        cs'''16
+                        - \tenuto
+                        b''16
+                        - \tenuto
                         cs'''16
                         - \tenuto
                         d'''16
@@ -7960,62 +7824,64 @@
                         e''16
                         - \tenuto
                         bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
-                        - \tenuto
-                        cs'''16
-                        - \tenuto
-                        d'''16
-                        - \tenuto
-                        fs'''16
-                        - \tenuto
-                        d''''16
-                        - \tenuto
-                        fs'''16
-                        - \tenuto
-                        d''''16
-                        - \tenuto
-                        fs'''16
-                        - \tenuto
-                        d''''16
-                        - \tenuto
-                        fs'''16
                         - \tenuto
                     }
                     {
                         \times 4/5 {
                             % [Voice 8 measure 36] %! COMMENT_MEASURE_NUMBERS
+                            e''8
+                            - \tenuto
+                            b''8
+                            - \tenuto
+                            cs'''8
+                            - \tenuto
                             d'''8
-                            - \tenuto
-                            fs'''8
-                            - \tenuto
-                            d''''8
-                            - \tenuto
-                            fs'''8
-                            - \tenuto
-                            d''''8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 8 measure 37] %! COMMENT_MEASURE_NUMBERS
+                        r16
+                        \stopStaff \startStaff
                         fs'''16
                         \fff
                         - \tenuto
                         \>
                         [
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d'''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
+                        d''''16
+                        - \tenuto
+                        fs'''16
+                        - \tenuto
                         d'''16
                         - \tenuto
                         fs'''16
@@ -8025,30 +7891,37 @@
                         cs'''16
                         - \tenuto
                         b''16
+                        \mf
                         - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
+                    }
+                    {
+                        % [Voice 8 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                        r2
+                    }
+                    {
+                        % [Voice 8 measure 39] %! COMMENT_MEASURE_NUMBERS
+                        r2
+                    }
+                    {
+                        r16
+                        \stopStaff \startStaff
                         e''16
+                        \fff
                         - \tenuto
+                        \>
+                        [
                         bf'16
                         - \tenuto
                         f'16
                         - \tenuto
                         g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
                         - \tenuto
                         f'16
                         - \tenuto
@@ -8058,42 +7931,10 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
-                    }
-                    {
-                        % [Voice 8 measure 38] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                        r2.
+                        r16
                         \!
-                        r2
-                    }
-                    {
-                        % [Voice 8 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        r2
                         \stopStaff \startStaff
-                    }
-                    {
-                        f'16
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        g16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
                     }
                     {
                         % [Voice 8 measure 40] %! COMMENT_MEASURE_NUMBERS
@@ -8102,6 +7943,7 @@
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        [
                         e'''16
 
                         ef'''16
@@ -8386,11 +8228,12 @@
                     {
                         % [Voice 9 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
+                            r8
+                            \stopStaff \startStaff
                             f'8
                             \fff
                             - \tenuto
@@ -8398,12 +8241,12 @@
                             [
                             bf'8
                             - \tenuto
-                            e''8
-                            - \tenuto
                         }
                     }
                     {
                         % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
+                        e''16
+                        - \tenuto
                         bf'16
                         - \tenuto
                         e''16
@@ -8415,20 +8258,17 @@
                         bf'16
                         - \tenuto
                         f'16
-                        - \tenuto
-                        g16
-                        - \tenuto
-                        f'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 9 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -8510,18 +8350,17 @@
                     {
                         % [Voice 9 measure 12] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 2/3 {
-                            bf'4
+                            r4
+                            \stopStaff \startStaff
+                            g4
                             \fff
                             - \tenuto
                             \>
                             [
                             f'4
-                            - \tenuto
-                            bf'4
                             - \tenuto
                         }
                     }
@@ -8531,22 +8370,21 @@
                             % [Voice 9 measure 13] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
-                            - \tenuto
                             bf'16
                             - \tenuto
-                            e''16
+                            f'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -8590,30 +8428,28 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        b''8
+                        r8
+                        \stopStaff \startStaff
+                        bf'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        e''8
-                        - \tenuto
-                        bf'8
-                        - \tenuto
                         f'8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 9 measure 17] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -8652,16 +8488,26 @@
                         f'16
 
                         af'16
+                        \ff
 
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         \times 4/5 {
                             % [Voice 9 measure 19] %! COMMENT_MEASURE_NUMBERS
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
                             d''16
+                            \mp
 
-                            b''16
-
-                            d''8.
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            b''8.
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -8677,52 +8523,50 @@
                     {
                         % [Voice 9 measure 20] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            g16
+                            r16
+                            \stopStaff \startStaff
+                            bf'16
                             \fff
                             - \tenuto
                             \>
                             [
+                            e''16
+                            - \tenuto
+                            b''16
+                            - \tenuto
+                            e''16
+                            - \tenuto
+                            bf'16
+                            - \tenuto
                             f'16
                             - \tenuto
                             g16
                             - \tenuto
                             f'16
-                            - \tenuto
-                            bf'16
-                            - \tenuto
-                            f'16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            f'16
-                            - \tenuto
-                            bf'16
                             - \tenuto
                         }
                     }
                     {
                         % [Voice 9 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        e''16
+                        g16
                         - \tenuto
-                        b''16
+                        f'16
                         - \tenuto
-                        cs'''16
-                        - \tenuto
-                        b''16
+                        bf'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 9 measure 22] %! COMMENT_MEASURE_NUMBERS
@@ -8750,30 +8594,28 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 9 measure 24] %! COMMENT_MEASURE_NUMBERS
-                        cs'''8
+                        r8
+                        \stopStaff \startStaff
+                        f'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        b''8
-                        - \tenuto
-                        e''8
-                        - \tenuto
-                        b''8
+                        g8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 9 measure 25] %! COMMENT_MEASURE_NUMBERS
@@ -8781,31 +8623,31 @@
                         \stopStaff \startStaff
                     }
                     {
-                        af'16
+                        d''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
+                        af'8.
+
+                        ~
+                        af'16
                         f'8.
-
                         ~
-                        f'16
-                        a8.
-                        ~
-                        a8
-                        f'16
-
+                        f'8
                         a16
+
+                        f'16
 
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 9 measure 26] %! COMMENT_MEASURE_NUMBERS
-                            f'16
+                            a16
 
-                            af'8
+                            f'8
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -8821,31 +8663,25 @@
                     {
                         % [Voice 9 measure 27] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 9 measure 28] %! COMMENT_MEASURE_NUMBERS
-                            cs'''16
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            d'''16
-                            - \tenuto
-                            cs'''16
+                            r16
+                            \stopStaff \startStaff
+                            f'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
-                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -8925,25 +8761,19 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        b''4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
                         % [Voice 9 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            cs'''16
+                            r16
+                            \stopStaff \startStaff
+                            e''16
                             \fff
                             - \tenuto
                             \>
@@ -8956,13 +8786,11 @@
                             - \tenuto
                             cs'''16
                             - \tenuto
-                            d'''16
-                            - \tenuto
-                            cs'''16
-                            - \tenuto
                             b''16
                             - \tenuto
                             e''16
+                            - \tenuto
+                            b''16
                             - \tenuto
                         }
                     }
@@ -8970,122 +8798,117 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/5 {
                             % [Voice 9 measure 36] %! COMMENT_MEASURE_NUMBERS
+                            cs'''8
+                            - \tenuto
+                            d'''8
+                            - \tenuto
+                            cs'''8
+                            - \tenuto
                             b''8
-                            - \tenuto
-                            e''8
-                            - \tenuto
-                            bf'8
-                            - \tenuto
-                            f'8
-                            - \tenuto
-                            bf'8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 9 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2.
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 9 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        f'16
+                        r16
+                        \stopStaff \startStaff
+                        cs'''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        g16
+                        b''16
                         - \tenuto
-                        f'16
+                        cs'''16
                         - \tenuto
-                        g16
+                        b''16
                         - \tenuto
-                        f'16
+                        cs'''16
                         - \tenuto
-                        g16
+                        d'''16
                         - \tenuto
-                        f'16
+                        cs'''16
                         - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
-                        - \tenuto
-                        bf'16
+                        b''16
                         - \tenuto
                         e''16
                         - \tenuto
-                        bf'16
+                        b''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 9 measure 39] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            f'16
+                            r16
+                            \stopStaff \startStaff
+                            e''16
                             \fff
                             - \tenuto
                             \>
                             [
                             bf'16
                             - \tenuto
-                            e''16
-                            - \tenuto
-                            bf'16
-                            - \tenuto
-                            e''16
+                            f'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 9 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r1
-                        \!
                         \stopStaff \startStaff
                     }
                     {
                         % [Voice 9 measure 41] %! COMMENT_MEASURE_NUMBERS
-                        f'16
+                        af'16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        a8.
+                        f'8.
 
-                        f'16
+                        a16
 
-                        af'8.
+                        f'8.
 
                         ~
-                        af'16
-                        d''8.
+                        f'16
+                        af'8.
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -9101,17 +8924,17 @@
                     {
                         \times 4/5 {
                             % [Voice 9 measure 42] %! COMMENT_MEASURE_NUMBERS
-                            b''8
+                            d''8
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            ef'''16
-
                             b''16
 
                             ef'''16
+
+                            b''16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -9130,32 +8953,32 @@
                         \stopStaff \startStaff
                     }
                     {
-                        b''8
+                        ef'''8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        d''16
-
                         b''16
 
+                        d''16
+
                         ~
-                        b''8
+                        d''8
+                        b''16
+
                         ef'''16
 
-                        e'''16
-
                         ~
-                        e'''8.
+                        ef'''8.
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        ef'''16
+                        e'''16
                         ~
                     }
                     {
                         % [Voice 9 measure 44] %! COMMENT_MEASURE_NUMBERS
-                        ef'''4
+                        e'''4
                         \ff
                         - \tweak stencil #constante-hairpin
                         \<
@@ -9169,23 +8992,23 @@
                     }
                     {
                         % [Voice 9 measure 45] %! COMMENT_MEASURE_NUMBERS
-                        b''16
+                        ef'''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        ef'''16
-
                         b''16
 
                         ef'''16
 
-                        b''8
+                        b''16
+
+                        ef'''8
+
+                        b''16
 
                         ef'''16
-
-                        e'''16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -9201,7 +9024,7 @@
                     {
                         \times 16/17 {
                             % [Voice 9 measure 46] %! COMMENT_MEASURE_NUMBERS
-                            ef'''8
+                            e'''8
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
@@ -9209,30 +9032,30 @@
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            b''16
-
-                            d''4
+                            ef'''16
 
                             b''4
+
+                            d''4
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
+                            d''16
                             b''16
+
                             d''16
 
                             af'16
 
-                            f'16
-
-                            af'8
+                            f'8
 
                         }
                     }
                     {
                         % [Voice 9 measure 47] %! COMMENT_MEASURE_NUMBERS
-                        f'16
+                        af'16
 
-                        a8.
+                        f'8.
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -9254,38 +9077,38 @@
                         \times 8/7 {
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 2
-                            f'16
+                            a16
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            a4
+                            f'4
 
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8
+                            a8
                             ~
                         }
                     }
                     {
                         % [Voice 9 measure 49] %! COMMENT_MEASURE_NUMBERS
-                        f'8.
+                        a8.
+                        f'16
+
                         a16
 
                         f'16
 
-                        af'16
+                        af'8
 
-                        f'8
+                        f'16
 
-                        af'16
+                        af'8.
 
-                        d''8.
+                        d''16
 
-                        af'16
-
-                        f'8.
+                        af'8.
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -9332,9 +9155,10 @@
                     {
                         % [Voice 10 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
+                        r8
+                        \stopStaff \startStaff
                         f'8
                         \fff
                         - \tenuto
@@ -9344,11 +9168,11 @@
                         - \tenuto
                         f'8
                         - \tenuto
-                        g8
-                        - \tenuto
                     }
                     {
                         % [Voice 10 measure 4] %! COMMENT_MEASURE_NUMBERS
+                        g16
+                        - \tenuto
                         f'16
                         - \tenuto
                         bf'16
@@ -9358,10 +9182,6 @@
                         bf'16
                         - \tenuto
                         e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        f'16
                         - \tenuto
                         bf'16
                         \mf
@@ -9369,11 +9189,12 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 10 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -9430,19 +9251,22 @@
                     {
                         % [Voice 10 measure 8] %! COMMENT_MEASURE_NUMBERS
                         r2.
+                    }
+                    {
+                        r4
                         \stopStaff \startStaff
                     }
                     {
-                        e''4
+                        % [Voice 10 measure 9] %! COMMENT_MEASURE_NUMBERS
+                        f'16
                         \fff
                         - \tenuto
                         \>
                         [
-                    }
-                    {
-                        % [Voice 10 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
+                        bf'16
+                        - \tenuto
+                        e''16
+                        - \tenuto
                         bf'16
                         - \tenuto
                         e''16
@@ -9450,24 +9274,17 @@
                         b''16
                         - \tenuto
                         e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -9490,22 +9307,21 @@
                     {
                         % [Voice 10 measure 12] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            b''8
+                            r8
+                            \stopStaff \startStaff
+                            bf'8
                             \fff
                             - \tenuto
                             \>
                             [
                             e''8
                             - \tenuto
-                            b''8
+                            bf'8
                             - \tenuto
                             e''8
-                            - \tenuto
-                            bf'8
                             - \tenuto
                         }
                     }
@@ -9513,9 +9329,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 10 measure 13] %! COMMENT_MEASURE_NUMBERS
-                            f'16
-                            - \tenuto
-                            bf'16
+                            b''16
                             - \tenuto
                             e''16
                             \mf
@@ -9523,12 +9337,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -9572,9 +9387,10 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         b''16
                         \fff
                         - \tenuto
@@ -9582,15 +9398,11 @@
                         [
                         e''16
                         - \tenuto
-                        b''16
+                        bf'16
                         - \tenuto
-                        e''16
+                        f'16
                         - \tenuto
-                        b''16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        b''16
+                        bf'16
                         - \tenuto
                         e''16
                         \mf
@@ -9598,12 +9410,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 10 measure 17] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -9639,16 +9452,26 @@
                         af'16
 
                         d''16
+                        \ff
 
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         \times 4/5 {
                             % [Voice 10 measure 19] %! COMMENT_MEASURE_NUMBERS
-                            b''8
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
+                            \stopStaff \startStaff
+                            b''16
+                            \mp
 
-                            d''16
-
-                            af'8
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            d''8
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -9664,11 +9487,12 @@
                     {
                         % [Voice 10 measure 20] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            bf'8
+                            r8
+                            \stopStaff \startStaff
+                            b''8
                             \fff
                             - \tenuto
                             \>
@@ -9679,29 +9503,26 @@
                             - \tenuto
                             e''8
                             - \tenuto
-                            bf'8
-                            - \tenuto
                         }
                     }
                     {
                         % [Voice 10 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        f'16
+                        b''16
                         - \tenuto
-                        g16
+                        e''16
                         - \tenuto
-                        f'16
-                        - \tenuto
-                        g16
+                        b''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 10 measure 22] %! COMMENT_MEASURE_NUMBERS
@@ -9729,20 +9550,13 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 10 measure 24] %! COMMENT_MEASURE_NUMBERS
-                        f'2
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r2
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 10 measure 25] %! COMMENT_MEASURE_NUMBERS
@@ -9750,33 +9564,33 @@
                         \stopStaff \startStaff
                     }
                     {
-                        d''16
+                        af'16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        af'16
-
-                        d''8
-
-                        ~
-                        d''8
-                        b''8
-                        ~
-                        b''8.
                         d''16
+
+                        af'8
+
+                        ~
+                        af'8
+                        d''8
+                        ~
+                        d''8.
+                        b''16
 
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 10 measure 26] %! COMMENT_MEASURE_NUMBERS
+                            d''16
+
                             b''16
 
                             ef'''16
-
-                            e'''16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -9792,31 +9606,25 @@
                     {
                         % [Voice 10 measure 27] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 10 measure 28] %! COMMENT_MEASURE_NUMBERS
+                            r16
+                            \stopStaff \startStaff
                             bf'16
                             \fff
                             - \tenuto
-                            \>
-                            [
-                            e''16
-                            - \tenuto
-                            bf'16
-                            \mf
-                            - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
-                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -9896,25 +9704,19 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        e''4
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r4
                     }
                     {
                         % [Voice 10 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
-                            bf'16
+                            r16
+                            \stopStaff \startStaff
+                            b''16
                             \fff
                             - \tenuto
                             \>
@@ -9923,17 +9725,15 @@
                             - \tenuto
                             bf'16
                             - \tenuto
-                            e''16
+                            f'16
                             - \tenuto
-                            bf'16
+                            g16
                             - \tenuto
                             f'16
                             - \tenuto
-                            bf'16
+                            g16
                             - \tenuto
-                            e''16
-                            - \tenuto
-                            bf'16
+                            f'16
                             - \tenuto
                         }
                     }
@@ -9941,21 +9741,19 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 10 measure 36] %! COMMENT_MEASURE_NUMBERS
-                            f'16
+                            bf'16
                             - \tenuto
-                            g16
-                            - \tenuto
-                            f'16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            f'16
+                            e''16
                             - \tenuto
                             bf'16
                             - \tenuto
                             e''16
                             - \tenuto
-                            b''16
+                            bf'16
+                            - \tenuto
+                            e''16
+                            - \tenuto
+                            bf'16
                             - \tenuto
                             e''16
                             - \tenuto
@@ -9967,21 +9765,23 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 10 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2.
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 10 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        r8
+                        \stopStaff \startStaff
                         bf'8
                         \fff
                         - \tenuto
@@ -9989,40 +9789,34 @@
                         [
                         e''8
                         - \tenuto
-                        b''8
+                        bf'8
                         - \tenuto
-                        e''8
-                        - \tenuto
-                        b''8
-                        - \tenuto
-                        e''8
+                        f'8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 10 measure 39] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            bf'16
+                            r16
+                            \stopStaff \startStaff
+                            g16
                             \fff
                             - \tenuto
                             \>
                             [
-                            f'16
-                            - \tenuto
-                            g16
-                            - \tenuto
                             f'16
                             - \tenuto
                             g16
@@ -10031,34 +9825,35 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 10 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
-                        ef'''16
+                        e'''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        e'''16
+                        ef'''16
 
-                        ef'''8
+                        e'''8
                         ~
                     }
                     {
                         \times 4/5 {
                             % [Voice 10 measure 41] %! COMMENT_MEASURE_NUMBERS
+                            e'''16
                             ef'''16
-                            b''16
 
-                            ef'''8.
+                            b''8.
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -10073,37 +9868,37 @@
                         \stopStaff \startStaff
                     }
                     {
-                        b''16
+                        ef'''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        d''8.
+                        b''8.
                         ~
-                        d''8
+                        b''8
+                        d''16
+
                         b''16
 
                         d''16
 
                         b''16
 
-                        d''16
-
                         ~
+                        b''16
                         d''16
-                        af'16
 
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
                             % [Voice 10 measure 42] %! COMMENT_MEASURE_NUMBERS
-                            d''8.
+                            af'8.
 
-                            b''16
+                            d''16
 
-                            d''8.
+                            b''8.
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -10122,26 +9917,26 @@
                         \stopStaff \startStaff
                     }
                     {
-                        af'16
+                        d''16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        f'8.
+                        af'8.
                         ~
-                        f'8
+                        af'8
+                        f'16
+
                         a16
 
                         f'16
 
                         a16
 
-                        f'16
-
                         ~
+                        a16
                         f'16
-                        af'16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -10157,15 +9952,15 @@
                     }
                     {
                         \times 4/5 {
-                            d''8.
+                            af'8.
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            af'16
-
                             d''16
+
+                            af'16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -10188,7 +9983,7 @@
                         \stopStaff \startStaff
                     }
                     {
-                        af'8.
+                        d''8.
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
@@ -10196,28 +9991,28 @@
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        d''16
+                        af'16
                         ~
-                        d''4
+                        af'4
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
+                        d''16
+
                         af'16
 
                         d''16
 
                         af'16
-
-                        f'16
                         ~
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 10 measure 47] %! COMMENT_MEASURE_NUMBERS
-                            f'16
                             af'16
+                            f'16
 
-                            d''16
+                            af'16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -10233,19 +10028,19 @@
                     }
                     {
                         % [Voice 10 measure 48] %! COMMENT_MEASURE_NUMBERS
-                        af'8
+                        d''8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        f'16
+                        af'16
 
-                        a16
+                        f'16
 
                         ~
-                        a8.
-                        f'16
+                        f'8.
+                        a16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -10261,7 +10056,7 @@
                     {
                         \times 16/17 {
                             % [Voice 10 measure 49] %! COMMENT_MEASURE_NUMBERS
-                            a4
+                            f'4
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
@@ -10269,21 +10064,21 @@
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
+                            a16
+
                             f'16
 
                             af'16
 
-                            d''16
+                            d''8
 
-                            b''8
+                            b''16
 
-                            d''16
+                            d''8.
 
-                            af'8.
+                            af'16
 
-                            f'16
-
-                            af'8.
+                            f'8.
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -10333,20 +10128,13 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 11 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        af,2
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r2
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 11 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -10422,9 +10210,10 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         c,16
                         \fff
                         - \tenuto
@@ -10450,16 +10239,12 @@
                         - \tenuto
                         g16
                         - \tenuto
-                        af,16
-                        - \tenuto
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 11 measure 11] %! COMMENT_MEASURE_NUMBERS
-                            g8
-                            - \tenuto
-                            f'8
+                            af,8
                             - \tenuto
                             g8
                             \mf
@@ -10467,12 +10252,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 11 measure 12] %! COMMENT_MEASURE_NUMBERS
@@ -10525,14 +10311,19 @@
                     {
                         % [Voice 11 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         f'16
                         \fff
                         - \tenuto
                         \>
                         [
+                        g16
+                        - \tenuto
+                        f'16
+                        - \tenuto
                         bf'16
                         - \tenuto
                         e''16
@@ -10541,16 +10332,16 @@
                         - \tenuto
                         e''16
                         - \tenuto
-                        bf'16
-                        - \tenuto
-                        e''16
-                        - \tenuto
-                        bf'16
-                        - \tenuto
                     }
                     {
                         \times 8/9 {
                             % [Voice 11 measure 16] %! COMMENT_MEASURE_NUMBERS
+                            bf'16
+                            - \tenuto
+                            e''16
+                            - \tenuto
+                            bf'16
+                            - \tenuto
                             f'16
                             - \tenuto
                             g16
@@ -10560,25 +10351,18 @@
                             c,16
                             - \tenuto
                             af,16
-                            - \tenuto
-                            c,16
-                            - \tenuto
-                            af,16
-                            - \tenuto
-                            g16
-                            - \tenuto
-                            af,16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -10645,24 +10429,33 @@
                     {
                         % [Voice 11 measure 21] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
-                            g8
+                            r8
+                            \stopStaff \startStaff
+                            c,8
                             \fff
                             - \tenuto
                             \>
                             [
                             af,8
                             - \tenuto
-                            c,8
-                            - \tenuto
                         }
                     }
                     {
                         % [Voice 11 measure 22] %! COMMENT_MEASURE_NUMBERS
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        g16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        c,16
+                        - \tenuto
                         af,16
                         - \tenuto
                         g16
@@ -10674,29 +10467,18 @@
                         f'16
                         - \tenuto
                         g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 11 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -10728,36 +10510,31 @@
                     {
                         % [Voice 11 measure 24] %! COMMENT_MEASURE_NUMBERS
                         r2
+                    }
+                    {
+                        r4
                         \stopStaff \startStaff
                     }
                     {
-                        af,4
+                        % [Voice 11 measure 25] %! COMMENT_MEASURE_NUMBERS
+                        af,16
                         \fff
                         - \tenuto
                         \>
                         [
-                    }
-                    {
-                        % [Voice 11 measure 25] %! COMMENT_MEASURE_NUMBERS
-                        \set stemLeftBeamCount = 2
-                        \set stemRightBeamCount = 2
+                        c,16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        c,16
+                        - \tenuto
+                        af,16
+                        - \tenuto
+                        c,16
+                        - \tenuto
+                        af,16
+                        - \tenuto
                         g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        c,16
                         - \tenuto
                         af,16
                         - \tenuto
@@ -10769,11 +10546,12 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                     }
                     {
                         % [Voice 11 measure 26] %! COMMENT_MEASURE_NUMBERS
@@ -10792,11 +10570,12 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         % [Voice 11 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        g8
+                        r8
+                        \stopStaff \startStaff
+                        c,8
                         \fff
                         - \tenuto
                         \>
@@ -10806,20 +10585,17 @@
                         c,8
                         - \tenuto
                         af,8
-                        - \tenuto
-                        g8
-                        - \tenuto
-                        f'8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 11 measure 29] %! COMMENT_MEASURE_NUMBERS
@@ -10924,17 +10700,34 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 20/19 {
                             % [Voice 11 measure 35] %! COMMENT_MEASURE_NUMBERS
-                            bf'16
+                            r16
+                            \stopStaff \startStaff
+                            c,16
                             \fff
                             - \tenuto
                             \>
                             [
+                            af,16
+                            - \tenuto
+                            c,16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            c,16
+                            - \tenuto
+                            af,16
+                            - \tenuto
+                            g16
+                            - \tenuto
                             f'16
                             - \tenuto
                             bf'16
@@ -10943,29 +10736,9 @@
                             - \tenuto
                             bf'16
                             - \tenuto
-                            e''16
+                            f'16
                             - \tenuto
                             bf'16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            bf'16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            b''16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            bf'16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            b''16
-                            - \tenuto
-                            e''16
-                            - \tenuto
-                            b''16
                             - \tenuto
                             e''16
                             - \tenuto
@@ -10975,27 +10748,29 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
                         % [Voice 11 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 11 measure 37] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
+                        r16
+                        \stopStaff \startStaff
                         e''16
                         \fff
                         - \tenuto
                         \>
                         [
-                        b''16
+                        bf'16
                         - \tenuto
                         e''16
                         - \tenuto
@@ -11007,56 +10782,55 @@
                         - \tenuto
                         e''16
                         - \tenuto
-                        bf'16
+                        b''16
                         - \tenuto
-                        f'16
+                        e''16
                         - \tenuto
-                        g16
-                        - \tenuto
-                        af,16
-                        - \tenuto
-                        g16
+                        b''16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
                         % [Voice 11 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \times 8/9 {
                             % [Voice 11 measure 39] %! COMMENT_MEASURE_NUMBERS
-                            af,8
+                            r8
+                            \stopStaff \startStaff
+                            e''8
                             \fff
                             - \tenuto
                             \>
                             [
-                            g8
+                            bf'8
                             - \tenuto
-                            af,8
+                            e''8
                             - \tenuto
-                            c,8
+                            b''8
                             - \tenuto
-                            af,8
+                            e''8
                             - \tenuto
-                            c,8
+                            b''8
                             - \tenuto
-                            af,8
-                            - \tenuto
-                            g8
-                            - \tenuto
-                            af,8
+                            e''8
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
@@ -11068,6 +10842,7 @@
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
                             f'16
 
                             a8.
@@ -11222,16 +10997,26 @@
                             a16
 
                             bf,16
+                            \ff
 
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
                         }
                     }
                     {
                         % [Voice 11 measure 46] %! COMMENT_MEASURE_NUMBERS
-                        c,16
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
+                        \stopStaff \startStaff
+                        c,8
+                        \mp
 
-                        bf,8
-
-                        c,16
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        [
+                        bf,16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -11251,23 +11036,23 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/13 {
-                            bf,8.
+                            c,8.
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
                             [
-                            c,16
-
                             bf,16
 
+                            c,16
+
                             ~
-                            bf,8.
+                            c,8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            c,16
+                            bf,16
                             ~
-                            c,4
+                            bf,4
                             ]
                         }
                     }
@@ -11279,39 +11064,39 @@
                         \stopStaff \startStaff
                     }
                     {
-                        bf,16
+                        c,16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
+                        bf,16
+
                         c,16
 
                         bf,16
-
-                        a16
                         ~
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
                             % [Voice 11 measure 49] %! COMMENT_MEASURE_NUMBERS
-                            a16
                             bf,16
+                            a16
 
-                            c,8.
+                            bf,8.
 
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            bf,16
+                            c,16
 
-                            a4
+                            bf,4
 
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8.
+                            a8.
                             ~
-                            f'8
+                            a8
                             ]
                         }
                     }
@@ -11353,11 +11138,12 @@
                     {
                         % [Voice 12 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
+                            r16
+                            \stopStaff \startStaff
                             c16
                             \fff
                             - \tenuto
@@ -11370,21 +11156,18 @@
                             a,16
                             - \tenuto
                             c16
-                            - \tenuto
-                            af16
-                            - \tenuto
-                            g'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 12 measure 4] %! COMMENT_MEASURE_NUMBERS
@@ -11467,20 +11250,13 @@
                     {
                         % [Voice 12 measure 10] %! COMMENT_MEASURE_NUMBERS
                         r2.
-                        \stopStaff \startStaff
                     }
                     {
-                        af2
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r2
                     }
                     {
                         % [Voice 12 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -11547,19 +11323,16 @@
                     {
                         % [Voice 12 measure 15] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
-                            c16
+                            r16
+                            \stopStaff \startStaff
+                            g'16
                             \fff
                             - \tenuto
                             \>
                             [
-                            a,16
-                            - \tenuto
-                            c16
-                            - \tenuto
                             af16
                             - \tenuto
                             c16
@@ -11568,12 +11341,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                     }
                     {
                         % [Voice 12 measure 16] %! COMMENT_MEASURE_NUMBERS
@@ -11619,24 +11393,32 @@
 
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
                     }
                     {
                         % [Voice 12 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        \set stemLeftBeamCount = 1
-                        \set stemRightBeamCount = 1
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
+                        \stopStaff \startStaff
                         a,8
                         \fff
                         - \tenuto
                         \>
+                        [
                         c8
                         - \tenuto
-                        a,8
-                        - \tenuto
-                        c8
+                        af8
                         - \tenuto
                     }
                     {
                         % [Voice 12 measure 20] %! COMMENT_MEASURE_NUMBERS
+                        c16
+                        - \tenuto
+                        a,16
+                        - \tenuto
+                        c16
+                        - \tenuto
                         a,16
                         - \tenuto
                         c16
@@ -11644,24 +11426,17 @@
                         a,16
                         - \tenuto
                         c16
-                        - \tenuto
-                        af16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        af16
-                        - \tenuto
-                        g'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r16
+                        \!
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 12 measure 21] %! COMMENT_MEASURE_NUMBERS
@@ -11692,13 +11467,14 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
                         \!
-                        \stopStaff \startStaff
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 12 measure 23] %! COMMENT_MEASURE_NUMBERS
-                            af16
+                            r16
+                            \stopStaff \startStaff
+                            a,16
                             \fff
                             - \tenuto
                             \>
@@ -11709,17 +11485,13 @@
                             - \tenuto
                             c16
                             - \tenuto
-                            a,16
+                            af16
+                            - \tenuto
+                            g'16
+                            - \tenuto
+                            af16
                             - \tenuto
                             c16
-                            - \tenuto
-                            af16
-                            - \tenuto
-                            g'16
-                            - \tenuto
-                            af16
-                            - \tenuto
-                            g'16
                             - \tenuto
                             af16
                             \mf
@@ -11727,12 +11499,13 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
                         }
                     }
                     {
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
-                        \!
                     }
                     {
                         % [Voice 12 measure 24] %! COMMENT_MEASURE_NUMBERS
@@ -11755,30 +11528,28 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \!
-                        \stopStaff \startStaff
                     }
                     {
-                        g'8
+                        r8
+                        \stopStaff \startStaff
+                        c8
                         \fff
                         - \tenuto
                         \>
                         [
-                        af8
-                        - \tenuto
-                        c8
-                        - \tenuto
-                        af8
+                        a,8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r8
+                        \!
                     }
                     {
                         % [Voice 12 measure 27] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         \stopStaff \startStaff
                     }
                     {
@@ -11819,28 +11590,28 @@
                     {
                         % [Voice 12 measure 30] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
                         \times 4/5 {
+                            r16
+                            \stopStaff \startStaff
                             c16
                             \fff
                             - \tenuto
                             \>
                             [
-                            a,16
+                            af16
                             - \tenuto
-                            c16
-                            - \tenuto
-                            a,16
-                            - \tenuto
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c16
+                            g'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r16
+                            \!
+                            \stopStaff \startStaff
                         }
                     }
                     {
@@ -11850,7 +11621,6 @@
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -11934,33 +11704,43 @@
                     {
                         % [Voice 12 measure 36] %! COMMENT_MEASURE_NUMBERS
                         r2
-                        \stopStaff \startStaff
                     }
                     {
-                        af2.
-                        \fff
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        r2.
                     }
                     {
                         % [Voice 12 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2.
-                        \!
                         r2
                     }
                     {
                         % [Voice 12 measure 38] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \stopStaff \startStaff
                     }
                     {
-                        c16
+                        r16
+                        \stopStaff \startStaff
+                        g'16
                         \fff
                         - \tenuto
                         \>
                         [
+                        af16
+                        - \tenuto
+                        g'16
+                        - \tenuto
+                        af16
+                        - \tenuto
+                        c16
+                        - \tenuto
+                        af16
+                        - \tenuto
+                        c16
+                        - \tenuto
+                        a,16
+                        - \tenuto
+                        c16
+                        - \tenuto
                         a,16
                         - \tenuto
                         c16
@@ -11972,31 +11752,11 @@
                         a,16
                         - \tenuto
                         c16
-                        - \tenuto
-                        af16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        a,16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        a,16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        af16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        af16
                         - \tenuto
                     }
                     {
                         \times 8/9 {
                             % [Voice 12 measure 39] %! COMMENT_MEASURE_NUMBERS
-                            c8
-                            - \tenuto
                             af8
                             - \tenuto
                             c8
@@ -12005,7 +11765,7 @@
                             - \tenuto
                             c8
                             - \tenuto
-                            a,8
+                            af8
                             - \tenuto
                             c8
                             - \tenuto
@@ -12017,13 +11777,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            r8
+                            \!
                         }
                     }
                     {
                         % [Voice 12 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r2
-                        \!
                         \stopStaff \startStaff
                     }
                     {

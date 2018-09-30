@@ -46,11 +46,17 @@ class MusicMaker:
         cyc_pitches = cyc(pitches)
         pitches, durations, leaves = [[], [], []]
         for tie in logical_ties:
-            pitch = next(cyc_pitches)
-            for leaf in tie:
-                pitches.append(pitch)
-                durations.append(leaf.written_duration)
-                leaves.append(leaf)
+            if isinstance(tie[0], abjad.Note):
+                pitch = next(cyc_pitches)
+                for leaf in tie:
+                    pitches.append(pitch)
+                    durations.append(leaf.written_duration)
+                    leaves.append(leaf)
+            else:
+                for leaf in tie:
+                    pitches.append(None)
+                    durations.append(leaf.written_duration)
+                    leaves.append(leaf)
         return pitches, durations, leaves
 
     def _apply_pitches(self, selections, pitches):
@@ -60,11 +66,6 @@ class MusicMaker:
             container).logical_ties()]
         pitches, durations, old_leaves = self._collect_pitches_durations_leaves(
             old_ties, pitches)
-        # print(selections)
-        # print(pitches)
-        # print(durations)
-        # print(old_leaves)
-        # print()
         new_leaves = [leaf for leaf in leaf_maker(pitches, durations)]
         for old_leaf, new_leaf in zip(old_leaves, new_leaves):
             indicators = abjad.inspect(old_leaf).indicators()

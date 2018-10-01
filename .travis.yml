@@ -8,7 +8,7 @@ python:
 
 before_install:
     # alias package
-    - PACKAGE=`pwd`/naehte
+    - PACKAGE=`pwd`/tianshu
 
     # upgrade pip:
     - pip install --upgrade pip

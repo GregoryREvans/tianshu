@@ -63,7 +63,7 @@ install:
 script:
     # eventually uncomment:
     # -mypy $PACKAGE
-    - coverage run -a `which py.test` -rf $PACKAGE
+    # - coverage run -a `which py.test` -rf $PACKAGE
 
 after_success:
     - pip install --quiet coveralls

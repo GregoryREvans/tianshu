@@ -8,7 +8,7 @@ python:
 
 before_install:
     # alias package
-    - PACKAGE=`pwd`/tianshu
+    - PACKAGE=`pwd`/naehte
 
     # upgrade pip:
     - pip install --upgrade pip
@@ -36,6 +36,13 @@ before_install:
     - pip install -e $RMAKERS
     - export MYPYPATH=$MYPYPATH:$RMAKERS
 
+    # clone & install baca:
+    - BACA=/tmp/baca
+    - git clone https://github.com/trevorbaca/baca.git $BACA
+    - pip install -e $BACA
+    - export MYPYPATH=$MYPYPATH:$BACA
+    - export PATH=$PATH:$BACA/scr
+
     # clone & install ide:
     - IDE=/tmp/ide
     - git clone https://github.com/Abjad/ide.git $IDE
@@ -54,16 +61,20 @@ before_install:
     - ls
     - ls /tmp
     - pwd
+    - which baca-doctest
     - which mypy
+    - which prime-parser-tables
 
 install:
     - pip install coverage
-    # - pip install -e .
+    - pip install -e .
+    - prime-parser-tables
 
 script:
     # eventually uncomment:
     # -mypy $PACKAGE
-    # - coverage run -a `which py.test` -rf $PACKAGE
+    - coverage run -a `which baca-doctest` $PACKAGE
+    - coverage run -a `which py.test` -rf $PACKAGE
 
 after_success:
     - pip install --quiet coveralls

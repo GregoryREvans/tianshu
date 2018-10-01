@@ -186,6 +186,9 @@
             % [Global Context measure 49] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
             s1 * 1
+            % [Global Context measure 50] %! COMMENT_MEASURE_NUMBERS
+            \time 1/4
+            s1 * 1/4
         }
         \context StaffGroup = "Staff Group 1"
         <<
@@ -1197,9 +1200,15 @@
                         ~
                         ef'''4
                         ]
+                    }
+                    {
+                        % [Voice 1 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         \ottava #0
+                        r4
                         \!
                         \bar "||"
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -2107,7 +2116,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                    }
+                    {
+                        % [Voice 2 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
                         \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -3155,8 +3170,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 3 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -4129,9 +4150,15 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
-                            \!
-                            \bar "||"
                         }
+                    }
+                    {
+                        % [Voice 4 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \bar "||"
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -5133,8 +5160,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 5 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -6155,8 +6188,14 @@
                             ~
                             a8
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 6 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -7135,7 +7174,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                    }
+                    {
+                        % [Voice 7 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
                         \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -8160,9 +8205,15 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                    }
+                    {
+                        % [Voice 8 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         \ottava #0
+                        r4
                         \!
                         \bar "||"
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -9083,7 +9134,13 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
+                    }
+                    {
+                        % [Voice 9 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
                         \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -10053,8 +10110,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 10 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -11071,8 +11134,14 @@
                             ~
                             a8
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 11 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }
@@ -11992,8 +12061,14 @@
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
-                            \!
                         }
+                    }
+                    {
+                        % [Voice 12 measure 50] %! COMMENT_MEASURE_NUMBERS
+                        \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        r4
+                        \!
+                        \stopStaff \startStaff
                     }
                 }
             }

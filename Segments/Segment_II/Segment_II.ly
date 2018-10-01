@@ -2907,6 +2907,7 @@
 
                             \<
                             [
+                            \ottava #1
                             c'16
 
                             ~
@@ -2917,6 +2918,7 @@
                             bf'32
                             c'32
 
+                            \ottava #0
                             g16
 
                             c'32
@@ -3019,6 +3021,7 @@
 
                             \<
                             [
+                            \clef "tenorvarC"
                             bf'4
 
                             ~
@@ -3033,6 +3036,7 @@
                             \set stemRightBeamCount = 1
                             g8
 
+                            \clef "bass"
                             c'4
 
                             \set stemLeftBeamCount = 1
@@ -3132,6 +3136,7 @@
 
                             ~
                             g16
+                            \clef "tenorvarC"
                             c'16
 
                             bf'8
@@ -3157,6 +3162,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         bf,8.
                         \mp
 
@@ -3238,6 +3244,7 @@
                             % [Voice 3 measure 30] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 1
+                            \clef "tenorvarC"
                             c'8
                             \pp
 
@@ -3278,6 +3285,7 @@
                             r4
                             \!
                             \stopStaff \startStaff
+                            \clef "bass"
                             f,8
                             \mf
                             - \tenuto
@@ -3495,6 +3503,7 @@
                     {
                         \times 8/11 {
                             % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
+                            \clef "tenorvarC"
                             c'32
 
                             bf'16
@@ -3531,6 +3540,7 @@
                             % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 1
+                            \clef "bass"
                             f,8
                             \pp
 
@@ -3745,6 +3755,7 @@
                     {
                         \times 8/11 {
                             % [Voice 3 measure 48] %! COMMENT_MEASURE_NUMBERS
+                            \clef "tenorvarC"
                             bf'16
 
                             c'8
@@ -3842,6 +3853,7 @@
                             \clef "treble"
                             r8
                             \stopStaff \startStaff
+                            \ottava #-1
                             c16
                             \mf
                             - \tenuto
@@ -3882,6 +3894,7 @@
                             \<
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            \ottava #0
                             r16
                             \!
                         }
@@ -3937,6 +3950,7 @@
                             \set stemRightBeamCount = 1
                             d'8
 
+                            \ottava #-1
                             ef4
 
                             \set stemLeftBeamCount = 1
@@ -3954,6 +3968,7 @@
                     {
                         % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                     }
@@ -4021,6 +4036,7 @@
                     }
                     {
                         % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #-1
                         c16
                         \mf
                         - \tenuto
@@ -4051,6 +4067,7 @@
                         \<
                         ]
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -4088,6 +4105,7 @@
 
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
+                            \ottava #-1
                             ef8
 
                             c8
@@ -4100,6 +4118,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -4130,6 +4149,7 @@
                         \times 6/7 {
                             r4
                             \stopStaff \startStaff
+                            \ottava #-1
                             c8
                             \mf
                             - \tenuto
@@ -4161,6 +4181,7 @@
                             \<
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            \ottava #0
                             r16
                             \!
                         }
@@ -4175,6 +4196,7 @@
                     }
                     {
                         \times 8/11 {
+                            \ottava #-1
                             ef16
                             \pp
 
@@ -4188,6 +4210,7 @@
 
                             ~
                             ef16
+                            \ottava #0
                             d'16
 
                             g'8
@@ -4266,6 +4289,7 @@
 
                             d'16
 
+                            \ottava #-1
                             ef32
 
                             c32
@@ -4278,6 +4302,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                         \stopStaff \startStaff
@@ -4311,6 +4336,7 @@
                         % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
                         r8
                         \stopStaff \startStaff
+                        \ottava #-1
                         c16
                         \mf
                         - \tenuto
@@ -4353,6 +4379,7 @@
                         \<
                         ]
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -4445,6 +4472,7 @@
                     {
                         r8
                         \stopStaff \startStaff
+                        \ottava #-1
                         c16
                         \mf
                         - \tenuto
@@ -4560,6 +4588,7 @@
                             \<
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            \ottava #0
                             r16
                             \!
                         }
@@ -4644,6 +4673,7 @@
                     }
                     {
                         \times 8/11 {
+                            \ottava #-1
                             c32
                             \pp
 
@@ -4653,6 +4683,7 @@
 
                             ~
                             ef32
+                            \ottava #0
                             d'32
 
                             ~
@@ -4686,6 +4717,7 @@
 
                             d'32
 
+                            \ottava #-1
                             ef32
                             \ff
 
@@ -4696,6 +4728,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r1
                         \!
                         \stopStaff \startStaff
@@ -4824,6 +4857,7 @@
 
                             ~
                             d'32
+                            \ottava #-1
                             ef32
 
                             ~
@@ -4844,6 +4878,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                     }
@@ -4886,6 +4921,7 @@
 
                             ~
                             d'32
+                            \ottava #-1
                             ef32
 
                             ~
@@ -4894,6 +4930,7 @@
 
                             ef16
 
+                            \ottava #0
                             d'32
 
                             g'32
@@ -4925,12 +4962,14 @@
 
                             ~
                             d'32
+                            \ottava #-1
                             ef32
 
                             c16
 
                             ef32
 
+                            \ottava #0
                             d'32
 
                         }
@@ -8512,12 +8551,14 @@
                     {
                         r8
                         \stopStaff \startStaff
+                        \ottava #1
                         fs'''16
                         \p
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -8531,12 +8572,14 @@
                     }
                     {
                         % [Voice 8 measure 5] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         b'''2...
                         \mp
 
                         - \tweak stencil #constante-hairpin
                         \<
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -8598,6 +8641,7 @@
                         \times 6/7 {
                             r4
                             \stopStaff \startStaff
+                            \ottava #1
                             fqs'''8
                             \mf
                             - \tenuto
@@ -8614,6 +8658,7 @@
                             \<
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                            \ottava #0
                             r8
                             \!
                         }
@@ -8626,12 +8671,14 @@
                     }
                     {
                         % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         c''''2...
                         \mf
 
                         - \tweak stencil #constante-hairpin
                         \<
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -8671,6 +8718,7 @@
                     {
                         \times 8/11 {
                             % [Voice 8 measure 12] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             cs'''32
 
                             d'''16
@@ -8725,6 +8773,7 @@
                         - \tenuto
                         cqs'''16
                         - \tenuto
+                        \ottava #0
                         c'''16
                         - \tenuto
                         bqs''16
@@ -8762,6 +8811,7 @@
                     }
                     {
                         % [Voice 8 measure 15] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         b'''2
                         \mp
                         \<
@@ -8775,6 +8825,7 @@
                         \<
                         ]
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -8910,6 +8961,7 @@
                             cs'''16
                             d'''16
 
+                            \ottava #1
                             bf'''8
 
                             d''''16
@@ -8924,6 +8976,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -8999,6 +9052,7 @@
                     }
                     {
                         \times 8/11 {
+                            \ottava #1
                             d'''32
                             \pp
 
@@ -9051,6 +9105,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -9062,6 +9117,7 @@
                         % [Voice 8 measure 28] %! COMMENT_MEASURE_NUMBERS
                         r4
                         \stopStaff \startStaff
+                        \ottava #1
                         eqs'''8
                         \mf
                         - \tenuto
@@ -9152,6 +9208,7 @@
                             - \tenuto
                             c'''16
                             - \tenuto
+                            \ottava #0
                             bqs''16
                             - \tenuto
                             b''16
@@ -9266,6 +9323,7 @@
                     }
                     {
                         % [Voice 8 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         b'''2.
                         \mp
                         ~
@@ -9314,6 +9372,7 @@
                         \<
                         ]
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r16
                         \!
                     }
@@ -9341,6 +9400,7 @@
                     {
                         \times 8/11 {
                             % [Voice 8 measure 40] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             d''''16
                             \pp
 
@@ -9370,6 +9430,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                     }
@@ -9445,6 +9506,7 @@
                             d'''8
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
+                            \ottava #1
                             bf'''8
 
                             d''''4
@@ -9486,6 +9548,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                         \stopStaff \startStaff
@@ -9493,6 +9556,7 @@
                     {
                         \times 8/11 {
                             % [Voice 8 measure 44] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             d''''16
                             \pp
 
@@ -9522,6 +9586,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                     }
@@ -10864,7 +10929,7 @@
                         \set Staff.instrumentName =
                         \markup { Viola }
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                        \clef "alto"
+                        \clef "varC"
                         r2
                     }
                     {
@@ -12242,6 +12307,7 @@
                             % [Voice 11 measure 7] %! COMMENT_MEASURE_NUMBERS
                             g32
 
+                            \clef "tenorvarC"
                             c'16
 
                             ~
@@ -12252,6 +12318,7 @@
                             bf'32
                             c'32
 
+                            \clef "bass"
                             g16
 
                             af,32
@@ -12302,6 +12369,7 @@
                     {
                         \times 8/11 {
                             % [Voice 11 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
                             c'32
                             \pp
 
@@ -12336,6 +12404,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         f,2
                         \mp
                         \<
@@ -12426,6 +12495,7 @@
                     }
                     {
                         \times 8/11 {
+                            \clef "treble"
                             bf'32
                             \pp
 
@@ -12443,6 +12513,7 @@
 
                             g16
 
+                            \clef "bass"
                             af,32
 
                             f,32
@@ -12656,6 +12727,7 @@
 
                             ~
                             g16
+                            \clef "treble"
                             c'16
 
                             bf'8
@@ -12681,6 +12753,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         a8.
                         \mf
 
@@ -12723,6 +12796,7 @@
                     }
                     {
                         % [Voice 11 measure 28] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
                         af'2
                         \mp
                         \<
@@ -12753,6 +12827,7 @@
                             % [Voice 11 measure 30] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 1
+                            \clef "bass"
                             af,8
                             \pp
 
@@ -12906,14 +12981,14 @@
                             % [Voice 11 measure 34] %! COMMENT_MEASURE_NUMBERS
                             r8
                             \stopStaff \startStaff
-                            c16
+                            f16
                             \mf
                             - \tenuto
                             \>
                             [
-                            bqf,,16
+                            e16
                             - \tenuto
-                            aqf,,16
+                            eqf16
                             - \tenuto
                             bqf,16
                             - \tenuto
@@ -13104,6 +13179,7 @@
                             \set stemRightBeamCount = 1
                             c'8
 
+                            \clef "treble"
                             bf'4
 
                             \set stemLeftBeamCount = 1
@@ -13228,6 +13304,7 @@
                             bf'8
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
+                            \clef "bass"
                             c'8
 
                             g4
@@ -13339,6 +13416,7 @@
                             af,32
                             g32
 
+                            \clef "tenorvarC"
                             c'16
 
                             bf'32
@@ -13352,6 +13430,7 @@
                             % [Voice 11 measure 49] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 1
+                            \clef "bass"
                             g8
 
                             af,4
@@ -14146,6 +14225,7 @@
                     }
                     {
                         \times 8/11 {
+                            \ottava #1
                             c''16
                             \pp
 
@@ -14174,6 +14254,7 @@
                             % [Voice 12 measure 41] %! COMMENT_MEASURE_NUMBERS
                             g'16
 
+                            \ottava #0
                             f8
 
                             ~
@@ -14205,6 +14286,7 @@
                     {
                         \times 8/11 {
                             % [Voice 12 measure 42] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             c''16
                             \pp
 
@@ -14234,6 +14316,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                     }
@@ -14351,6 +14434,7 @@
                     }
                     {
                         \times 8/11 {
+                            \ottava #1
                             g'16
                             \pp
 
@@ -14381,6 +14465,7 @@
                     {
                         % [Voice 12 measure 47] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r1
                         \!
                         \stopStaff \startStaff

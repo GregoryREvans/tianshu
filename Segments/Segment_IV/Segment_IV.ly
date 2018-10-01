@@ -233,6 +233,7 @@
                     }
                     {
                         \times 2/3 {
+                            \ottava #1
                             ef''''4
                             \mf
 
@@ -248,6 +249,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -341,6 +343,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
+                            \ottava #1
                             ef''''4
                             \mf
 
@@ -368,6 +371,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                         \stopStaff \startStaff
@@ -463,6 +467,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \ottava #1
                         ef''''4
                         \mf
 
@@ -487,6 +492,7 @@
                     {
                         % [Voice 1 measure 14] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r1
                         \!
                         \stopStaff \startStaff
@@ -566,6 +572,7 @@
                     }
                     {
                         \times 4/5 {
+                            \ottava #1
                             ef''''4
                             \mf
 
@@ -592,6 +599,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                         \stopStaff \startStaff
@@ -705,6 +713,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \ottava #1
                         ef''''8
                         \mf
 
@@ -728,6 +737,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -807,6 +817,7 @@
                     }
                     {
                         % [Voice 1 measure 28] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         ef''''8
                         \mf
 
@@ -829,6 +840,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                         \stopStaff \startStaff
@@ -880,6 +892,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
+                            \ottava #1
                             ef''''8
                             \mf
 
@@ -957,6 +970,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                         \stopStaff \startStaff
@@ -2530,6 +2544,7 @@
                     {
                         \times 8/9 {
                             % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
                             c''4.
                             \mf
                             ~
@@ -2560,6 +2575,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         d32
                         \ff
 
@@ -2638,6 +2654,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
+                            \clef "treble"
                             c''4
                             \mf
 
@@ -2667,6 +2684,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 24/23 {
+                            \clef "bass"
                             g,8
                             \ff
 
@@ -2737,6 +2755,7 @@
 
                         f16.
 
+                        \clef "tenorvarC"
                         e'32
 
                         f16.
@@ -2819,6 +2838,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         g16
                         \p
                         - \tenuto
@@ -2879,6 +2899,7 @@
                             r16.
                             \!
                             \stopStaff \startStaff
+                            \clef "treble"
                             c''16
                             \ff
 
@@ -2926,6 +2947,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/11 {
                             % [Voice 3 measure 18] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
                             e8.
                             \p
                             - \tenuto
@@ -2947,6 +2969,7 @@
                     }
                     {
                         % [Voice 3 measure 19] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
                         c''8
                         \mf
 
@@ -3084,6 +3107,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "bass"
                         f32
                         \ff
 
@@ -3238,6 +3262,7 @@
                     }
                     {
                         % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
                         c''4
                         \mf
 
@@ -3337,6 +3362,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 40/41 {
                             % [Voice 3 measure 35] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
                             f16
                             \ff
 
@@ -3448,6 +3474,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 32/31 {
                             % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
                             c''32
                             \ff
 
@@ -3511,6 +3538,7 @@
                         g16
                         d'16
                         - \tenuto
+                        \clef "bass"
                         g8
                         - \tenuto
                         ~
@@ -3542,6 +3570,7 @@
                         [
                         d'16
                         - \tenuto
+                        \clef "tenorvarC"
                         c''16
                         - \tenuto
                         d'16
@@ -3603,6 +3632,7 @@
                         - \tweak stencil #constante-hairpin
                         \<
                         [
+                        \clef "bass"
                         d'16
                         - \tenuto
                         g16
@@ -3643,6 +3673,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \clef "treble"
                         d'16
                         \p
                         - \tenuto
@@ -3928,6 +3959,7 @@
 
                             a32
 
+                            \ottava #-1
                             d8
                             ~
                             d32
@@ -3946,6 +3978,7 @@
                     {
                         % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                         \stopStaff \startStaff
@@ -7413,11 +7446,19 @@
 
                             f32
 
-                            bf'8
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+
+                            r8
+
+                           \stopStaff \startStaff
 
                             g,32
 
-                            bf'32
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+
+                            r32
+
+                           \stopStaff \startStaff
 
                             g,32
                             ~
@@ -7426,17 +7467,21 @@
 
                             g,32
 
-                            bf'32
+                            bf,,32
 
                             ~
-                            bf'16
+                            bf,,16
+                            f32
+                            
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                           
+                           r8
+                            
+                           \stopStaff \startStaff
+
                             f32
 
-                            bf'8
-
-                            f32
-
-                            bf'32
+                            32
 
                             f16
                             \mf
@@ -7459,7 +7504,7 @@
                         \stopStaff \startStaff
                     }
                     {
-                        bf'16.
+                        bf,,16.
                         \ff
 
                         \>
@@ -8071,7 +8116,7 @@
 
                         \>
                         [
-                        bf'16
+                        bf,,16
 
                         g,32
 
@@ -8094,7 +8139,7 @@
                         a,,32
                         g,32
 
-                        bf'16
+                        bf,,16
 
                         ~
                         bf'32
@@ -8146,11 +8191,11 @@
                             e'8
                             f16
 
-                            bf'32
+                            bf,,32
 
                             g,16.
 
-                            bf'32
+                            bf,,32
 
                             f32
                             \mf
@@ -8475,6 +8520,7 @@
                         b''32
                         ~
                         b''8
+                        \ottava #1
                         af'''16
 
                         b''32
@@ -8489,6 +8535,7 @@
                     {
                         % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r1
                         \!
                         \stopStaff \startStaff
@@ -8560,6 +8607,7 @@
                     {
                         \times 32/33 {
                             % [Voice 8 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             cs''''16
                             \ff
 
@@ -8605,6 +8653,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -8675,6 +8724,7 @@
                     }
                     {
                         % [Voice 8 measure 15] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         bf''32
                         \ff
 
@@ -8714,6 +8764,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                         \stopStaff \startStaff
@@ -8765,6 +8816,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
                             % [Voice 8 measure 19] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             ef''''8
                             \ff
 
@@ -8861,6 +8913,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -9005,6 +9058,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \ottava #1
                         af'''32
                         \ff
 
@@ -9048,6 +9102,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2
                         \!
                     }
@@ -9147,6 +9202,7 @@
                     }
                     {
                         % [Voice 8 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         af'''16
                         \ff
 
@@ -9234,6 +9290,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                         \stopStaff \startStaff
@@ -9425,6 +9482,7 @@
                     }
                     {
                         % [Voice 8 measure 43] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         bf'''4
                         \pp
                         - \tenuto
@@ -9434,6 +9492,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                         \stopStaff \startStaff
@@ -9556,6 +9615,7 @@
                         - \tenuto
                         cs'''16
                         - \tenuto
+                         \ottava #1
                         bf'''16
                         - \tenuto
                         ~
@@ -9578,6 +9638,7 @@
                     {
                         % [Voice 8 measure 50] %! COMMENT_MEASURE_NUMBERS
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                         \bar "|."
@@ -9999,6 +10060,7 @@
                     }
                     {
                         \times 16/17 {
+                            \ottava #1
                             b''32
                             \ff
 
@@ -10051,6 +10113,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                     }
@@ -10729,7 +10792,7 @@
                         \set Staff.instrumentName =
                         \markup { Viola }
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                        \clef "alto"
+                        \clef "varC"
                         r2
                         \stopStaff \startStaff
                     }
@@ -12106,6 +12169,7 @@
                             [
                             f32
 
+                            \clef "tenorvarC"
                             e'32
                             ~
                             e'8
@@ -12177,6 +12241,7 @@
                     }
                     {
                         % [Voice 11 measure 13] %! COMMENT_MEASURE_NUMBERS
+                        \clef "bass"
                         f4.
                         \mf
 
@@ -12201,6 +12266,7 @@
                     }
                     {
                         \times 4/5 {
+                            \clef "treble"
                             g8
                             \p
                             - \tenuto
@@ -12229,6 +12295,7 @@
                     }
                     {
                         \times 16/17 {
+                            \clef "treble"
                             f8
                             \ff
 
@@ -12263,6 +12330,7 @@
                         \!
                         r32
                         \stopStaff \startStaff
+                        \clef "bass"
                         f16
                         \ff
 
@@ -12363,6 +12431,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
+                            \clef "tenorvarC"
                             e'32
                             \ff
 
@@ -12397,6 +12466,7 @@
                         r16.
                         \!
                         \stopStaff \startStaff
+                        \clef "bass"
                         d32
                         \ff
 
@@ -12440,6 +12510,7 @@
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
+                            \clef "tenorvarC"
                             d'16
                             \p
                             - \tenuto
@@ -12472,6 +12543,7 @@
                     }
                     {
                         \times 8/9 {
+                            \clef "bass"
                             g,8
                             \ff
 
@@ -12511,6 +12583,7 @@
                         f8
                         ~
                         f32
+                        \clef "tenorvarC"
                         e'16
 
                         c''32
@@ -12539,6 +12612,7 @@
                     {
                         \times 2/3 {
                             % [Voice 11 measure 27] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
                             d8
                             \mf
 
@@ -12562,6 +12636,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 24/23 {
                             % [Voice 11 measure 28] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
                             c''32
                             \ff
 
@@ -12631,6 +12706,7 @@
                     }
                     {
                         % [Voice 11 measure 31] %! COMMENT_MEASURE_NUMBERS
+                        \clef "bass"
                         cs4.
                         \mf
 
@@ -12731,6 +12807,7 @@
                     }
                     {
                         % [Voice 11 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        \clef "tenorvarC"
                         bf'16
                         \ff
 
@@ -12879,6 +12956,7 @@
 
                         ~
                         e'32
+                        \clef "bass"
                         f32
 
                         d16
@@ -12963,6 +13041,7 @@
                             - \tenuto
                             g8.
                             - \tenuto
+                            \clef "tenorvarC"
                             d'16
                             - \tenuto
                             c''4
@@ -12987,6 +13066,7 @@
                     {
                         \times 8/9 {
                             % [Voice 11 measure 44] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
                             g16
                             \p
                             - \tenuto
@@ -13124,6 +13204,7 @@
                         [
                         g8
                         - \tenuto
+                        \clef "treble"
                         d'16
                         - \tenuto
                     }
@@ -13590,6 +13671,7 @@
                     }
                     {
                         % [Voice 12 measure 23] %! COMMENT_MEASURE_NUMBERS
+                        \ottava #1
                         e''16
                         \ff
 
@@ -13625,6 +13707,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r4
                         \!
                     }
@@ -13677,6 +13760,7 @@
                             d'8
                             ~
                             d'32
+                            \ottava #1
                             f'32
 
                             ~
@@ -13685,6 +13769,7 @@
 
                             f'16.
 
+                            \ottava #0
                             d'32
 
                             f'16
@@ -13744,6 +13829,7 @@
                         \stopStaff \startStaff
                     }
                     {
+                        \ottava #1
                         e''16
                         \ff
 
@@ -13753,6 +13839,7 @@
 
                         d'32
 
+                        \ottava #0
                         g8
                         \mf
 
@@ -13950,6 +14037,7 @@
 
                         d'16.
 
+                        \ottava #1
                         f'32
 
                         e''16.
@@ -14000,6 +14088,7 @@
                             f'16
                             d'32
 
+                            \ottava #0
                             g8
 
                             a,32
@@ -14035,6 +14124,7 @@
                             - \tenuto
                             ~
                             e'16
+                            \ottava #1
                             g'16
                             - \tenuto
                             d''16
@@ -14058,6 +14148,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                         \stopStaff \startStaff
@@ -14066,6 +14157,7 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 8/7 {
                             % [Voice 12 measure 42] %! COMMENT_MEASURE_NUMBERS
+                            \ottava #1
                             d''16
                             \p
                             - \tenuto
@@ -14092,6 +14184,7 @@
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+                        \ottava #0
                         r2.
                         \!
                     }
@@ -14127,6 +14220,7 @@
                     }
                     {
                         \times 8/9 {
+                            \ottava #1
                             e'16
                             \p
                             - \tenuto
@@ -14217,6 +14311,7 @@
                         g'16
                         e'16
                         - \tenuto
+                        \ottava #0
                         f8
                         - \tenuto
                         ~

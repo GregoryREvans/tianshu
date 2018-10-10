@@ -3,17 +3,17 @@
 \version "2.19.82"
 \language "english"
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 13)
+#(set-global-staff-size 12)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "Didot") \fontsize #7 \italic {"for Ensemble Ibis"}
-	title =  \markup { \epsfile #Y #35 #"/Users/evansdsg2/Scores/tianshu/Segments/Segment_I/tianshu_title.eps" }
-	subtitle = \markup \override #'(font-name . "Didot") \fontsize #10 \bold \center-column {"Tianshu"}
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for twelve players"}
+	dedication = \markup \override #'(font-name . "Didot") \fontsize #6 \italic {"for Ensemble Ibis"}
+	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores//tianshu/tianshu/Segments/Segment_I/tianshu_title.eps" }
+	subtitle = \markup \override #'(font-name . "Didot") \fontsize #9 \bold \center-column {"Tianshu"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #5 \center-column {"for twelve players"}
 	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
@@ -63,9 +63,9 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #7
-		%\override TimeSignature.font-size = #1
+        \override TimeSignature.font-size = #6
         \override TimeSignature.self-alignment-X = #center
+		\override TimeSignature.whiteout = ##t
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))
     }
     \context {
@@ -80,13 +80,13 @@
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 24) (minimum-distance . 24) (padding . 1))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 3))
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
-		proportionalNotationDuration = #(ly:make-moment 1 39)
+		proportionalNotationDuration = #(ly:make-moment 1 40)
         autoBeaming = ##f
         tupletFullLength = ##t
     }

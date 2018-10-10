@@ -23,8 +23,7 @@ time_signatures = [
         (4, 4), (5, 4), (4, 4), (3, 4), (5, 4), (5, 4),
         (5, 4), (5, 4), (4, 4), (4, 4), (5, 4), (5, 4),
         (4, 4), (4, 4), (3, 4), (4, 4), (4, 4), (3, 4),
-        (4, 4),
-        (1, 4),
+        (5, 4),
     ]
 ]
 
@@ -61,8 +60,8 @@ for i in range(1, 1000):
     value = flute_random_walk_one[i-1] + movement
     flute_random_walk_one.append(value)
 flute_random_walk_one = [abs(x) for x in flute_random_walk_one]
-flute_chord_one = [5, 8, 14, 23, 27, 28, 30, 37, 30, 28, 27, 23, 14, 8, ]
-flute_notes_one = [flute_chord_one[x] for x in reduceMod13(flute_random_walk_one)]
+flute_chord_one = [8, 14, 23, 27, 28, 30, 37, 30, 28, 27, 23, 14, ]
+flute_notes_one = [flute_chord_one[x] for x in reduceMod11(flute_random_walk_one)]
 
 seed(2)
 clarinet_random_walk_one = []
@@ -206,8 +205,8 @@ for i in range(1, 1000):
     value = flute_random_walk_two[i-1] + movement
     flute_random_walk_two.append(value)
 flute_random_walk_two = [abs(x) for x in flute_random_walk_two]
-flute_chord_two = [5, 10, 16, 23, 25, 26, 25, 23, 16, 10, ]
-flute_notes_two = [flute_chord_two[x] for x in reduceMod9(flute_random_walk_two)]
+flute_chord_two = [10, 16, 23, 25, 26, 25, 23, 16, ]
+flute_notes_two = [flute_chord_two[x] for x in reduceMod7(flute_random_walk_two)]
 
 seed(2)
 clarinet_random_walk_two = []
@@ -1404,7 +1403,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
 # Create a score structure
 
 score = abjad.Score([
-    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context'),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 1'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 1')],name='Staff 1', lilypond_type='Staff',),
@@ -1413,6 +1412,7 @@ score = abjad.Score([
         ],
         name='Staff Group 1',
     ),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 2'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 4')],name='Staff 4', lilypond_type='Staff',),
@@ -1422,6 +1422,7 @@ score = abjad.Score([
         ],
         name='Staff Group 2',
     ),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 3'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 8')],name='Staff 8', lilypond_type='Staff',),
@@ -1445,7 +1446,17 @@ score = abjad.Score([
 for time_signature in time_signatures:
     skip = abjad.Skip(1, multiplier=(time_signature))
     abjad.attach(time_signature, skip)
-    score['Global Context'].append(skip)
+    score['Global Context 1'].append(skip)
+
+for time_signature in time_signatures:
+    skip = abjad.Skip(1, multiplier=(time_signature))
+    abjad.attach(time_signature, skip)
+    score['Global Context 2'].append(skip)
+
+for time_signature in time_signatures:
+    skip = abjad.Skip(1, multiplier=(time_signature))
+    abjad.attach(time_signature, skip)
+    score['Global Context 3'].append(skip)
 
 # Define a helper function that takes a rhythm maker and some durations and
 # outputs a container. This helper function also adds LilyPond analysis
@@ -1693,7 +1704,7 @@ clefs1 = cyc([
 ])
 
 clefs2 = cyc([
-    abjad.Clef('treble'),
+    abjad.Clef('bass'),
     abjad.Clef('treble'),
     abjad.Clef('bass'),
     abjad.Clef('bass'),
@@ -1788,27 +1799,75 @@ for staff in abjad.select(score['Staff Group 3']).components(abjad.Staff)[0]:
     abjad.attach(metro, leaf1)
     abjad.attach(bar_line, last_leaf)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[7]
     abjad.attach(mark1, leaf1)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[7]
+    abjad.attach(mark1, leaf1)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[7]
+    abjad.attach(mark1, leaf1)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf2 = abjad.select(staff).leaves()[16]
     abjad.attach(mark2, leaf2)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf2 = abjad.select(staff).leaves()[16]
+    abjad.attach(mark2, leaf2)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf2 = abjad.select(staff).leaves()[16]
+    abjad.attach(mark2, leaf2)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf3 = abjad.select(staff).leaves()[22]
     abjad.attach(mark3, leaf3)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf3 = abjad.select(staff).leaves()[22]
+    abjad.attach(mark3, leaf3)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf3 = abjad.select(staff).leaves()[22]
+    abjad.attach(mark3, leaf3)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf4 = abjad.select(staff).leaves()[29]
     abjad.attach(mark4, leaf4)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf4 = abjad.select(staff).leaves()[29]
+    abjad.attach(mark4, leaf4)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf4 = abjad.select(staff).leaves()[29]
+    abjad.attach(mark4, leaf4)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf5 = abjad.select(staff).leaves()[34]
     abjad.attach(mark5, leaf5)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf5 = abjad.select(staff).leaves()[34]
+    abjad.attach(mark5, leaf5)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf5 = abjad.select(staff).leaves()[34]
+    abjad.attach(mark5, leaf5)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
+    leaf6 = abjad.select(staff).leaves()[39]
+    abjad.attach(mark6, leaf6)
+
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf6 = abjad.select(staff).leaves()[39]
+    abjad.attach(mark6, leaf6)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
     leaf6 = abjad.select(staff).leaves()[39]
     abjad.attach(mark6, leaf6)
 
@@ -1831,7 +1890,7 @@ score_file = abjad.LilyPondFile.new(
 abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
 
-directory = '/Users/evansdsg2/Scores/tianshu/Segments/Segment_I'
+directory = '/Users/evansdsg2/Scores//tianshu/tianshu/Segments/Segment_I'
 pdf_path = f'{directory}/Segment_I.pdf'
 path = pathlib.Path('Segment_I.pdf')
 if path.exists():

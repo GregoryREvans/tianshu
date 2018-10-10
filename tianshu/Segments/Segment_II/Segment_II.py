@@ -23,8 +23,7 @@ time_signatures = [
         (4, 4), (5, 4), (4, 4), (3, 4), (5, 4), (5, 4),
         (5, 4), (5, 4), (4, 4), (4, 4), (5, 4), (5, 4),
         (4, 4), (4, 4), (3, 4), (4, 4), (4, 4), (3, 4),
-        (4, 4),
-        (1, 4),
+        (5, 4),
     ]
 ]
 
@@ -192,7 +191,7 @@ tuba_scale = [-19 ]
 violin1_scale = [30, 29.5, 29, 28.5, 28, 27.5, 27, 26.5, 26, 25.5, 25, 24.5, 24, 23.5, 23, 22.5, 22, 21.5, 21, 20.5, 20, 19.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, ]
 violin2_scale = [19, 18.5, 18, 17.5, 17, 16.5, 16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, ]
 viola_scale = [8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, 0, -0.5, -1, -1.5, -2, -2.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, ]
-cello_scale = [-3, -3.5, -4, -4.5, -5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5 -13, -13.5 -14, -13.5, -13, -12.5, -12, -11.5, -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, ]
+cello_scale = [-3, -3.5, -4, -4.5, -5, -5.5, -6, -6.5, -7, -7.5, -8, -8.5, -9, -9.5, -10, -10.5, -11, -11.5, -12, -12.5, -13, -13.5, -14, -13.5, -13, -12.5, -12, -11.5, -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, ]
 bass_scale = [-14, -14.5, -15, -15.5, -16, -16.5, -17, -17.5, -18, -18.5, -19, -19.5, -20, -20.5, -21, -21.5, -22, -22.5, -23, -23.5, -24, -24.5, -25, -24.5, -24, -23.5, -23, -22.5, -22, -21.5, -21, -20.5, -20, -19.5, -19, -18.5, -18, -17.5, -17, -16.5, -16, -15.5, -15, -14.5, ]
 
 seed(1)
@@ -324,7 +323,7 @@ for i in range(1, 1000):
     value = bass_random_walk_two[i-1] + movement
     bass_random_walk_two.append(value)
 bass_random_walk_two = [abs(x) for x in bass_random_walk_two]
-bass_chord_two = [-29, -19, -14, -3, 0, -3, 14, -19 ]
+bass_chord_two = [-29, -19, -14, -3, 0, -3, -14, -19 ]
 bass_notes_two = [bass_chord_two[x] for x in reduceMod7(bass_random_walk_two)]
 
 # Define rhythm-makers: to be used by the MusicMaker, one for silence.
@@ -357,7 +356,12 @@ rmaker_two = abjadext.rmakers.IncisedRhythmMaker(
     )
 
 rmaker_three = abjadext.rmakers.TupletRhythmMaker(
-    tuplet_ratios=[(1, 3, 2, 1, 2, 1, 1)],
+    tuplet_ratios=[(1, 3, 2)],
+    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
+        trivialize=True,
+        extract_trivial=True,
+        rewrite_rest_filled=True,
+        ),
     )
 
 # Initialize AttachmentHandler
@@ -1392,7 +1396,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
 # Create a score structure
 
 score = abjad.Score([
-    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context'),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 1'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 1')],name='Staff 1', lilypond_type='Staff',),
@@ -1401,6 +1405,7 @@ score = abjad.Score([
         ],
         name='Staff Group 1',
     ),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 2'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 4')],name='Staff 4', lilypond_type='Staff',),
@@ -1410,6 +1415,7 @@ score = abjad.Score([
         ],
         name='Staff Group 2',
     ),
+    abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context 3'),
     abjad.StaffGroup(
         [
             abjad.Staff([abjad.Voice(name='Voice 8')],name='Staff 8', lilypond_type='Staff',),
@@ -1433,7 +1439,17 @@ score = abjad.Score([
 for time_signature in time_signatures:
     skip = abjad.Skip(1, multiplier=(time_signature))
     abjad.attach(time_signature, skip)
-    score['Global Context'].append(skip)
+    score['Global Context 1'].append(skip)
+
+for time_signature in time_signatures:
+    skip = abjad.Skip(1, multiplier=(time_signature))
+    abjad.attach(time_signature, skip)
+    score['Global Context 2'].append(skip)
+
+for time_signature in time_signatures:
+    skip = abjad.Skip(1, multiplier=(time_signature))
+    abjad.attach(time_signature, skip)
+    score['Global Context 3'].append(skip)
 
 # Define a helper function that takes a rhythm maker and some durations and
 # outputs a container. This helper function also adds LilyPond analysis
@@ -1776,27 +1792,75 @@ for staff in abjad.select(score['Staff Group 3']).components(abjad.Staff)[0]:
     abjad.attach(metro, leaf1)
     abjad.attach(bar_line, last_leaf)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[7]
     abjad.attach(mark1, leaf1)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[7]
+    abjad.attach(mark1, leaf1)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[7]
+    abjad.attach(mark1, leaf1)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf2 = abjad.select(staff).leaves()[16]
     abjad.attach(mark2, leaf2)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf2 = abjad.select(staff).leaves()[16]
+    abjad.attach(mark2, leaf2)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf2 = abjad.select(staff).leaves()[16]
+    abjad.attach(mark2, leaf2)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf3 = abjad.select(staff).leaves()[22]
     abjad.attach(mark3, leaf3)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf3 = abjad.select(staff).leaves()[22]
+    abjad.attach(mark3, leaf3)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf3 = abjad.select(staff).leaves()[22]
+    abjad.attach(mark3, leaf3)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf4 = abjad.select(staff).leaves()[29]
     abjad.attach(mark4, leaf4)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf4 = abjad.select(staff).leaves()[29]
+    abjad.attach(mark4, leaf4)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf4 = abjad.select(staff).leaves()[29]
+    abjad.attach(mark4, leaf4)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
     leaf5 = abjad.select(staff).leaves()[34]
     abjad.attach(mark5, leaf5)
 
-for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf5 = abjad.select(staff).leaves()[34]
+    abjad.attach(mark5, leaf5)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
+    leaf5 = abjad.select(staff).leaves()[34]
+    abjad.attach(mark5, leaf5)
+
+for staff in abjad.iterate(score['Global Context 1']).components(abjad.Staff):
+    leaf6 = abjad.select(staff).leaves()[39]
+    abjad.attach(mark6, leaf6)
+
+for staff in abjad.iterate(score['Global Context 2']).components(abjad.Staff):
+    leaf6 = abjad.select(staff).leaves()[39]
+    abjad.attach(mark6, leaf6)
+
+for staff in abjad.iterate(score['Global Context 3']).components(abjad.Staff):
     leaf6 = abjad.select(staff).leaves()[39]
     abjad.attach(mark6, leaf6)
 
@@ -1819,7 +1883,7 @@ score_file = abjad.LilyPondFile.new(
 abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
 
-directory = '/Users/evansdsg2/Scores/tianshu/Segments/Segment_II'
+directory = '/Users/evansdsg2/Scores/tianshu/tianshu/Segments/Segment_II'
 pdf_path = f'{directory}/Segment_II.pdf'
 path = pathlib.Path('Segment_II.pdf')
 if path.exists():

@@ -1,6 +1,7 @@
 import abjad
 from .AttachmentHandler import AttachmentHandler
 
+
 class MusicMaker:
     def __init__(
         self,
@@ -30,14 +31,15 @@ class MusicMaker:
         selections = self._make_basic_rhythm(durations)
         if self.pitches == None:
             start_command = abjad.LilyPondLiteral(
-                r'\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff',
-                format_slot='before',
-                )
+                r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
+                format_slot="before",
+            )
             stop_command = abjad.LilyPondLiteral(
-                r'\stopStaff \startStaff',
-                format_slot='after',
-                )
-            literal = abjad.LilyPondLiteral(r'\once \override Clef.transparent = ##t', 'before')
+                r"\stopStaff \startStaff", format_slot="after"
+            )
+            literal = abjad.LilyPondLiteral(
+                r"\once \override Clef.transparent = ##t", "before"
+            )
             abjad.attach(literal, selections[0][0])
             abjad.attach(start_command, selections[0][0])
             abjad.attach(stop_command, selections[0][-1])
@@ -55,6 +57,7 @@ class MusicMaker:
             while True:
                 yield lst[self._count % len(lst)]
                 self._count += 1
+
         cyc_pitches = cyc(pitches)
         pitches, durations, leaves = [[], [], []]
         for tie in logical_ties:
@@ -74,10 +77,10 @@ class MusicMaker:
     def _apply_pitches(self, selections, pitches):
         leaf_maker = abjad.LeafMaker()
         container = abjad.Container(selections)
-        old_ties = [tie for tie in abjad.iterate(
-            container).logical_ties()]
+        old_ties = [tie for tie in abjad.iterate(container).logical_ties()]
         pitches, durations, old_leaves = self._collect_pitches_durations_leaves(
-            old_ties, pitches)
+            old_ties, pitches
+        )
         new_leaves = [leaf for leaf in leaf_maker(pitches, durations)]
         for old_leaf, new_leaf in zip(old_leaves, new_leaves):
             indicators = abjad.inspect(old_leaf).indicators()

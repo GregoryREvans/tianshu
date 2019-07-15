@@ -11,7 +11,7 @@
 	tagline = ##f
 	breakbefore = ##t
 	dedication = \markup \override #'(font-name . "Didot") \fontsize #6 \italic {"for Ensemble Ibis"}
-	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores//tianshu/tianshu/Segments/Segment_I/tianshu_title.eps" }
+	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/tianshu_title.eps" }
 	subtitle = \markup \override #'(font-name . "Didot") \fontsize #9 \bold \center-column {"Tianshu"}
 	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #5 \center-column {"for twelve players"}
 	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
@@ -109,8 +109,10 @@
 
 \paper {
 
-	top-margin = 1.5\cm
-	bottom-margin = 1.5\cm
+	top-margin = 0.5\cm
+	bottom-margin = 0.4\cm
+	left-margin = 1\cm
+	right-margin = 0.8\cm
 
 	%top-margin = .90\in
 	oddHeaderMarkup = \markup ""

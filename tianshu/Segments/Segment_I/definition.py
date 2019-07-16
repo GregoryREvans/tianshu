@@ -2122,13 +2122,12 @@ for staff in abjad.iterate(score["Staff Group 3"]).components(abjad.Staff):
 
 # Make a lilypond file and show it:
 
-abjad_stylesheet_path = os.path.join(
-    os.environ.get("HOME"), "abjad/docs/source/_stylesheets/abjad.ily"
-)
-current_directory = pathlib.Path(__file__).parent
-stylesheet_path = (current_directory / ".." / ".." / "Build").resolve()
 score_file = abjad.LilyPondFile.new(
-    score, includes=[abjad_stylesheet_path, f"{stylesheet_path}/first_stylesheet.ily"]
+    score,
+    includes=[
+        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+        "/Users/evansdsg2/Scores/tianshu/tianshu/Build/first_stylesheet.ily",
+    ],
 )
 
 abjad.SegmentMaker.comment_measure_numbers(score)
@@ -2182,7 +2181,10 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Staff)):
     part.insert(0, signature_copy)
     part_file = abjad.LilyPondFile.new(
         part,
-        includes=[abjad_stylesheet_path, f"{stylesheet_path}/parts_stylesheet.ily"],
+        includes=[
+            "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+            "/Users/evansdsg2/Scores/tianshu/tianshu/Build/parts_stylesheet.ily",
+        ],
     )
     pdf_path = f"{directory}/part_illustration{count}.pdf"
     path = pathlib.Path(f"part_illustration{count}.pdf")

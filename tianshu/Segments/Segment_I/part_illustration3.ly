@@ -366,16 +366,20 @@
                 - \tenuto
                 g16
                 - \tenuto
+                \ottava 1
                 f'16
                 - \tenuto
+                \ottava 0
                 g16
                 - \tenuto
+                \ottava 1
                 f'16
                 \mf
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
+                \ottava 0
                 r16
                 \!
                 r4
@@ -422,20 +426,26 @@
                     - \tenuto
                     \>
                     [
+                    \ottava 1
                     f'8
                     - \tenuto
+                    \ottava 0
                     g8
                     - \tenuto
+                    \ottava 1
                     f'8
                     - \tenuto
+                    \ottava 0
                 }
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 8/7 {
                     % [Voice 3 measure 16] %! COMMENT_MEASURE_NUMBERS
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
                     af,16
@@ -543,6 +553,7 @@
                 }
                 % [Voice 3 measure 23] %! COMMENT_MEASURE_NUMBERS
                 r4
+                \clef "tenorvarC"
                 f'4
                 \mp
 
@@ -566,11 +577,14 @@
                 % [Voice 3 measure 24] %! COMMENT_MEASURE_NUMBERS
                 r2
                 r8
+                \ottava 1
+                \clef "bass"
                 f'8
                 \fff
                 - \tenuto
                 \>
                 [
+                \ottava 0
                 % [Voice 3 measure 25] %! COMMENT_MEASURE_NUMBERS
                 g16
                 - \tenuto
@@ -582,8 +596,10 @@
                 - \tenuto
                 g16
                 - \tenuto
+                \ottava 1
                 f'16
                 - \tenuto
+                \ottava 0
                 g16
                 - \tenuto
                 af,16
@@ -626,24 +642,32 @@
                     [
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                     r16
                     \!
                 }
@@ -663,22 +687,30 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     [
+                    \ottava 1
                     f'16
 
+                    \ottava 0
                     a8.
 
+                    \ottava 1
                     f'16
 
+                    \ottava 0
+                    \ottava 1
                     af'16
 
                     ~
                     af'8.
+                    \ottava 0
+                    \ottava 1
                     f'8.
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                 }
                 % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
                 c,2
@@ -729,24 +761,30 @@
                 - \tenuto
                 \>
                 [
+                \ottava 1
                 f'8
                 - \tenuto
+                \ottava 0
                 g8
                 - \tenuto
+                \ottava 1
                 f'8
                 - \tenuto
+                \ottava 0
                 g8
                 - \tenuto
                 af,8
                 - \tenuto
                 g8
                 - \tenuto
+                \ottava 1
                 f'8
                 \mf
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
+                \ottava 0
                 r8
                 \!
                 % [Voice 3 measure 36] %! COMMENT_MEASURE_NUMBERS
@@ -765,16 +803,22 @@
                     - \tenuto
                     \>
                     [
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
+                    \ottava 1
                     f'16
                     - \tenuto
+                    \ottava 0
                     g16
                     - \tenuto
                     af,16
@@ -817,12 +861,16 @@
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 [
+                \ottava 1
                 f'16
 
+                \ottava 0
                 a16
 
+                \ottava 1
                 f'16
 
+                \ottava 0
                 a16
 
                 ~
@@ -831,20 +879,27 @@
 
                 a8.
 
+                \ottava 1
                 f'16
 
                 ]
+                \ottava 0
+                \ottava 1
                 af'4
 
+                \ottava 0
                 % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
+                \ottava 1
                 f'4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
+                \ottava 0
                 r1
                 \!
                 % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 af'8
                 \mp
 
@@ -875,6 +930,7 @@
                 \!
                 \times 4/5 {
                     % [Voice 3 measure 43] %! COMMENT_MEASURE_NUMBERS
+                    \clef "bass"
                     a4
                     \mp
 
@@ -900,20 +956,28 @@
                 [
                 a16
 
+                \ottava 1
                 f'16
 
+                \ottava 0
                 a16
                 ~
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 8/7 {
                     % [Voice 3 measure 45] %! COMMENT_MEASURE_NUMBERS
                     a16
+                    \ottava 1
                     f'16
 
+                    \ottava 0
+                    \ottava 1
                     af'8.
 
+                    \ottava 0
+                    \ottava 1
                     f'16
 
+                    \ottava 0
                     a16
                     \ff
 
@@ -968,12 +1032,14 @@
                 bf,8
                 a16
 
+                \ottava 1
                 f'16
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
+                \ottava 0
                 r4
                 \!
                 \tweak text #tuplet-number::calc-fraction-text

@@ -7,6 +7,7 @@ import datetime
 import abjadext.rmakers
 from tianshu.tools.MusicMaker import MusicMaker
 from tianshu.tools.AttachmentHandler import AttachmentHandler
+from tianshu.tools.clef_handlers import handlers
 from random import random
 from random import seed
 
@@ -636,6 +637,20 @@ rmaker_three = abjadext.rmakers.IncisedRhythmMaker(
     )
 )
 
+slower_rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
+    talea=abjadext.rmakers.Talea(counts=[6, 2, 4, 2, 6, 1, 12, 8, 10], denominator=8),
+    beam_specifier=abjadext.rmakers.BeamSpecifier(
+        beam_divisions_together=True, beam_rests=False
+    ),
+    extra_counts_per_division=[0, 1, 0, -1],
+    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
+        left_classes=[abjad.Note, abjad.Rest], left_counts=[1, 0, 1]
+    ),
+    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
+        trivialize=True, extract_trivial=True, rewrite_rest_filled=True
+    ),
+)
+
 # Initialize AttachmentHandler
 
 attachment_handler_one = AttachmentHandler(
@@ -792,7 +807,7 @@ bassoonmusicmaker_three = MusicMaker(
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=slower_rmaker_one,
     pitches=trombone_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -830,7 +845,7 @@ cellomusicmaker_three = MusicMaker(
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=slower_rmaker_one,
     pitches=horn_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -849,7 +864,7 @@ hornmusicmaker_three = MusicMaker(
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=slower_rmaker_one,
     pitches=tuba_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -868,7 +883,7 @@ tubamusicmaker_three = MusicMaker(
 )
 #####bass#####
 bassmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=slower_rmaker_one,
     pitches=bass_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -1921,22 +1936,6 @@ instruments3 = cyc(
     [abjad.Violin(), abjad.Violin(), abjad.Viola(), abjad.Cello(), abjad.Contrabass()]
 )
 
-clefs1 = cyc([abjad.Clef("treble"), abjad.Clef("treble"), abjad.Clef("bass")])
-
-clefs2 = cyc(
-    [abjad.Clef("treble"), abjad.Clef("treble"), abjad.Clef("bass"), abjad.Clef("bass")]
-)
-
-clefs3 = cyc(
-    [
-        abjad.Clef("treble"),
-        abjad.Clef("treble"),
-        abjad.Clef("alto"),
-        abjad.Clef("bass"),
-        abjad.Clef("bass"),
-    ]
-)
-
 abbreviations1 = cyc(
     [
         abjad.MarginMarkup(markup=abjad.Markup("fl.")),
@@ -1996,21 +1995,22 @@ for staff in abjad.iterate(score["Staff Group 1"]).components(abjad.Staff):
     abjad.attach(next(instruments1), leaf1)
     abjad.attach(next(abbreviations1), leaf1)
     abjad.attach(next(names1), leaf1)
-    abjad.attach(next(clefs1), leaf1)
 
 for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(next(instruments2), leaf1)
     abjad.attach(next(abbreviations2), leaf1)
     abjad.attach(next(names2), leaf1)
-    abjad.attach(next(clefs2), leaf1)
 
 for staff in abjad.iterate(score["Staff Group 3"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(next(instruments3), leaf1)
     abjad.attach(next(abbreviations3), leaf1)
     abjad.attach(next(names3), leaf1)
-    abjad.attach(next(clefs3), leaf1)
+
+for voice in abjad.select(score).components(abjad.Voice):
+    clef = next(handlers)
+    clef(voice)
 
 for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]

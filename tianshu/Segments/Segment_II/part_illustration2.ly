@@ -485,8 +485,10 @@
                 % [Voice 2 measure 18] %! COMMENT_MEASURE_NUMBERS
                 fs''8
 
+                \ottava 1
                 cs'''4.
 
+                \ottava 0
                 fs''4
 
                 \times 2/3 {
@@ -580,18 +582,22 @@
 
                 \<
                 [
+                \ottava 1
                 cs'''8
 
                 ~
                 ]
                 cs'''4
+                \ottava 0
                 fs''4
 
                 \times 2/3 {
                     % [Voice 2 measure 26] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     cs'''16
 
                     [
+                    \ottava 0
                     fs''8.
 
                     e''8
@@ -902,8 +908,10 @@
 
                     \<
                     [
+                    \ottava 1
                     cs'''8.
 
+                    \ottava 0
                     fs''8
                     \ff
 
@@ -916,11 +924,13 @@
                 % [Voice 2 measure 48] %! COMMENT_MEASURE_NUMBERS
                 r2
                 \times 2/3 {
+                    \ottava 1
                     cs'''16
                     \pp
 
                     \<
                     [
+                    \ottava 0
                     fs''8.
 
                     e''8

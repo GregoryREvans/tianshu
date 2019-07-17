@@ -712,8 +712,10 @@
                     \<
                     c'2.
 
+                    \ottava 1
                     bf'2
 
+                    \ottava 0
                 }
                 \times 2/3 {
                     % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
@@ -738,11 +740,13 @@
                 \<
                 c'4.
 
+                \ottava 1
                 bf'4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
+                \ottava 0
                 r2
                 \!
                 \times 2/3 {
@@ -792,6 +796,7 @@
                 % [Voice 3 measure 46] %! COMMENT_MEASURE_NUMBERS
                 r2
                 \times 2/3 {
+                    \clef "tenorvarC"
                     bf'8
                     \pp
 
@@ -831,6 +836,7 @@
                 \!
                 \times 2/3 {
                     % [Voice 3 measure 49] %! COMMENT_MEASURE_NUMBERS
+                    \clef "bass"
                     c'4
                     \pp
 

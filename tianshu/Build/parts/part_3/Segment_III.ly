@@ -209,6 +209,7 @@
                 R1 * 1/4
                 \stopStaff \startStaff
                 % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 af'4..
                 \mp
 
@@ -226,6 +227,7 @@
                 \stopStaff \startStaff
                 % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
                 r4
+                \clef "bass"
                 c4
                 \mf
                 - \tenuto
@@ -259,6 +261,7 @@
                 r4
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 12/11 {
+                    \clef "tenorvarC"
                     af'16
                     \mp
 
@@ -279,6 +282,7 @@
                 % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
                 r2
                 \!
+                \clef "bass"
                 g,2.
                 \mp
                 - \tenuto
@@ -313,6 +317,7 @@
                 R1 * 3/8
                 \stopStaff \startStaff
                 % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 af'8
                 \mp
 
@@ -337,6 +342,7 @@
                 \!
                 % [Voice 3 measure 14] %! COMMENT_MEASURE_NUMBERS
                 r4
+                \clef "bass"
                 f,8.
                 \f
                 - \marcato
@@ -362,6 +368,7 @@
                 \!
                 \times 8/9 {
                     % [Voice 3 measure 17] %! COMMENT_MEASURE_NUMBERS
+                    \clef "tenorvarC"
                     af'4.
                     \mp
                     ~
@@ -372,6 +379,7 @@
                 r4
                 \!
                 % [Voice 3 measure 18] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 a,2
                 \mf
                 - \tweak stencil #constante-hairpin
@@ -384,6 +392,7 @@
                 r16
                 \!
                 % [Voice 3 measure 19] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 af'8
                 \mp
 
@@ -407,6 +416,7 @@
                 \!
                 % [Voice 3 measure 21] %! COMMENT_MEASURE_NUMBERS
                 r2
+                \clef "bass"
                 c2
                 \mp
                 - \tenuto
@@ -451,6 +461,7 @@
                 R1 * 3/8
                 \stopStaff \startStaff
                 % [Voice 3 measure 27] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 af'4
                 \f
 
@@ -459,6 +470,7 @@
                 r2
                 \!
                 % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 c2.
                 \mf
                 - \tenuto
@@ -486,6 +498,7 @@
                 \!
                 \times 8/9 {
                     % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
+                    \clef "tenorvarC"
                     af'8.
                     \mp
                     ~
@@ -574,6 +587,7 @@
                 r4
                 \!
                 % [Voice 3 measure 35] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 e2.
                 \mp
                 ~

@@ -190,30 +190,25 @@
         {
             \context Voice = "Voice 4"
             {
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 20/19 {
-                    % [Voice 4 measure 1] %! COMMENT_MEASURE_NUMBERS
-                    \set Staff.shortInstrumentName =
-                    \markup { hr. }
-                    \set Staff.instrumentName =
-                    \markup { Horn }
-                    \tempo 4=60
-                    \clef "treble"
-                    af'4..
-                    \mp
+                % [Voice 4 measure 1] %! COMMENT_MEASURE_NUMBERS
+                \set Staff.shortInstrumentName =
+                \markup { hr. }
+                \set Staff.instrumentName =
+                \markup { Horn }
+                \tempo 4=60
+                \clef "tenorvarC"
+                af'2.
+                \mp
 
-                    - \tweak stencil #abjad-flared-hairpin
-                    \<
-                    af'4.
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                af'4
 
-                    af'8
+                af'4
+                \f
 
-                    af'4
-                    \f
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
+                - \tweak stencil #constante-hairpin
+                \<
                 % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
                 \once \override Rest.transparent = ##t
                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -223,6 +218,7 @@
                 \stopStaff \startStaff
                 % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
                 r4
+                \clef "bass"
                 c2
                 \mp
                 - \tenuto
@@ -246,24 +242,25 @@
                 \!
                 % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
                 r2.
-                af'8
-                \mp
-
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                [
-                af'8
-                ~
-                ]
-                \times 4/5 {
-                    % [Voice 4 measure 7] %! COMMENT_MEASURE_NUMBERS
+                \times 2/3 {
+                    \clef "tenorvarC"
                     af'4
-                    af'16
-                    \f
+                    \mp
 
-                    - \tweak stencil #constante-hairpin
+                    - \tweak stencil #abjad-flared-hairpin
                     \<
+                    af'8
+                    ~
+                    [
                 }
+                % [Voice 4 measure 7] %! COMMENT_MEASURE_NUMBERS
+                af'8
+                af'8
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
                 r2.
                 \!
                 % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
@@ -280,6 +277,7 @@
                 \stopStaff \startStaff
                 % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
                 r2.
+                \clef "bass"
                 e2
                 \mf
                 - \tenuto
@@ -288,21 +286,21 @@
                 % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
                 r4
                 \!
+                \clef "tenorvarC"
                 af'2
                 \mp
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 ~
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/11 {
-                    % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
-                    af'4
-                    af'4..
-                    \f
+                % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
+                af'4
+                af'8
 
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
+                af'4.
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
                 % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
                 \once \override Rest.transparent = ##t
                 \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -311,6 +309,7 @@
                 R1 * 1/2
                 \stopStaff \startStaff
                 % [Voice 4 measure 14] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 d2
                 \mf
                 - \tweak stencil #constante-hairpin
@@ -334,30 +333,22 @@
                 \!
                 % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
                 r2
-                af'16
+                \clef "tenorvarC"
+                af'2.
                 \mp
-
                 - \tweak stencil #abjad-flared-hairpin
                 \<
-                [
-                af'8.
                 ~
-                ]
-                af'4..
-                af'16
-                ~
-                [
-                \times 4/5 {
-                    % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
-                    af'8.
-                    ~
-                    af'8
-                    ]
-                }
+                % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
+                af'4
+                \f
+                - \tweak stencil #constante-hairpin
+                \<
                 r2
                 \!
                 % [Voice 4 measure 18] %! COMMENT_MEASURE_NUMBERS
                 r4
+                \clef "bass"
                 c'4..
                 \mf
                 - \marcato
@@ -386,6 +377,7 @@
                 R1 * 1/2
                 \stopStaff \startStaff
                 % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 fs'8.
                 \f
                 - \marcato
@@ -395,6 +387,7 @@
                 \!
                 r2
                 % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 e2.
                 \mf
                 - \tenuto
@@ -408,34 +401,25 @@
                 r1 * 3/8
                 R1 * 3/8
                 \stopStaff \startStaff
-                % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
-                af'8
-                \mp
+                \tweak text #tuplet-number::calc-fraction-text
+                \times 10/9 {
+                    % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
+                    \clef "tenorvarC"
+                    af'1
+                    \mp
 
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                [
-                af'8
+                    - \tweak stencil #abjad-flared-hairpin
+                    \<
+                    af'8
+                    \f
 
-                ~
-                af'8
-                af'8
-
-                ]
-                af'4
-
-                ~
-                af'8
-                [
-                af'16
-
-                af'16
-                ~
-                ]
-                af'4
+                    - \tweak stencil #constante-hairpin
+                    \<
+                }
                 % [Voice 4 measure 26] %! COMMENT_MEASURE_NUMBERS
                 r4
                 \!
+                \clef "bass"
                 f2
                 \mp
                 - \tenuto
@@ -464,6 +448,7 @@
                 \stopStaff \startStaff
                 % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
                 r2
+                \clef "tenorvarC"
                 d'4
                 \mf
                 - \tenuto
@@ -477,71 +462,57 @@
                 \<
                 r4
                 \!
-                af'4
-                \mp
-
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                af'4
-                ~
-                \times 8/9 {
-                    % [Voice 4 measure 32] %! COMMENT_MEASURE_NUMBERS
-                    af'4
-                    af'8
-                    ~
-                    [
-                    af'8.
-                    ]
-                }
-                r4
-                \!
-                af'4
-                \mp
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                ~
-                af'16
-                [
-                af'8.
-                ~
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 8/7 {
-                    % [Voice 4 measure 33] %! COMMENT_MEASURE_NUMBERS
-                    af'8.
-                    af'8
-
-                    af'8
-                    \f
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r4
-                \!
-                af'8
-                \mp
-
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                [
-                af'8
-
-                ]
-                \times 8/9 {
-                    % [Voice 4 measure 34] %! COMMENT_MEASURE_NUMBERS
+                \times 4/5 {
                     af'4.
-
-                    af'16
-
-                    [
-                    af'8
-                    \f
-
-                    - \tweak stencil #constante-hairpin
+                    \mp
+                    ~
+                    af'4
+                    - \tweak stencil #abjad-flared-hairpin
                     \<
-                    ]
+                    ~
                 }
+                % [Voice 4 measure 32] %! COMMENT_MEASURE_NUMBERS
+                af'4
+                af'4
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
+                r4
+                \!
+                af'2
+                \mp
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                ~
+                % [Voice 4 measure 33] %! COMMENT_MEASURE_NUMBERS
+                af'8
+                [
+                af'8
+
+                ~
+                af'8
+                af'8
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
+                r4
+                \!
+                af'4
+                \mp
+
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                % [Voice 4 measure 34] %! COMMENT_MEASURE_NUMBERS
+                af'4
+
+                af'4
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
                 r4
                 \!
                 % [Voice 4 measure 35] %! COMMENT_MEASURE_NUMBERS
@@ -552,6 +523,7 @@
                 \stopStaff \startStaff
                 % [Voice 4 measure 36] %! COMMENT_MEASURE_NUMBERS
                 r2
+                \clef "bass"
                 f2.
                 \mp
                 - \tenuto
@@ -597,6 +569,7 @@
                 r1
                 \!
                 % [Voice 4 measure 42] %! COMMENT_MEASURE_NUMBERS
+                \clef "tenorvarC"
                 fs'2
                 \mf
                 - \tweak stencil #constante-hairpin
@@ -610,6 +583,7 @@
                 \!
                 r2
                 % [Voice 4 measure 43] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 c'2...
                 \f
                 - \marcato
@@ -619,6 +593,7 @@
                 \!
                 % [Voice 4 measure 44] %! COMMENT_MEASURE_NUMBERS
                 r2.
+                \clef "tenorvarC"
                 fs'8.
                 \mf
                 - \marcato
@@ -628,6 +603,7 @@
                 \!
                 % [Voice 4 measure 45] %! COMMENT_MEASURE_NUMBERS
                 r16
+                \clef "bass"
                 c'8.
                 \f
                 - \marcato
@@ -637,6 +613,7 @@
                 \!
                 % [Voice 4 measure 46] %! COMMENT_MEASURE_NUMBERS
                 r2
+                \clef "tenorvarC"
                 fs'4..
                 \mf
                 - \marcato
@@ -646,6 +623,7 @@
                 \!
                 % [Voice 4 measure 47] %! COMMENT_MEASURE_NUMBERS
                 r16
+                \clef "bass"
                 c'8.
                 \f
                 - \marcato

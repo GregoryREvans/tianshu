@@ -320,8 +320,10 @@
                     - \tenuto
                     cs'''16
                     - \tenuto
+                    \ottava 1
                     ds'''16
                     - \tenuto
+                    \ottava 0
                     cs'''16
                     - \tenuto
                     fs''16
@@ -378,12 +380,14 @@
                 - \tenuto
                 \>
                 [
+                \ottava 1
                 ds'''8
                 \mf
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
+                \ottava 0
                 r8
                 \!
                 % [Voice 2 measure 17] %! COMMENT_MEASURE_NUMBERS
@@ -395,9 +399,11 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     [
+                    \ottava 1
                     f'''8.
                     ~
                     f'''8
+                    \ottava 0
                     cs'''16
 
                 }
@@ -410,16 +416,20 @@
 
                 cs'''16
 
+                \ottava 1
                 f'''8.
 
+                \ottava 0
                 cs'''16
 
+                \ottava 1
                 f'''8.
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
+                \ottava 0
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 4/3 {
                     % [Voice 2 measure 19] %! COMMENT_MEASURE_NUMBERS
@@ -437,13 +447,17 @@
                 r4
                 \times 8/9 {
                     r16
+                    \ottava 1
                     e'''16
                     \fff
                     - \tenuto
                     \>
                     [
+                    \ottava 0
+                    \ottava 1
                     ds'''16
                     - \tenuto
+                    \ottava 0
                     cs'''16
                     - \tenuto
                     fs''16
@@ -630,26 +644,38 @@
                     - \tenuto
                     cs'''16
                     - \tenuto
+                    \ottava 1
                     ds'''16
                     - \tenuto
+                    \ottava 0
+                    \ottava 1
                     e'''16
                     - \tenuto
+                    \ottava 0
                 }
                 \tweak text #tuplet-number::calc-fraction-text
                 \times 6/5 {
                     % [Voice 2 measure 36] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     ds'''8
                     - \tenuto
+                    \ottava 0
+                    \ottava 1
                     e'''8
                     - \tenuto
+                    \ottava 0
+                    \ottava 1
                     ds'''8
                     - \tenuto
+                    \ottava 0
+                    \ottava 1
                     e'''8
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                     r8
                     \!
                 }
@@ -662,19 +688,25 @@
                 \stopStaff \startStaff
                 % [Voice 2 measure 38] %! COMMENT_MEASURE_NUMBERS
                 r16
+                \ottava 1
                 ds'''16
                 \fff
                 - \tenuto
                 \>
                 [
+                \ottava 0
                 cs'''16
                 - \tenuto
+                \ottava 1
                 ds'''16
                 - \tenuto
+                \ottava 0
                 cs'''16
                 - \tenuto
+                \ottava 1
                 ds'''16
                 - \tenuto
+                \ottava 0
                 cs'''16
                 - \tenuto
                 fs''16
@@ -754,16 +786,20 @@
                 % [Voice 2 measure 43] %! COMMENT_MEASURE_NUMBERS
                 r4
                 \!
+                \ottava 1
                 f'''16
                 \mp
 
                 - \tweak stencil #abjad-flared-hairpin
                 \<
                 [
+                \ottava 0
                 cs'''16
 
+                \ottava 1
                 f'''16
 
+                \ottava 0
                 cs'''16
 
                 e''8

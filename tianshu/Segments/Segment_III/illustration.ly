@@ -2018,7 +2018,7 @@
                     \set Staff.instrumentName =
                     \markup { Horn }
                     \tempo 4=60
-                    \clef "tenorvarC"
+                    \clef "treble"
                     af'2.
                     \mp
 
@@ -2065,7 +2065,7 @@
                     % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \times 2/3 {
-                        \clef "tenorvarC"
+                        \clef "treble"
                         af'4
                         \mp
 
@@ -2108,7 +2108,7 @@
                     % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    \clef "tenorvarC"
+                    \clef "treble"
                     af'2
                     \mp
                     - \tweak stencil #abjad-flared-hairpin
@@ -2155,7 +2155,7 @@
                     \!
                     % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
                     r2
-                    \clef "tenorvarC"
+                    \clef "treble"
                     af'2.
                     \mp
                     - \tweak stencil #abjad-flared-hairpin
@@ -2199,7 +2199,7 @@
                     R1 * 1/2
                     \stopStaff \startStaff
                     % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
-                    \clef "tenorvarC"
+                    \clef "treble"
                     fs'8.
                     \f
                     - \marcato
@@ -2226,7 +2226,7 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 10/9 {
                         % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
-                        \clef "tenorvarC"
+                        \clef "treble"
                         af'1
                         \mp
 
@@ -2270,7 +2270,7 @@
                     \stopStaff \startStaff
                     % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
                     r2
-                    \clef "tenorvarC"
+                    \clef "treble"
                     d'4
                     \mf
                     - \tenuto
@@ -2391,7 +2391,7 @@
                     r1
                     \!
                     % [Voice 4 measure 42] %! COMMENT_MEASURE_NUMBERS
-                    \clef "tenorvarC"
+                    \clef "treble"
                     fs'2
                     \mf
                     - \tweak stencil #constante-hairpin
@@ -2415,7 +2415,7 @@
                     \!
                     % [Voice 4 measure 44] %! COMMENT_MEASURE_NUMBERS
                     r2.
-                    \clef "tenorvarC"
+                    \clef "treble"
                     fs'8.
                     \mf
                     - \marcato
@@ -2435,7 +2435,7 @@
                     \!
                     % [Voice 4 measure 46] %! COMMENT_MEASURE_NUMBERS
                     r2
-                    \clef "tenorvarC"
+                    \clef "treble"
                     fs'4..
                     \mf
                     - \marcato

@@ -3026,7 +3026,7 @@
                     R1 * 3/8
                     \stopStaff \startStaff
                     % [Voice 4 measure 5] %! COMMENT_MEASURE_NUMBERS
-                    \clef "tenorvarC"
+                    \clef "treble"
                     e8
                     \p
                     - \tenuto
@@ -3040,17 +3040,13 @@
                     d'8
                     - \tenuto
                     ]
-                    \ottava 1
                     c''4.
                     - \tenuto
-                    \ottava 0
-                    \ottava 1
                     fs''8
                     \pp
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
-                    \ottava 0
                     % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \!

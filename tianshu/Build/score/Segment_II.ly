@@ -2840,7 +2840,7 @@
                     \stopStaff \startStaff
                     % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
                     r2
-                    \clef "tenorvarC"
+                    \clef "treble"
                     af'8.
                     \mp
 
@@ -2930,7 +2930,7 @@
                     \stopStaff \startStaff
                     % [Voice 4 measure 38] %! COMMENT_MEASURE_NUMBERS
                     r4
-                    \clef "tenorvarC"
+                    \clef "treble"
                     af'2
                     \mf
 

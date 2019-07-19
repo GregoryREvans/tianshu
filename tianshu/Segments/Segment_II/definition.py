@@ -2187,13 +2187,7 @@ segment_time = time_2 - time_1
 
 time_5 = time.time()
 ###make parts###
-for count, staff in enumerate(abjad.iterate(score).components(abjad.Staff)):
-    if count == 0:
-        continue
-    elif count == 4:
-        continue
-    elif count == 9:
-        continue
+for count, staff in enumerate(abjad.iterate(score).components(abjad.Voice)):
     signatures = abjad.select(score["Global Context 1"]).components(abjad.Staff)
     signature_copy = abjad.mutate(signatures).copy()
     copied_staff = abjad.mutate(staff).copy()
@@ -2207,8 +2201,8 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Staff)):
             "/Users/evansdsg2/Scores/tianshu/tianshu/Build/parts_stylesheet.ily",
         ],
     )
-    pdf_path = f"{directory}/part_illustration{count}.pdf"
-    path = pathlib.Path(f"part_illustration{count}.pdf")
+    pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
+    path = pathlib.Path(f"part_illustration{count + 1}.pdf")
     if path.exists():
         print(f"Removing {pdf_path} ...")
         path.unlink()
@@ -2223,8 +2217,8 @@ for count, staff in enumerate(abjad.iterate(score).components(abjad.Staff)):
     if path.exists():
         print(f"Opening {pdf_path} ...")
         os.system(f"open {pdf_path}")
-    build_path = (directory / ".." / ".." / f"Build/parts/part_{count}").resolve()
-    part_lines = open(f"{directory}/part_illustration{count}.ly").readlines()
+    build_path = (directory / ".." / ".." / f"Build/parts/part_{count + 1}").resolve()
+    part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
     open(f"{build_path}/Segment_II.ly", "w").writelines(part_lines[15:-1])
 time_6 = time.time()
 parts_time = time_6 - time_5

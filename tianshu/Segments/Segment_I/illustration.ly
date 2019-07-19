@@ -2793,7 +2793,7 @@
                     \set Staff.instrumentName =
                     \markup { Horn }
                     \tempo 4=108
-                    \clef "tenorvarC"
+                    \clef "treble"
                     c''2.
                     \p
                     ~
@@ -2863,7 +2863,7 @@
                     % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \!
-                    \clef "tenorvarC"
+                    \clef "treble"
                     c''4
                     \p
                     - \accent
@@ -3107,7 +3107,7 @@
                     R1 * 3/8
                     \stopStaff \startStaff
                     % [Voice 4 measure 31] %! COMMENT_MEASURE_NUMBERS
-                    \clef "tenorvarC"
+                    \clef "treble"
                     c''4
                     \p
                     - \accent
@@ -3241,7 +3241,7 @@
                     % [Voice 4 measure 40] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \times 2/3 {
-                        \clef "tenorvarC"
+                        \clef "treble"
                         ef''8
                         \mp
 
@@ -3373,7 +3373,7 @@
                         % [Voice 4 measure 49] %! COMMENT_MEASURE_NUMBERS
                         r8
                         \!
-                        \clef "tenorvarC"
+                        \clef "treble"
                         c''8
                         \mp
 

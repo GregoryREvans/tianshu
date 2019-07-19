@@ -10,11 +10,11 @@
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "Didot") \fontsize #6 \italic {"for Ensemble Ibis"}
+	dedication = \markup \override #'(font-name . "Didot") \fontsize #6.5 \italic {"T     i     ā     n     s     h     ū"}
 	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/tianshu_title.eps" }
-	subtitle = \markup \override #'(font-name . "Didot") \fontsize #9 \bold \center-column {"Tianshu"}
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #5 \center-column {"for twelve players"}
-	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
+	subtitle = \markup { \epsfile #Y #7.7 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/subtitle.eps" }
+	subsubtitle = \markup \override #'(font-name . "Didot") \center-column {\fontsize #2.3 \line{"f   o   r       t   w   e   l   v   e       p   l   a   y   e   r   s"} \fontsize #0.05 \line{";   o r  ,  m a d  w r i t i n g s  i n  a  B o o k  f r o m  t h e  S k y"}}
+	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
 \layout {

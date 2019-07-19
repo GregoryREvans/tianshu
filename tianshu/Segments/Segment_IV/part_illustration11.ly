@@ -201,242 +201,283 @@
             \time 9/8
             s1 * 9/8
         }
-        \context Staff = "Staff 9"
+        \context Voice = "Voice 11"
         {
-            \context Voice = "Voice 9"
-            {
-                % [Voice 9 measure 1] %! COMMENT_MEASURE_NUMBERS
-                \set Staff.shortInstrumentName =
-                \markup { vln.II }
-                \set Staff.instrumentName =
-                \markup { "Violin II" }
-                \tempo 4=120
-                \clef "treble"
-                r2
-                g''8
+            % [Voice 11 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \set Staff.shortInstrumentName =
+            \markup { vc. }
+            \set Staff.instrumentName =
+            \markup { Violoncello }
+            \tempo 4=120
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            \clef "bass"
+            r1 * 5/8
+            R1 * 5/8
+            \stopStaff \startStaff
+            % [Voice 11 measure 2] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 1/4
+            R1 * 1/4
+            \stopStaff \startStaff
+            \times 8/9 {
+                % [Voice 11 measure 3] %! COMMENT_MEASURE_NUMBERS
+                a8
                 \mf
 
                 \<
-                [
-                gqf''8
-
+                aqf4
                 ~
-                gqf''8
-                fs''8
+                aqf4.
+                af8
 
-                ]
-                fqs''4
+                gqs4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
-                % [Voice 9 measure 2] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 1/4
-                \!
-                R1 * 1/4
-                \stopStaff \startStaff
-                % [Voice 9 measure 3] %! COMMENT_MEASURE_NUMBERS
-                r2
-                c''16
-                \ff
+            }
+            % [Voice 11 measure 4] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 3/8
+            \!
+            R1 * 3/8
+            \stopStaff \startStaff
+            % [Voice 11 measure 5] %! COMMENT_MEASURE_NUMBERS
+            d8.
+            \ff
 
-                \>
+            \>
+            [
+            g,16
+
+            ]
+            d4
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            r2
+            \!
+            % [Voice 11 measure 6] %! COMMENT_MEASURE_NUMBERS
+            r2.
+            \times 4/5 {
+                e4
+                \p
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                f,16
+                - \tenuto
                 [
-                fs''8.
-
-                ~
-                fs''16
-                bf''16
-
-                fs''16
-
-                bf''16
+            }
+            % [Voice 11 measure 7] %! COMMENT_MEASURE_NUMBERS
+            e16
+            - \tenuto
+            f,16
+            - \tenuto
+            e8
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            r2.
+            \!
+            % [Voice 11 measure 8] %! COMMENT_MEASURE_NUMBERS
+            r4
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 6/7 {
+                g4.
                 \mf
+
+                \<
+                gqf4
+
+                fs8
+
+                [
+                fqs8
+                \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
-                \times 8/9 {
-                    % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
-                    r4
-                    \!
-                    fs''8
-                    \ff
-
-                    \>
-                    [
-                    c''16
-
-                    fs''8
-                    \mf
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r4
-                \!
-                % [Voice 9 measure 5] %! COMMENT_MEASURE_NUMBERS
-                r2
-                d'16
+            }
+            % [Voice 11 measure 9] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 5/8
+            \!
+            R1 * 5/8
+            \stopStaff \startStaff
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 4/3 {
+                % [Voice 11 measure 10] %! COMMENT_MEASURE_NUMBERS
+                g16
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 [
-                c''8.
-                ~
-                c''8
-                fs''16
-                - \tenuto
-                c''16
+                e8
                 \pp
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
-                % [Voice 9 measure 6] %! COMMENT_MEASURE_NUMBERS
-                r2.
-                \!
-                \times 2/3 {
-                    f''4
-                    \mf
-
-                    \<
-                    eqs''8
-                    ~
-                }
-                \times 2/3 {
-                    % [Voice 9 measure 7] %! COMMENT_MEASURE_NUMBERS
-                    eqs''4
-                    e''8
-                    \ff
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                r2.
-                \!
-                % [Voice 9 measure 8] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 1/2
-                R1 * 1/2
-                \stopStaff \startStaff
-                % [Voice 9 measure 9] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 5/8
-                R1 * 5/8
-                \stopStaff \startStaff
-                % [Voice 9 measure 10] %! COMMENT_MEASURE_NUMBERS
-                eqf''2
-                \mf
-
-                \<
-                ef''4
-                ~
-                ef''4.
-                dqs''8
-                \ff
-
-                - \tweak stencil #constante-hairpin
-                \<
-                % [Voice 9 measure 11] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 3/8
-                \!
-                R1 * 3/8
-                \stopStaff \startStaff
-                % [Voice 9 measure 12] %! COMMENT_MEASURE_NUMBERS
-                r4
-                c''16
+            }
+            r4
+            \!
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 12/11 {
+                g,16
                 \ff
 
                 \>
                 [
+                d16
+
+                f16
+                ~
+                ]
+                f4
+                d8
+
+                [
+                f16
+
+                \ottava 1
                 e'16
-
-                c''8
-
-                ~
-                c''8
-                fs''16
-
-                c''16
                 \mf
 
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
-                % [Voice 9 measure 13] %! COMMENT_MEASURE_NUMBERS
-                r2.
-                \!
-                \times 4/5 {
-                    fs''16
-                    \p
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    [
-                    c''8
-                    - \tenuto
-                    d'16
-                    - \tenuto
-                    c''16
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                % [Voice 9 measure 14] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 1/2
-                \!
-                R1 * 1/2
-                \stopStaff \startStaff
-                % [Voice 9 measure 15] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 8/7 {
-                    d''4
-                    \mf
+                \ottava 0
+            }
+            % [Voice 11 measure 11] %! COMMENT_MEASURE_NUMBERS
+            r8
+            \!
+            \ottava 1
+            c''16
+            \ff
 
-                    \<
-                    dqf''4.
+            \>
+            [
+            \ottava 0
+            \ottava 1
+            e'16
 
-                    cs''4
-                    \ff
+            ~
+            e'8.
+            \ottava 0
+            f16
+            \mf
 
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                % [Voice 9 measure 16] %! COMMENT_MEASURE_NUMBERS
-                r2.
-                \!
-                fs''8
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            r4
+            \!
+            % [Voice 11 measure 12] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 3/8
+            R1 * 3/8
+            \stopStaff \startStaff
+            % [Voice 11 measure 13] %! COMMENT_MEASURE_NUMBERS
+            f4.
+            \mf
+
+            \<
+            eqs4.
+            \ff
+
+            - \tweak stencil #constante-hairpin
+            \<
+            r4
+            \!
+            % [Voice 11 measure 14] %! COMMENT_MEASURE_NUMBERS
+            r4
+            g16
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            d'16
+            - \tenuto
+            \ottava 1
+            c''8
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            \ottava 0
+            r2
+            \!
+            % [Voice 11 measure 15] %! COMMENT_MEASURE_NUMBERS
+            r2.
+            \times 8/9 {
+                d16
                 \ff
 
                 \>
                 [
-                c''8
+                f8
+                ~
+                f8.
+                \ottava 1
+                e'8
 
-                fs''16
-
-                bf''8.
+                \ottava 0
+                f16
                 \mf
 
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
-                % [Voice 9 measure 17] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \!
+            }
+            % [Voice 11 measure 16] %! COMMENT_MEASURE_NUMBERS
+            r8.
+            \!
+            \clef "tenorvarC"
+            e'16
+            \ff
+
+            \>
+            \ottava 1
+            c''4
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            \ottava 0
+            r2.
+            \!
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 4/3 {
+                % [Voice 11 measure 17] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
+                e8
+                \mf
+
+                \<
+                eqf4
+                \ff
+
+                - \tweak stencil #constante-hairpin
+                \<
+            }
+            r4
+            \!
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 12/13 {
+                % [Voice 11 measure 18] %! COMMENT_MEASURE_NUMBERS
                 d'8
                 \p
                 - \tenuto
@@ -444,561 +485,621 @@
                 \<
                 [
                 g16
+                ~
+                ]
+                g4
+                e16
+                - \tenuto
+                [
+                g16
                 - \tenuto
                 d'16
                 - \tenuto
-                ~
-                d'8.
-                c''16
-                ~
-                ]
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/11 {
-                    % [Voice 9 measure 18] %! COMMENT_MEASURE_NUMBERS
-                    c''4
-                    d'16
-                    - \tenuto
-                    [
-                    c''16
-                    - \tenuto
-                    d'16
-                    - \tenuto
-                    c''8
-                    - \tenuto
-                    fs''16
-                    - \tenuto
-                    af''16
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                % [Voice 9 measure 19] %! COMMENT_MEASURE_NUMBERS
-                r8
-                \!
-                fs''16
-                \p
+                g16
                 - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                [
-                c''16
+                ~
+                g16
+                d'16
                 \pp
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 ]
-                r4
-                \!
-                % [Voice 9 measure 20] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \times 8/9 {
-                    b''16
-                    \ff
+            }
+            % [Voice 11 measure 19] %! COMMENT_MEASURE_NUMBERS
+            ef4
+            \mf
 
-                    \>
-                    [
-                    bf''8
+            \<
+            dqs4
+            ~
+            % [Voice 11 measure 20] %! COMMENT_MEASURE_NUMBERS
+            dqs4
+            \ff
+            - \tweak stencil #constante-hairpin
+            \<
+            r2
+            \!
+            % [Voice 11 measure 21] %! COMMENT_MEASURE_NUMBERS
+            r2
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 8/7 {
+                \ottava 1
+                e'16
+                \ff
 
-                    ~
-                    bf''8
-                    fs''16
+                \>
+                [
+                \ottava 0
+                f16
 
-                    c''16
+                \ottava 1
+                e'16
+                ~
+                ]
+                e'4
+                \ottava 0
+            }
+            % [Voice 11 measure 22] %! COMMENT_MEASURE_NUMBERS
+            r8
+            \!
+            \ottava 1
+            \clef "tenorvarC"
+            c''16
+            \ff
 
-                    e'8
-                    \mf
+            \>
+            [
+            \ottava 0
+            e'16
 
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                % [Voice 9 measure 21] %! COMMENT_MEASURE_NUMBERS
-                r8.
-                \!
-                c''16
+            ~
+            e'8
+            \ottava 1
+            c''16
+
+            \ottava 0
+            e'16
+
+            ~
+            e'8.
+            f16
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            % [Voice 11 measure 23] %! COMMENT_MEASURE_NUMBERS
+            r4
+            \!
+            \ottava 1
+            \clef "bass"
+            c''8.
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            \ottava 0
+            d'16
+            - \tenuto
+            ]
+            g4
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            r4
+            \!
+            % [Voice 11 measure 24] %! COMMENT_MEASURE_NUMBERS
+            r2
+            \times 4/5 {
+                d16
+                \ff
+
+                \>
+                g,4
+                \mf
+
+                - \tweak stencil #constante-hairpin
+                \<
+            }
+            % [Voice 11 measure 25] %! COMMENT_MEASURE_NUMBERS
+            r16
+            \!
+            d16
+            \ff
+
+            ~
+            [
+            d16
+            \>
+            g,16
+
+            d8.
+
+            f16
+
+            ]
+            d4
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            r2
+            \!
+            % [Voice 11 measure 26] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 3/8
+            R1 * 3/8
+            \stopStaff \startStaff
+            \times 2/3 {
+                % [Voice 11 measure 27] %! COMMENT_MEASURE_NUMBERS
+                d8
+                \mf
+
+                \<
+                dqf4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
-                r2.
-                \!
-                % [Voice 9 measure 22] %! COMMENT_MEASURE_NUMBERS
-                r4
-                cqs''8
+            }
+            r2
+            \!
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 12/11 {
+                % [Voice 11 measure 28] %! COMMENT_MEASURE_NUMBERS
+                f16
+                \ff
+
+                \>
+                [
+                d16
+
+                g,16
+                ~
+                ]
+                g,4
+                d8
+
+                [
+                f16
+
+                \ottava 1
+                e'16
+                \mf
+
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
+                \ottava 0
+            }
+            r4
+            \!
+            % [Voice 11 measure 29] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 3/8
+            R1 * 3/8
+            \stopStaff \startStaff
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 12/11 {
+                % [Voice 11 measure 30] %! COMMENT_MEASURE_NUMBERS
+                d'8.
+                \p
+                ~
+                [
+                d'8
+                - \tweak stencil #constante-hairpin
+                \<
+                \ottava 1
+                c''16
+                - \tenuto
+                \ottava 0
+                d'16
+                - \tenuto
+                \ottava 1
+                c''16
+                - \tenuto
+                \ottava 0
+                d'16
+                - \tenuto
+                ~
+                d'16
+                g16
+                \pp
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
+            }
+            % [Voice 11 measure 31] %! COMMENT_MEASURE_NUMBERS
+            cs4.
+            \mf
+
+            \<
+            cqs8
+            \ff
+
+            - \tweak stencil #constante-hairpin
+            \<
+            r4
+            \!
+            c4
+            \mf
+
+            \<
+            % [Voice 11 measure 32] %! COMMENT_MEASURE_NUMBERS
+            bqs,8
+
+            [
+            b,8
+
+            ~
+            ]
+            b,4.
+            bqf,8
+            \ff
+
+            - \tweak stencil #constante-hairpin
+            \<
+            r4
+            \!
+            \times 2/3 {
+                bf,4
                 \mf
 
                 \<
-                c''4.
+                bqf,8
+
+            }
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 6/7 {
+                % [Voice 11 measure 33] %! COMMENT_MEASURE_NUMBERS
+                b,2
+
+                bqs,4.
+                \ff
+
+                - \tweak stencil #constante-hairpin
+                \<
+            }
+            r4
+            \!
+            % [Voice 11 measure 34] %! COMMENT_MEASURE_NUMBERS
+            c4
+            \mf
+
+            \<
+            cqs8
+
+            [
+            cs8
+            \ff
+
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            r4
+            \!
+            % [Voice 11 measure 35] %! COMMENT_MEASURE_NUMBERS
+            \ottava 1
+            c''8
+            \ff
+
+            \>
+            [
+            \ottava 0
+            \ottava 1
+            e'16
+
+            \ottava 0
+            f16
+
+            ~
+            f8.
+            d16
+
+            g,16
+
+            d8.
+            ~
+            d8
+            g,8
+
+            d16
+
+            g,8.
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            % [Voice 11 measure 36] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 5/8
+            \!
+            R1 * 5/8
+            \stopStaff \startStaff
+            % [Voice 11 measure 37] %! COMMENT_MEASURE_NUMBERS
+            r2
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 12/13 {
+                d16
+                \ff
+
+                \>
+                f4
+
+                d16
+
+                [
+                g,16
+
+                ]
+                d4
                 ~
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 6/7 {
-                    % [Voice 9 measure 23] %! COMMENT_MEASURE_NUMBERS
-                    c''8
-                    bqs'4
+                d16
+                [
+                g,16
+                \mf
 
-                    ~
-                    bqs'8
-                    [
-                    b'8
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
+            }
+            % [Voice 11 measure 38] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 5/8
+            \!
+            R1 * 5/8
+            \stopStaff \startStaff
+            % [Voice 11 measure 39] %! COMMENT_MEASURE_NUMBERS
+            d16
+            \ff
 
-                    ]
-                    bqf'4
-                    \ff
+            \>
+            [
+            g,16
 
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                r4
-                \!
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 8/7 {
-                    % [Voice 9 measure 24] %! COMMENT_MEASURE_NUMBERS
-                    e'16
-                    \ff
+            d8
 
-                    \>
-                    [
-                    c''16
+            ~
+            d16
+            g,16
 
-                    fs''8.
+            d8
 
-                    c''16
+            ~
+            d8
+            g,16
 
-                    e'16
-                    \mf
+            d16
 
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r4
-                \!
-                % [Voice 9 measure 25] %! COMMENT_MEASURE_NUMBERS
-                r2
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/13 {
-                    d'8.
-                    \p
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    g4
-                    ~
-                    g16
-                    [
-                    d'16
-                    - \tenuto
-                    g16
-                    - \tenuto
-                    d'16
-                    - \tenuto
-                    c''8
-                    - \tenuto
-                }
-                % [Voice 9 measure 26] %! COMMENT_MEASURE_NUMBERS
-                d'16
+            ]
+            f4
+            \mf
+
+            - \tweak stencil #constante-hairpin
+            \<
+            % [Voice 11 measure 40] %! COMMENT_MEASURE_NUMBERS
+            e8.
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            f,16
+            - \tenuto
+            ]
+            e4
+            - \tenuto
+            f,4
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            r4
+            \!
+            % [Voice 11 measure 41] %! COMMENT_MEASURE_NUMBERS
+            r4
+            \times 4/5 {
+                e16
+                \p
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                [
+                g16
+                - \tenuto
+                e16
+                - \tenuto
+                g16
+                - \tenuto
+                e16
+                \pp
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                ]
+            }
+            r2.
+            \!
+            % [Voice 11 measure 42] %! COMMENT_MEASURE_NUMBERS
+            r2
+            f,16
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            e16
+            - \tenuto
+            g8
+            - \tenuto
+            ~
+            g16
+            d'16
+            - \tenuto
+            \ottava 1
+            c''8
+            - \tenuto
+            ~
+            c''8
+            \ottava 0
+            d'8
+            ~
+            ]
+            % [Voice 11 measure 43] %! COMMENT_MEASURE_NUMBERS
+            d'4
+            \pp
+            - \tweak stencil #constante-hairpin
+            \<
+            r2.
+            \!
+            % [Voice 11 measure 44] %! COMMENT_MEASURE_NUMBERS
+            g16
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            e16
+            - \tenuto
+            f,16
+            - \tenuto
+            e16
+            - \tenuto
+            ~
+            e16
+            f,16
+            - \tenuto
+            e8
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            r4
+            \!
+            \times 4/5 {
+                f,16
+                \p
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                [
+                e16
                 - \tenuto
                 g8.
-                \pp
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                r2
-                \!
-                % [Voice 9 measure 27] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 3/8
-                R1 * 3/8
-                \stopStaff \startStaff
-                % [Voice 9 measure 28] %! COMMENT_MEASURE_NUMBERS
-                c''8.
-                \ff
-
-                \>
-                [
-                fs''16
-                \mf
-
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                r2
-                \!
-                \times 2/3 {
-                    bf'4
-                    \mf
-
-                    \<
-                    aqs'8
-                    ~
-                }
-                % [Voice 9 measure 29] %! COMMENT_MEASURE_NUMBERS
-                aqs'2
-                \ff
-                - \tweak stencil #constante-hairpin
-                \<
-                r4
-                \!
-                % [Voice 9 measure 30] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 3/8
-                R1 * 3/8
-                \stopStaff \startStaff
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 8/7 {
-                    % [Voice 9 measure 31] %! COMMENT_MEASURE_NUMBERS
-                    a'8
-                    \mf
-
-                    \<
-                    aqf'4
-
-                    af'4.
-
-                    aqf'8
-                    \ff
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                % [Voice 9 measure 32] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \!
-                a'8
-                \mf
-
-                \<
-                [
-                aqs'8
-
-                ]
-                bf'4
-
                 ~
-                bf'4
-                bqf'4
-                \ff
-
-                - \tweak stencil #constante-hairpin
-                \<
-                % [Voice 9 measure 33] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \!
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 6/7 {
-                    b'8
-                    \mf
-
-                    \<
-                    [
-                    bqs'8
-
-                    c''8
-
-                    ~
-                    ]
-                    c''4.
-                    cqs''8
-                    ~
-                }
-                % [Voice 9 measure 34] %! COMMENT_MEASURE_NUMBERS
-                cqs''4
-                \ff
-                - \tweak stencil #constante-hairpin
-                \<
-                r4
-                \!
-                \times 4/5 {
-                    bf''16
-                    \ff
-
-                    \>
-                    b''4
-                    \mf
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                % [Voice 9 measure 35] %! COMMENT_MEASURE_NUMBERS
-                r2.
-                \!
-                \clef "treble^8"
-                af'''16
-                \ff
-
-                \>
-                [
-                b''16
-
-                ~
-                b''16
-                af'''16
-
-                b''8.
-
-                bf''16
-                \mf
-
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/11 {
-                    % [Voice 9 measure 36] %! COMMENT_MEASURE_NUMBERS
-                    r4
-                    \!
-                    b''16
-                    \ff
-
-                    \>
-                    [
-                    af'''16
-
-                    b''16
-                    ~
-                    ]
-                    b''4
-                }
-                r2
-                \!
-                % [Voice 9 measure 37] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 5/8
-                R1 * 5/8
-                \stopStaff \startStaff
-                % [Voice 9 measure 38] %! COMMENT_MEASURE_NUMBERS
-                \clef "treble"
-                bf''8
-                \ff
-
-                \>
-                [
-                fs''16
-
-                bf''16
-
-                ~
-                bf''8
-                fs''16
-
-                bf''16
-
-                ~
-                bf''8.
-                fs''16
-                \mf
-
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                r2
-                \!
-                % [Voice 9 measure 39] %! COMMENT_MEASURE_NUMBERS
-                r2.
-                \times 4/5 {
-                    bf''16
-                    \ff
-
-                    \>
-                    b''4
-                    \mf
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                }
-                % [Voice 9 measure 40] %! COMMENT_MEASURE_NUMBERS
-                \once \override Rest.transparent = ##t
-                \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
-                r1 * 1/2
-                \!
-                R1 * 1/2
-                \stopStaff \startStaff
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/11 {
-                    % [Voice 9 measure 41] %! COMMENT_MEASURE_NUMBERS
-                    d'16
-                    \p
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    c''4
-                    - \tenuto
-                    fs''4
-                    ~
-                    fs''16
-                    [
-                    af''16
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r2
-                \!
-                % [Voice 9 measure 42] %! COMMENT_MEASURE_NUMBERS
-                fs''16
-                \p
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                [
-                af''16
-                - \tenuto
-                fs''8
-                \pp
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                r1
-                \!
-                % [Voice 9 measure 43] %! COMMENT_MEASURE_NUMBERS
-                r4
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 12/13 {
-                    af''16
-                    \p
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    [
-                    fs''8
-                    - \tenuto
-                    ~
-                    fs''16
-                    af''16
-                    - \tenuto
-                    ]
-                    fs''4
-                    - \tenuto
-                    c''4
-                    ~
-                }
-                % [Voice 9 measure 44] %! COMMENT_MEASURE_NUMBERS
-                c''16
-                [
-                d'16
-                - \tenuto
-                g16
-                - \tenuto
-                d'16
-                \pp
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                ]
-                r2.
-                \!
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 8/7 {
-                    % [Voice 9 measure 45] %! COMMENT_MEASURE_NUMBERS
-                    g8
-                    \p
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    [
-                    d'16
-                    - \tenuto
-                    g8.
-                    - \tenuto
-                    d'16
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r4
-                \!
-                % [Voice 9 measure 46] %! COMMENT_MEASURE_NUMBERS
-                c''4
-                \p
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                d'4
-                ~
-                d'16
-                [
-                g16
-                - \tenuto
-                d'16
-                - \tenuto
-                g16
-                - \tenuto
-                d'8
-                - \tenuto
-                c''16
-                - \tenuto
-                fs''16
-                ~
-                \times 4/5 {
-                    % [Voice 9 measure 47] %! COMMENT_MEASURE_NUMBERS
-                    fs''8
-                    c''16
-                    - \tenuto
-                    fs''8
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r2.
-                \!
-                % [Voice 9 measure 48] %! COMMENT_MEASURE_NUMBERS
-                r4
-                af''8
-                \p
-                - \tenuto
-                - \tweak stencil #constante-hairpin
-                \<
-                [
-                fs''8
-                ~
-                fs''8.
-                af''16
-                - \tenuto
-                \tweak text #tuplet-number::calc-fraction-text
-                \times 16/15 {
-                    % [Voice 9 measure 49] %! COMMENT_MEASURE_NUMBERS
-                    fs''16
-                    - \tenuto
-                    af''16
-                    - \tenuto
-                    fs''16
-                    - \tenuto
-                    ~
-                    fs''16
-                    c''16
-                    - \tenuto
-                    fs''8.
-                    - \tenuto
-                    c''16
-                    - \tenuto
-                    d'16
-                    - \tenuto
-                    ~
-                    d'8.
-                    c''8
-                    \pp
-                    - \tenuto
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                }
-                r8
-                \!
-                \bar "|."
             }
+            % [Voice 11 measure 45] %! COMMENT_MEASURE_NUMBERS
+            g16
+            e8.
+            ~
+            e8
+            f,16
+            - \tenuto
+            e16
+            - \tenuto
+            f,16
+            - \tenuto
+            e16
+            - \tenuto
+            ~
+            e16
+            f,16
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            % [Voice 11 measure 46] %! COMMENT_MEASURE_NUMBERS
+            \once \override Rest.transparent = ##t
+            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
+            r1 * 1/2
+            \!
+            R1 * 1/2
+            \stopStaff \startStaff
+            % [Voice 11 measure 47] %! COMMENT_MEASURE_NUMBERS
+            r4
+            e16
+            \p
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            [
+            f,8.
+            - \tenuto
+            ~
+            f,16
+            e8.
+            ~
+            e8
+            f,16
+            - \tenuto
+            e16
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            % [Voice 11 measure 48] %! COMMENT_MEASURE_NUMBERS
+            r2
+            \!
+            \times 4/5 {
+                g16
+                \p
+                - \tenuto
+                - \tweak stencil #constante-hairpin
+                \<
+                [
+                e8
+                - \tenuto
+                f,16
+                - \tenuto
+                e16
+                ~
+            }
+            % [Voice 11 measure 49] %! COMMENT_MEASURE_NUMBERS
+            e8
+            g16
+            - \tenuto
+            d'8.
+            - \tenuto
+            ~
+            d'16
+            \ottava 1
+            c''16
+            ~
+            ]
+            c''4
+            \ottava 0
+            d'16
+            - \tenuto
+            [
+            \ottava 1
+            c''16
+            - \tenuto
+            \ottava 0
+            d'16
+            - \tenuto
+            \ottava 1
+            c''16
+            \pp
+            - \tenuto
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
+            \ottava 0
+            r8
+            \!
+            \bar "|."
         }
     >>
 } %! abjad.LilyPondFile

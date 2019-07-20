@@ -23,9 +23,8 @@
 	%\accidentalStyle modern-cautionary
 	%\accidentalStyle neo-modern
 	%\accidentalStyle dodecaphonic
-    indent = #5
-	%ragged-last = ##t
-    %ragged-right = ##t
+	ragged-last = ##t
+    ragged-right = ##t
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -63,31 +62,52 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #6
+        \override TimeSignature.font-size = #3
         \override TimeSignature.self-alignment-X = #center
 		\override TimeSignature.whiteout = ##t
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))
     }
     \context {
-        \Score
+		\Score
+		\remove Metronome_mark_engraver
         \remove Bar_number_engraver
 		\remove Mark_engraver
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
+		\override BarLine.hair-thickness = #0.9
+		\override BarLine.thick-thickness = #2.7
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
+		\override Beam.beam-thickness = #0.8
+        \override Beam.length-fraction = #1.5
+		\override Clef.whiteout-style = #'outline
+  		\override Clef.whiteout = 1
+		\override DynamicText.font-size = #-2
+		\override DynamicLineSpanner.staff-padding = 5
+		\override Hairpin.bound-padding = #2
 		\override Glissando.breakable = ##t
+		\override Glissando.thickness = #1.8
+		\override Stem.thickness = #0.5
+		\override Staff.thickness = #0.5
+		\override MetronomeMark.font-size = 3
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 3))
-        \override TupletBracket.bracket-visibility = ##t
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 17) (minimum-distance . 17) (padding . 0))
+		\override Stem.stemlet-length = #1.15
+		\override StemTremolo.slope = #0.3
+		\override StemTremolo.shape = #'beam-like
+		\override StemTremolo.beam-thickness = #0.3
+		\override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
-        \override TupletBracket.padding = #2
+        \override TupletBracket.padding = #1.5
+		\override TupletBracket.staff-padding = #4
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+		\override TupletBracket.direction = #up
+		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
-		proportionalNotationDuration = #(ly:make-moment 1 42)
-        autoBeaming = ##f
+		autoBeaming = ##f
+		proportionalNotationDuration = #(ly:make-moment 1 38)
         tupletFullLength = ##t
     }
 	\context {
@@ -109,27 +129,35 @@
 
 \paper {
 
-	top-margin = 0.5\cm
-	bottom-margin = 0.4\cm
-	left-margin = 1\cm
-	right-margin = 0.8\cm
+	indent = 2\mm
+	short-indent = 2\mm
+	bottom-margin = 10\mm
+	left-margin = 10\mm
+	right-margin = 10\mm
+	top-margin = 10\mm
 
-	%top-margin = .90\in
 	oddHeaderMarkup = \markup ""
 	evenHeaderMarkup = \markup ""
-	oddFooterMarkup = \markup \fill-line {
-    ""
-    \concat {
-      "~"
-	  \fontsize #2
-	  \fromproperty #'page:page-number-string "~"
-     }
-    ""
-  }
-  evenFooterMarkup = \markup \fill-line {
-    ""
-	\concat { "~" \fontsize #2
-	\fromproperty #'page:page-number-string "~"
-    } ""
-  }
+	oddFooterMarkup = \markup
+        \fill-line {
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Tiānshū - Evans"
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            }
+    evenFooterMarkup = \markup
+        \fill-line {
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Tiānshū - Evans"
+            }
 }

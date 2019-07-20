@@ -120,9 +120,9 @@ for i in range(1, 1000):
     value = clarinet_random_walk_one[i - 1] + movement
     clarinet_random_walk_one.append(value)
 clarinet_random_walk_one = [abs(x) for x in clarinet_random_walk_one]
-clarinet_chord_one = [-10, 0, 6, 8, 15, 23, 15, 8, 6, 0]
+clarinet_chord_one = [0, 6, 8, 15, 8, 6]
 clarinet_notes_one = [
-    clarinet_chord_one[x] for x in reduceMod9(clarinet_random_walk_one)
+    clarinet_chord_one[x] for x in reduceMod5(clarinet_random_walk_one)
 ]
 
 seed(3)
@@ -492,9 +492,9 @@ for i in range(1, 1000):
     value = clarinet_random_walk_two[i - 1] + movement
     clarinet_random_walk_two.append(value)
 clarinet_random_walk_two = [abs(x) for x in clarinet_random_walk_two]
-clarinet_chord_two = [-8, -7, 2, 8, 11, 22, 11, 8, 2, -7]
+clarinet_chord_two = [-7, 2, 8, 11, 22, 11, 8, 2,]
 clarinet_notes_two = [
-    clarinet_chord_two[x] for x in reduceMod9(clarinet_random_walk_two)
+    clarinet_chord_two[x] for x in reduceMod7(clarinet_random_walk_two)
 ]
 
 seed(3)
@@ -651,6 +651,16 @@ slower_rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
     ),
 )
 
+rmaker_four = abjadext.rmakers.IncisedRhythmMaker(
+    incise_specifier=abjadext.rmakers.InciseSpecifier(
+        prefix_talea=[-1],
+        prefix_counts=[0, 1, 1, 0],
+        suffix_talea=[-1],
+        suffix_counts=[1, 0],
+        talea_denominator=8,
+    )
+)
+
 # Initialize AttachmentHandler
 
 attachment_handler_one = AttachmentHandler(
@@ -674,7 +684,7 @@ attachment_handler_three = AttachmentHandler(
 # Initialize MusicMakers with the rhythm-makers.
 #####oboe#####
 flutemusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=flute_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -712,7 +722,7 @@ violin1musicmaker_three = MusicMaker(
 )
 #####trumpet#####
 trumpetmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=trumpet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -731,7 +741,7 @@ trumpetmusicmaker_three = MusicMaker(
 )
 #####clarinet#####
 clarinetmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=clarinet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -788,7 +798,7 @@ violamusicmaker_three = MusicMaker(
 )
 #####bassoon#####
 bassoonmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=bassoon_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -807,7 +817,7 @@ bassoonmusicmaker_three = MusicMaker(
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=trombone_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -845,7 +855,7 @@ cellomusicmaker_three = MusicMaker(
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=horn_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -864,7 +874,7 @@ hornmusicmaker_three = MusicMaker(
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=tuba_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,

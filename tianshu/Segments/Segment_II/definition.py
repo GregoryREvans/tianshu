@@ -660,6 +660,16 @@ slower_rmaker_one = abjadext.rmakers.EvenDivisionRhythmMaker(
     ),
 )
 
+rmaker_four = abjadext.rmakers.IncisedRhythmMaker(
+    incise_specifier=abjadext.rmakers.InciseSpecifier(
+        prefix_talea=[-1],
+        prefix_counts=[0, 1],
+        suffix_talea=[-1],
+        suffix_counts=[1],
+        talea_denominator=8,
+    )
+)
+
 # Initialize AttachmentHandler
 
 attachment_handler_one = AttachmentHandler(
@@ -680,7 +690,7 @@ attachment_handler_three = AttachmentHandler(
 # Initialize MusicMakers with the rhythm-makers.
 #####oboe#####
 flutemusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=flute_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -718,7 +728,7 @@ violin1musicmaker_three = MusicMaker(
 )
 #####trumpet#####
 trumpetmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=trumpet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -737,7 +747,7 @@ trumpetmusicmaker_three = MusicMaker(
 )
 #####clarinet#####
 clarinetmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=clarinet_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -794,7 +804,7 @@ violamusicmaker_three = MusicMaker(
 )
 #####bassoon#####
 bassoonmusicmaker_one = MusicMaker(
-    rmaker=rmaker_one,
+    rmaker=rmaker_four,
     pitches=bassoon_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -813,7 +823,7 @@ bassoonmusicmaker_three = MusicMaker(
 )
 #####trombone#####
 trombonemusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=trombone_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -851,7 +861,7 @@ cellomusicmaker_three = MusicMaker(
 )
 #####horn#####
 hornmusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=horn_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,
@@ -870,7 +880,7 @@ hornmusicmaker_three = MusicMaker(
 )
 #####tuba#####
 tubamusicmaker_one = MusicMaker(
-    rmaker=slower_rmaker_one,
+    rmaker=rmaker_four,
     pitches=tuba_scale,
     continuous=True,
     attachment_handler=attachment_handler_one,

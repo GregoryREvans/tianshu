@@ -188,26 +188,25 @@
         }
         \context Voice = "Voice 12"
         {
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 10/9 {
-                % [Voice 12 measure 1] %! COMMENT_MEASURE_NUMBERS
-                \set Staff.shortInstrumentName =
-                \markup { cb. }
-                \set Staff.instrumentName =
-                \markup { Contrabass }
-                \tempo 4=60
-                \clef "bass"
-                bf,2..
-                \mp
+            % [Voice 12 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \set Staff.shortInstrumentName =
+            \markup { cb. }
+            \set Staff.instrumentName =
+            \markup { Contrabass }
+            \tempo 4=60
+            \clef "bass"
+            bf,2.
+            \mp
 
-                - \tweak stencil #abjad-flared-hairpin
-                \<
-                aqs,4
-                \f
+            - \tweak stencil #abjad-flared-hairpin
+            \<
+            aqs,4
 
-                - \tweak stencil #constante-hairpin
-                \<
-            }
+            a,4
+            \f
+
+            - \tweak stencil #constante-hairpin
+            \<
             % [Voice 12 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -240,16 +239,24 @@
             \!
             % [Voice 12 measure 6] %! COMMENT_MEASURE_NUMBERS
             r2.
-            a,4
-            \mp
-            - \tweak stencil #abjad-flared-hairpin
-            \<
-            ~
+            \times 2/3 {
+                aqf,4
+                \mp
+
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                af,8
+                ~
+                [
+            }
             % [Voice 12 measure 7] %! COMMENT_MEASURE_NUMBERS
-            a,4
+            af,8
+            gqs,8
             \f
+
             - \tweak stencil #constante-hairpin
             \<
+            ]
             r2.
             \!
             % [Voice 12 measure 8] %! COMMENT_MEASURE_NUMBERS
@@ -274,20 +281,20 @@
             % [Voice 12 measure 11] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
-            aqf,4.
+            g,2
             \mp
-
             - \tweak stencil #abjad-flared-hairpin
             \<
-            af,8
             ~
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 6/5 {
-                % [Voice 12 measure 12] %! COMMENT_MEASURE_NUMBERS
-                af,4.
-                ~
-                af,4
-            }
+            % [Voice 12 measure 12] %! COMMENT_MEASURE_NUMBERS
+            g,4
+            gqf,8
+
+            fs,4.
+            \f
+
+            - \tweak stencil #constante-hairpin
+            \<
             % [Voice 12 measure 13] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -319,23 +326,16 @@
             \!
             % [Voice 12 measure 16] %! COMMENT_MEASURE_NUMBERS
             r2
-            gqs,4
+            fqs,2.
             \mp
-
             - \tweak stencil #abjad-flared-hairpin
             \<
-            g,2
-
-            \times 2/3 {
-                % [Voice 12 measure 17] %! COMMENT_MEASURE_NUMBERS
-                gqf,4
-
-                fs,8
-                \f
-
-                - \tweak stencil #constante-hairpin
-                \<
-            }
+            ~
+            % [Voice 12 measure 17] %! COMMENT_MEASURE_NUMBERS
+            fqs,4
+            \f
+            - \tweak stencil #constante-hairpin
+            \<
             r2
             \!
             % [Voice 12 measure 18] %! COMMENT_MEASURE_NUMBERS
@@ -390,22 +390,20 @@
             r1 * 3/8
             R1 * 3/8
             \stopStaff \startStaff
-            % [Voice 12 measure 25] %! COMMENT_MEASURE_NUMBERS
-            fqs,2
-            \mp
-            - \tweak stencil #abjad-flared-hairpin
-            \<
-            ~
-            fqs,8
-            [
-            f,8
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 10/9 {
+                % [Voice 12 measure 25] %! COMMENT_MEASURE_NUMBERS
+                f,1
+                \mp
 
-            ]
-            eqs,2
-            \f
+                - \tweak stencil #abjad-flared-hairpin
+                \<
+                eqs,8
+                \f
 
-            - \tweak stencil #constante-hairpin
-            \<
+                - \tweak stencil #constante-hairpin
+                \<
+            }
             % [Voice 12 measure 26] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
@@ -450,20 +448,22 @@
             \<
             r4
             \!
-            eqf,2
-            \mp
-            - \tweak stencil #abjad-flared-hairpin
-            \<
-            ~
             \times 4/5 {
-                % [Voice 12 measure 32] %! COMMENT_MEASURE_NUMBERS
                 eqf,4.
-                ef,4
-                \f
-
-                - \tweak stencil #constante-hairpin
+                \mp
+                ~
+                eqf,4
+                - \tweak stencil #abjad-flared-hairpin
                 \<
+                ~
             }
+            % [Voice 12 measure 32] %! COMMENT_MEASURE_NUMBERS
+            eqf,4
+            ef,4
+            \f
+
+            - \tweak stencil #constante-hairpin
+            \<
             r4
             \!
             dqs,2
@@ -471,29 +471,34 @@
             - \tweak stencil #abjad-flared-hairpin
             \<
             ~
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 4/3 {
-                % [Voice 12 measure 33] %! COMMENT_MEASURE_NUMBERS
-                dqs,4
-                d,8
-                \f
+            % [Voice 12 measure 33] %! COMMENT_MEASURE_NUMBERS
+            dqs,8
+            [
+            d,8
 
-                - \tweak stencil #constante-hairpin
-                \<
-            }
+            ~
+            d,8
+            dqf,8
+            \f
+
+            - \tweak stencil #constante-hairpin
+            \<
+            ]
             r4
             \!
-            dqf,4
+            cs,4
             \mp
+
             - \tweak stencil #abjad-flared-hairpin
             \<
-            ~
-            \times 4/5 {
-                % [Voice 12 measure 34] %! COMMENT_MEASURE_NUMBERS
-                dqf,4.
-                ~
-                dqf,4
-            }
+            % [Voice 12 measure 34] %! COMMENT_MEASURE_NUMBERS
+            cqs,4
+
+            c,4
+            \f
+
+            - \tweak stencil #constante-hairpin
+            \<
             r4
             \!
             % [Voice 12 measure 35] %! COMMENT_MEASURE_NUMBERS

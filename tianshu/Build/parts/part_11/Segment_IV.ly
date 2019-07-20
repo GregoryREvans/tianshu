@@ -206,23 +206,20 @@
             r1 * 1/4
             R1 * 1/4
             \stopStaff \startStaff
-            \times 8/9 {
-                % [Voice 11 measure 3] %! COMMENT_MEASURE_NUMBERS
-                a8
-                \mf
+            % [Voice 11 measure 3] %! COMMENT_MEASURE_NUMBERS
+            a4
+            \mf
 
-                \<
-                aqf4
-                ~
-                aqf4.
-                af8
+            \<
+            aqf4.
 
-                gqs4
-                \ff
+            af8
 
-                - \tweak stencil #constante-hairpin
-                \<
-            }
+            gqs4
+            \ff
+
+            - \tweak stencil #constante-hairpin
+            \<
             % [Voice 11 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -274,22 +271,16 @@
             % [Voice 11 measure 8] %! COMMENT_MEASURE_NUMBERS
             r4
             \tweak text #tuplet-number::calc-fraction-text
-            \times 6/7 {
-                g4.
+            \times 6/5 {
+                g4
                 \mf
 
                 \<
-                gqf4
-
-                fs8
-
-                [
-                fqs8
+                gqf4.
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
-                ]
             }
             % [Voice 11 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
@@ -374,15 +365,23 @@
             R1 * 3/8
             \stopStaff \startStaff
             % [Voice 11 measure 13] %! COMMENT_MEASURE_NUMBERS
-            f4.
+            fs4
             \mf
 
             \<
-            eqs4.
+            fqs8
+
+            [
+            f8
+
+            ~
+            f8
+            eqs8
             \ff
 
             - \tweak stencil #constante-hairpin
             \<
+            ]
             r4
             \!
             % [Voice 11 measure 14] %! COMMENT_MEASURE_NUMBERS
@@ -444,19 +443,24 @@
             \ottava 0
             r2.
             \!
-            \tweak text #tuplet-number::calc-fraction-text
-            \times 4/3 {
+            \times 4/5 {
                 % [Voice 11 measure 17] %! COMMENT_MEASURE_NUMBERS
                 \clef "bass"
-                e8
+                e4
                 \mf
 
                 \<
-                eqf4
+                eqf8
+
+                ~
+                [
+                eqf8
+                ef8
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
+                ]
             }
             r4
             \!
@@ -491,15 +495,17 @@
                 \<
                 ]
             }
-            % [Voice 11 measure 19] %! COMMENT_MEASURE_NUMBERS
-            ef4
-            \mf
+            \times 4/5 {
+                % [Voice 11 measure 19] %! COMMENT_MEASURE_NUMBERS
+                dqs2
+                \mf
 
-            \<
-            dqs4
-            ~
+                \<
+                d8
+                ~
+            }
             % [Voice 11 measure 20] %! COMMENT_MEASURE_NUMBERS
-            dqs4
+            d4
             \ff
             - \tweak stencil #constante-hairpin
             \<
@@ -619,18 +625,12 @@
             r1 * 3/8
             R1 * 3/8
             \stopStaff \startStaff
-            \times 2/3 {
-                % [Voice 11 measure 27] %! COMMENT_MEASURE_NUMBERS
-                d8
-                \mf
+            % [Voice 11 measure 27] %! COMMENT_MEASURE_NUMBERS
+            dqf4
+            \ff
 
-                \<
-                dqf4
-                \ff
-
-                - \tweak stencil #constante-hairpin
-                \<
-            }
+            - \tweak stencil #constante-hairpin
+            \<
             r2
             \!
             \tweak text #tuplet-number::calc-fraction-text
@@ -701,51 +701,48 @@
                 ]
             }
             % [Voice 11 measure 31] %! COMMENT_MEASURE_NUMBERS
-            cs4.
+            cs2
             \mf
-
-            \<
-            cqs8
-            \ff
 
             - \tweak stencil #constante-hairpin
             \<
             r4
             \!
-            c4
+            cqs4
             \mf
-
             \<
-            % [Voice 11 measure 32] %! COMMENT_MEASURE_NUMBERS
-            bqs,8
-
-            [
-            b,8
-
             ~
-            ]
-            b,4.
-            bqf,8
-            \ff
-
-            - \tweak stencil #constante-hairpin
-            \<
-            r4
-            \!
-            \times 2/3 {
-                bf,4
-                \mf
-
-                \<
-                bqf,8
-
-            }
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
-                % [Voice 11 measure 33] %! COMMENT_MEASURE_NUMBERS
-                b,2
+                % [Voice 11 measure 32] %! COMMENT_MEASURE_NUMBERS
+                cqs4
+                c8
 
-                bqs,4.
+                bqs,4
+
+                b,4
+                \ff
+
+                - \tweak stencil #constante-hairpin
+                \<
+            }
+            r4
+            \!
+            bqf,8
+            \mf
+
+            \<
+            [
+            bf,8
+            ~
+            \tweak text #tuplet-number::calc-fraction-text
+            \times 6/5 {
+                % [Voice 11 measure 33] %! COMMENT_MEASURE_NUMBERS
+                bf,8
+                bqf,8
+
+                ]
+                b,4.
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -754,19 +751,15 @@
             r4
             \!
             % [Voice 11 measure 34] %! COMMENT_MEASURE_NUMBERS
-            c4
+            bqs,8
             \mf
 
             \<
-            cqs8
-
-            [
-            cs8
+            c4.
             \ff
 
             - \tweak stencil #constante-hairpin
             \<
-            ]
             r4
             \!
             % [Voice 11 measure 35] %! COMMENT_MEASURE_NUMBERS

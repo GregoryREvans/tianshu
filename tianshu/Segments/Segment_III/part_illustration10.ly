@@ -213,26 +213,18 @@
             r2
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/13 {
-                af'4.
+                af'8.
                 \mp
 
                 - \tweak stencil #abjad-flared-hairpin
                 \<
-                gqs'16
-
-                ~
                 [
                 gqs'16
+
                 g'16
-
                 ~
-                g'8.
-                gqf'16
-                \f
-
-                - \tweak stencil #constante-hairpin
-                \<
                 ]
+                g'2
             }
             % [Voice 10 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
@@ -267,22 +259,20 @@
             \!
             % [Voice 10 measure 6] %! COMMENT_MEASURE_NUMBERS
             r2.
-            fs'16
+            gqf'8.
             \mp
 
             - \tweak stencil #abjad-flared-hairpin
             \<
             [
-            fqs'8.
+            fs'16
             ~
+            ]
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/11 {
                 % [Voice 10 measure 7] %! COMMENT_MEASURE_NUMBERS
-                fqs'8.
-                f'16
-
-                ]
-                eqs'4..
+                fs'4..
+                fqs'4
                 \f
 
                 - \tweak stencil #constante-hairpin
@@ -306,21 +296,26 @@
             r2.
             \!
             % [Voice 10 measure 10] %! COMMENT_MEASURE_NUMBERS
-            e'4
+            f'4.
             \mp
+
             - \tweak stencil #abjad-flared-hairpin
             \<
-            ~
-            e'16
-            eqf'4..
+            eqs'4.
+
+            e'8
+
+            [
+            eqf'8
 
             ~
-            eqf'16
-            ef'4..
+            eqf'8
+            ef'8
             \f
 
             - \tweak stencil #constante-hairpin
             \<
+            ]
             % [Voice 10 measure 11] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -359,20 +354,17 @@
             % [Voice 10 measure 15] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 16/17 {
-                dqs'8.
+                dqs'4.
                 \mp
 
                 - \tweak stencil #abjad-flared-hairpin
                 \<
-                d'4.
+                d'16
 
+                dqf'2
+                ~
                 dqf'8
-
-                cs'4
-
-                cqs'8
                 \f
-
                 - \tweak stencil #constante-hairpin
                 \<
             }
@@ -432,29 +424,22 @@
             \!
             % [Voice 10 measure 22] %! COMMENT_MEASURE_NUMBERS
             r4
-            c'4.
+            cs'8
             \mp
 
             - \tweak stencil #abjad-flared-hairpin
             \<
-            bqs16
-
-            [
-            b16
+            cqs'4.
             ~
-            ]
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/11 {
                 % [Voice 10 measure 23] %! COMMENT_MEASURE_NUMBERS
-                b4..
-                ~
-                b8
-                ~
+                cqs'8
                 [
-                b8
-                - \tweak stencil #constante-hairpin
-                \<
+                c'16
+                ~
                 ]
+                c'2
             }
             r4
             \!
@@ -499,19 +484,25 @@
             \<
             r2
             \!
-            bqf4
+            bqs16
             \mp
+
             - \tweak stencil #abjad-flared-hairpin
             \<
+            [
+            b8.
             ~
             \times 8/9 {
                 % [Voice 10 measure 29] %! COMMENT_MEASURE_NUMBERS
-                bqf4
-                bf8
-                ~
-                [
-                bf8.
+                b8.
+                bqf8
+
                 ]
+                bf4
+                \f
+
+                - \tweak stencil #constante-hairpin
+                \<
             }
             r4
             \!
@@ -522,70 +513,60 @@
             R1 * 3/8
             \stopStaff \startStaff
             % [Voice 10 measure 31] %! COMMENT_MEASURE_NUMBERS
-            aqs4
+            aqs8
             \mp
+
             - \tweak stencil #abjad-flared-hairpin
             \<
-            ~
-            aqs16
-            [
-            a8.
+            a4.
 
-            ~
-            a8.
             aqs16
 
-            ~
-            aqs16
-            bf8.
+            bf4..
             \f
 
             - \tweak stencil #constante-hairpin
             \<
-            ]
             % [Voice 10 measure 32] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
             \tweak text #tuplet-number::calc-fraction-text
             \times 16/15 {
-                bqf16
+                bqf8.
                 \mp
-
+                ~
+                [
+                bqf8
                 - \tweak stencil #abjad-flared-hairpin
                 \<
-                [
-                b8
+                ]
+                b2
 
                 bqs8
+                \f
 
-                ~
-                ]
-                bqs4
-                c'16
-
-                [
-                cqs'8.
-                ~
-                cqs'8
-                ]
+                - \tweak stencil #constante-hairpin
+                \<
             }
             % [Voice 10 measure 33] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
-            cs'4..
+            c'2
             \mp
 
             - \tweak stencil #abjad-flared-hairpin
             \<
-            dqf'16
-            ~
-            dqf'4
+            cqs'4
             ~
             \times 4/5 {
                 % [Voice 10 measure 34] %! COMMENT_MEASURE_NUMBERS
-                dqf'8.
+                cqs'8
                 [
-                d'8
+                cs'16
+
+                ~
+                cs'16
+                dqf'16
                 \f
 
                 - \tweak stencil #constante-hairpin

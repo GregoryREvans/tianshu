@@ -13,7 +13,7 @@
 	dedication = \markup \override #'(font-name . "Didot") \fontsize #6.5 \italic {"T     i     ā     n     s     h     ū"}
 	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/tianshu_title.eps" }
 	subtitle = \markup { \epsfile #Y #7.7 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/subtitle.eps" }
-	subsubtitle = \markup \override #'(font-name . "Didot") \center-column {\fontsize #2.3 \line{"f   o   r       t   w   e   l   v   e       p   l   a   y   e   r   s"} \fontsize #0.05 \line{";   o r  ,  m a d  w r i t i n g s  i n  a  B o o k  f r o m  t h e  S k y"}}
+	subsubtitle = \markup \override #'(font-name . "Didot") \center-column {\fontsize #2.3 \line{"f   o   r       t   w   e   l   v   e       p   l   a   y   e   r   s"} \fontsize #0.05 \line{";   o r  ,  m a d  w r i t i n g s  i n  a  B o o k  f r o m  t h e  S k y"} \fontsize #2.3 \line{".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ."}}
 	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
@@ -23,7 +23,6 @@
 	%\accidentalStyle modern-cautionary
 	%\accidentalStyle neo-modern
 	%\accidentalStyle dodecaphonic
-    indent = #5
 	%ragged-last = ##t
     %ragged-right = ##t
     %left-margin = #15
@@ -69,25 +68,46 @@
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))
     }
     \context {
-        \Score
+		\Score
+		\remove Metronome_mark_engraver
         \remove Bar_number_engraver
 		\remove Mark_engraver
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
+		\override BarLine.hair-thickness = #0.9
+		\override BarLine.thick-thickness = #2.7
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
+		\override Beam.beam-thickness = #0.8
+        \override Beam.length-fraction = #1.5
+		\override Clef.whiteout-style = #'outline
+  		\override Clef.whiteout = 1
+		\override DynamicText.font-size = #-2
+		\override DynamicLineSpanner.staff-padding = 5
+		\override Hairpin.bound-padding = #2
 		\override Glissando.breakable = ##t
+		\override Glissando.thickness = #1.8
+		\override Stem.thickness = #0.5
+		\override Staff.thickness = #0.5
+		\override MetronomeMark.font-size = 3
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 25) (minimum-distance . 25) (padding . 3))
-        \override TupletBracket.bracket-visibility = ##t
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 27) (minimum-distance . 27) (padding . 3))
+		\override Stem.stemlet-length = #1.15
+		\override StemTremolo.slope = #0.3
+		\override StemTremolo.shape = #'beam-like
+		\override StemTremolo.beam-thickness = #0.3
+		\override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
-        \override TupletBracket.padding = #2
+        \override TupletBracket.padding = #1.5
+		\override TupletBracket.staff-padding = #4
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+		\override TupletBracket.direction = #up
+		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
+		autoBeaming = ##f
 		proportionalNotationDuration = #(ly:make-moment 1 42)
-        autoBeaming = ##f
         tupletFullLength = ##t
     }
 	\context {
@@ -109,27 +129,35 @@
 
 \paper {
 
-	top-margin = 0.5\cm
-	bottom-margin = 0.4\cm
-	left-margin = 1\cm
-	right-margin = 0.8\cm
+	indent = 10\mm
+	short-indent = 10\mm
+	%{ bottom-margin = 5\mm
+	left-margin = 10\mm
+	right-margin = 10\mm
+	top-margin = 5\mm %}
 
-	%top-margin = .90\in
 	oddHeaderMarkup = \markup ""
 	evenHeaderMarkup = \markup ""
-	oddFooterMarkup = \markup \fill-line {
-    ""
-    \concat {
-      "~"
-	  \fontsize #2
-	  \fromproperty #'page:page-number-string "~"
-     }
-    ""
-  }
-  evenFooterMarkup = \markup \fill-line {
-    ""
-	\concat { "~" \fontsize #2
-	\fromproperty #'page:page-number-string "~"
-    } ""
-  }
+	oddFooterMarkup = \markup
+        \fill-line {
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Tiānshū - Evans"
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            }
+    evenFooterMarkup = \markup
+        \fill-line {
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Tiānshū - Evans"
+            }
 }

@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=108
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -218,36 +219,30 @@
             \<
             % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             \!
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
             r4.
-            \clef "bass"
             d'8
             \fff
             - \tenuto
             \>
             [
-            \ottava 1
             c''8
             \mf
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
             ]
-            \ottava 0
             r4.
             \!
             % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 5] %! COMMENT_MEASURE_NUMBERS
+            \clef "bass"
             f8
             \mp
 
@@ -256,21 +251,16 @@
             [
             e'8
 
-            \ottava 1
+            \clef "treble"
             c''8
 
-            \ottava 0
-            \ottava 1
             ef''8
 
             ~
             ef''8
-            \ottava 0
-            \ottava 1
             c''8
 
             ]
-            \ottava 0
             e'4
             \ff
 
@@ -279,7 +269,6 @@
             % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
             r2.
             \!
-            \clef "treble"
             c''4
             \p
             - \accent
@@ -295,16 +284,12 @@
             \!
             % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 4 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
             r2.
             \times 4/5 {
@@ -340,11 +325,9 @@
             \<
             % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
                 % [Voice 4 measure 14] %! COMMENT_MEASURE_NUMBERS
@@ -371,10 +354,8 @@
             \!
             % [Voice 4 measure 15] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
             r2
             c''2.
@@ -415,17 +396,13 @@
             ]
             % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
             ef''4
             \mp
@@ -455,10 +432,8 @@
             \!
             % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
             c''2.
             \p
@@ -482,48 +457,40 @@
             }
             % [Voice 4 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 28] %! COMMENT_MEASURE_NUMBERS
-            \ottava 1
+            \clef "treble"
             c''8
             \mp
 
             - \tweak stencil #abjad-flared-hairpin
             \<
             [
-            \ottava 0
             e'8
 
             ]
+            \clef "bass"
             f4
 
             e'8
 
-            \ottava 1
+            \clef "treble"
             c''4.
             \ff
 
             - \tweak stencil #constante-hairpin
             \<
-            \ottava 0
             % [Voice 4 measure 29] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 4 measure 31] %! COMMENT_MEASURE_NUMBERS
-            \clef "treble"
             c''4
             \p
             - \accent
@@ -572,10 +539,8 @@
             \!
             % [Voice 4 measure 35] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 4 measure 36] %! COMMENT_MEASURE_NUMBERS
             r2
             r8
@@ -587,61 +552,47 @@
             [
             d'8
             - \tenuto
-            \ottava 1
+            \clef "treble"
             c''8
             - \tenuto
-            \ottava 0
-            \ottava 1
             f''8
             \mf
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
             ]
-            \ottava 0
             r8
             \!
             % [Voice 4 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 4 measure 38] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 4/5 {
                 r4
-                \ottava 1
                 c''4
                 \fff
                 - \tenuto
                 \>
-                \ottava 0
                 d'4
                 - \tenuto
-                \ottava 1
                 c''4
                 - \tenuto
-                \ottava 0
-                \ottava 1
                 f''4
                 - \tenuto
-                \ottava 0
             }
             % [Voice 4 measure 39] %! COMMENT_MEASURE_NUMBERS
-            \ottava 1
             c''8
             - \tenuto
             [
-            \ottava 0
             d'8
             - \tenuto
-            \ottava 1
             c''8
             - \tenuto
-            \ottava 0
             d'8
             - \tenuto
+            \clef "bass"
             ef8
             - \tenuto
             d'8
@@ -686,27 +637,21 @@
             r2
             \!
             % [Voice 4 measure 43] %! COMMENT_MEASURE_NUMBERS
-            \ottava 1
-            \clef "bass"
             c''8
             \mp
 
             - \tweak stencil #abjad-flared-hairpin
             \<
             [
-            \ottava 0
-            \ottava 1
             ef''8
 
-            \ottava 0
-            \ottava 1
             c''8
 
-            \ottava 0
             e'8
 
             ~
             e'8
+            \clef "bass"
             f8
 
             ]

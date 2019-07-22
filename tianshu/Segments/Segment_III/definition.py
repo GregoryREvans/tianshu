@@ -1871,8 +1871,8 @@ for count, voice in enumerate(abjad.iterate(score).components(abjad.Voice)):
         stop_command = abjad.LilyPondLiteral(
             r"\stopStaff \startStaff", format_slot="after"
         )
-        abjad.attach(start_command, invisible_rest)
-        abjad.attach(stop_command, multimeasure_rest)
+        # abjad.attach(start_command, invisible_rest)
+        # abjad.attach(stop_command, multimeasure_rest)
         both_rests = [invisible_rest, multimeasure_rest]
         abjad.mutate(shard).replace(both_rests[:])
 
@@ -2018,10 +2018,6 @@ for staff in abjad.iterate(score["Staff Group 3"]).components(abjad.Staff):
     abjad.attach(next(abbreviations3), leaf1)
     abjad.attach(next(names3), leaf1)
 
-for voice in abjad.select(score).components(abjad.Voice):
-    clef = next(handlers)
-    clef(voice)
-
 for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     last_leaf = abjad.select(staff).leaves()[-1]
@@ -2041,6 +2037,10 @@ for staff in abjad.select(score["Staff Group 3"]).components(abjad.Staff):
     abjad.attach(bar_line, last_leaf)
 
 for staff in abjad.iterate(score["Global Context 1"]).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[0]
+    abjad.attach(metro, leaf1)
+
+for staff in abjad.iterate(score["Global Context 1"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[7]
     abjad.attach(mark1, leaf1)
 
@@ -2112,14 +2112,18 @@ for staff in abjad.iterate(score["Global Context 3"]).components(abjad.Staff):
     leaf6 = abjad.select(staff).leaves()[39]
     abjad.attach(mark6, leaf6)
 
-# for staff in abjad.iterate(score['Staff Group 1']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
-#
-# for staff in abjad.iterate(score['Staff Group 2']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
-#
-# for staff in abjad.iterate(score['Staff Group 3']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
+for staff in abjad.iterate(score['Staff Group 1']).components(abjad.Staff):
+    abjad.Instrument.transpose_from_sounding_pitch(staff)
+
+for staff in abjad.iterate(score['Staff Group 2']).components(abjad.Staff):
+    abjad.Instrument.transpose_from_sounding_pitch(staff)
+
+for staff in abjad.iterate(score['Staff Group 3']).components(abjad.Staff):
+    abjad.Instrument.transpose_from_sounding_pitch(staff)
+
+for voice in abjad.select(score).components(abjad.Voice):
+    clef = next(handlers)
+    clef(voice)
 
 # Make a lilypond file and show it:
 

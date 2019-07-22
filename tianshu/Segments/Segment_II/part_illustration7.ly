@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=90
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -219,10 +220,8 @@
             \!
             % [Voice 7 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
             r4
             f,4..
@@ -235,10 +234,8 @@
             r4
             % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 7 measure 5] %! COMMENT_MEASURE_NUMBERS
                 f,4
@@ -265,10 +262,8 @@
             \!
             % [Voice 7 measure 7] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
             bf,2...
             \mf
@@ -279,10 +274,8 @@
             \!
             % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
             r2.
             f,4..
@@ -314,10 +307,8 @@
             \!
             % [Voice 7 measure 13] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 14] %! COMMENT_MEASURE_NUMBERS
             af,8
             \pp
@@ -354,10 +345,8 @@
             \!
             % [Voice 7 measure 17] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 18] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 2/3 {
@@ -397,10 +386,8 @@
             r4
             % [Voice 7 measure 21] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 7 measure 22] %! COMMENT_MEASURE_NUMBERS
                 af,16
@@ -433,10 +420,8 @@
             r4
             % [Voice 7 measure 24] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 25] %! COMMENT_MEASURE_NUMBERS
             f,2.
             \mf
@@ -456,10 +441,8 @@
             \!
             % [Voice 7 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 7 measure 28] %! COMMENT_MEASURE_NUMBERS
                 f,4
@@ -476,11 +459,9 @@
             }
             % [Voice 7 measure 29] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 30] %! COMMENT_MEASURE_NUMBERS
             r2
             a8.
@@ -560,10 +541,8 @@
             \!
             % [Voice 7 measure 35] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 36] %! COMMENT_MEASURE_NUMBERS
             r2
             bf,4
@@ -575,10 +554,8 @@
             \!
             % [Voice 7 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 38] %! COMMENT_MEASURE_NUMBERS
             r4
             f,2
@@ -605,10 +582,8 @@
             \!
             % [Voice 7 measure 40] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 41] %! COMMENT_MEASURE_NUMBERS
             af,8
             \pp
@@ -656,11 +631,9 @@
             }
             % [Voice 7 measure 44] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 45] %! COMMENT_MEASURE_NUMBERS
             f,8
             \pp

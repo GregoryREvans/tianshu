@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=120
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -228,11 +229,9 @@
             \<
             % [Voice 10 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             \!
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 10 measure 3] %! COMMENT_MEASURE_NUMBERS
             r2
             f16
@@ -363,11 +362,9 @@
             \<
             % [Voice 10 measure 11] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 12] %! COMMENT_MEASURE_NUMBERS
             r4
             e'8
@@ -377,11 +374,10 @@
             [
             c''16
 
-            \ottava 1
+            \clef "treble"
             fs''16
 
             ]
-            \ottava 0
             c''4
             \mf
 
@@ -407,6 +403,7 @@
                 - \tweak stencil #constante-hairpin
                 \<
                 [
+                \clef "varC"
                 e16
                 - \tenuto
                 g16
@@ -422,11 +419,9 @@
             }
             % [Voice 10 measure 14] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 10 measure 15] %! COMMENT_MEASURE_NUMBERS
             r4
             \tweak text #tuplet-number::calc-fraction-text
@@ -455,14 +450,13 @@
 
             c''16
 
-            \ottava 1
+            \clef "treble"
             fs''8.
             \mf
 
             - \tweak stencil #constante-hairpin
             \<
             ]
-            \ottava 0
             % [Voice 10 measure 17] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
@@ -504,7 +498,6 @@
             % [Voice 10 measure 19] %! COMMENT_MEASURE_NUMBERS
             r8.
             \!
-            \clef "treble"
             fs''16
             \pp
             - \tenuto
@@ -515,21 +508,19 @@
             % [Voice 10 measure 20] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 8/9 {
-                \clef "varC"
                 c''16
                 \ff
 
                 \>
                 [
-                \ottava 1
                 fs''16
 
-                \ottava 0
                 c''16
 
                 e'8.
                 ~
                 e'8
+                \clef "varC"
                 f16
                 \mf
 
@@ -605,7 +596,6 @@
             r2
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/13 {
-                \clef "varC"
                 c''4
                 \p
                 - \tenuto
@@ -621,33 +611,26 @@
                 - \tenuto
                 c''16
                 - \tenuto
-                \ottava 1
                 fs''16
                 ~
             }
             % [Voice 10 measure 26] %! COMMENT_MEASURE_NUMBERS
             fs''16
-            \ottava 0
             c''16
             - \tenuto
-            \ottava 1
             fs''8
             \pp
             - \tenuto
             - \tweak stencil #constante-hairpin
             \<
             ]
-            \ottava 0
             r2
             \!
             % [Voice 10 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 28] %! COMMENT_MEASURE_NUMBERS
-            \clef "treble"
             fs''16
             \ff
 
@@ -662,7 +645,6 @@
             r2
             \!
             \times 2/3 {
-                \clef "varC"
                 bqf8
                 \mf
 
@@ -682,10 +664,8 @@
             \!
             % [Voice 10 measure 30] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             \tweak text #tuplet-number::calc-fraction-text
             \times 8/7 {
                 % [Voice 10 measure 31] %! COMMENT_MEASURE_NUMBERS
@@ -749,13 +729,11 @@
             r4
             \!
             \times 4/5 {
-                \ottava 1
                 fs''8
                 \ff
 
                 \>
                 [
-                \ottava 0
                 c''16
 
                 ~
@@ -770,7 +748,6 @@
             % [Voice 10 measure 35] %! COMMENT_MEASURE_NUMBERS
             r2.
             \!
-            \clef "treble"
             c''8.
             \ff
 
@@ -789,12 +766,12 @@
                 % [Voice 10 measure 36] %! COMMENT_MEASURE_NUMBERS
                 r16
                 \!
-                \clef "varC"
                 e'16
                 \ff
 
                 \>
                 [
+                \clef "varC"
                 f16
                 ~
                 ]
@@ -815,10 +792,8 @@
             \!
             % [Voice 10 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 10 measure 38] %! COMMENT_MEASURE_NUMBERS
             f8
             \ff
@@ -890,12 +865,12 @@
             \!
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/13 {
-                \clef "treble"
                 c''4
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
+                \clef "treble"
                 fs''16
                 - \tenuto
                 [
@@ -929,23 +904,21 @@
             r4
             \tweak text #tuplet-number::calc-fraction-text
             \times 12/11 {
-                \clef "varC"
                 c''8
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
                 \<
                 [
-                \ottava 1
                 fs''16
                 - \tenuto
-                \ottava 0
                 c''16
                 - \tenuto
                 d'16
                 - \tenuto
                 g8
                 - \tenuto
+                \clef "varC"
                 e16
                 - \tenuto
                 g8.
@@ -974,10 +947,8 @@
             \!
             % [Voice 10 measure 45] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 46] %! COMMENT_MEASURE_NUMBERS
             r4
             \tweak text #tuplet-number::calc-fraction-text
@@ -1053,12 +1024,11 @@
             - \tenuto
             c''16
             - \tenuto
-            \ottava 1
+            \clef "treble"
             fs''16
             - \tenuto
             ~
             fs''8.
-            \ottava 0
             c''16
             \pp
             - \tenuto

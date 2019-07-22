@@ -3,6 +3,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=108
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -203,11 +204,9 @@
             \<
             % [Voice 7 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             \!
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
             r4.
             c,8
@@ -225,10 +224,8 @@
             \!
             % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 5] %! COMMENT_MEASURE_NUMBERS
             c,8
             \mp
@@ -278,10 +275,8 @@
             }
             % [Voice 7 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 10] %! COMMENT_MEASURE_NUMBERS
             r2..
             af,8
@@ -312,11 +307,9 @@
             \<
             % [Voice 7 measure 13] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
                 % [Voice 7 measure 14] %! COMMENT_MEASURE_NUMBERS
@@ -339,10 +332,8 @@
             \!
             % [Voice 7 measure 15] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 16] %! COMMENT_MEASURE_NUMBERS
             r2
             c,2.
@@ -365,13 +356,11 @@
 
             - \tweak stencil #abjad-flared-hairpin
             \<
-            \ottava 1
             f'4.
             \ff
 
             - \tweak stencil #constante-hairpin
             \<
-            \ottava 0
             \tweak text #tuplet-number::calc-fraction-text
             \times 4/3 {
                 % [Voice 7 measure 19] %! COMMENT_MEASURE_NUMBERS
@@ -400,10 +389,8 @@
             \!
             % [Voice 7 measure 21] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 22] %! COMMENT_MEASURE_NUMBERS
             a4
             \mp
@@ -433,10 +420,8 @@
             \!
             % [Voice 7 measure 24] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 25] %! COMMENT_MEASURE_NUMBERS
             c,2.
             \p
@@ -460,10 +445,8 @@
             }
             % [Voice 7 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 28] %! COMMENT_MEASURE_NUMBERS
             bf,2
             \mp
@@ -484,17 +467,13 @@
             ]
             % [Voice 7 measure 29] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 30] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 7 measure 31] %! COMMENT_MEASURE_NUMBERS
             c,4
             \mp
@@ -544,10 +523,8 @@
             \!
             % [Voice 7 measure 35] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 36] %! COMMENT_MEASURE_NUMBERS
             r2
             \tweak text #tuplet-number::calc-fraction-text
@@ -575,10 +552,8 @@
             }
             % [Voice 7 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 7 measure 38] %! COMMENT_MEASURE_NUMBERS
             r2
             c,4
@@ -613,10 +588,8 @@
             \!
             % [Voice 7 measure 40] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
                 % [Voice 7 measure 41] %! COMMENT_MEASURE_NUMBERS
@@ -673,11 +646,9 @@
             }
             % [Voice 7 measure 44] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 7 measure 45] %! COMMENT_MEASURE_NUMBERS
             c,8
             \mp

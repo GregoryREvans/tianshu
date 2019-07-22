@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=90
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -210,17 +211,13 @@
             \markup { Violoncello }
             \tempo 4=90
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             \clef "bass"
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 11 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 11 measure 3] %! COMMENT_MEASURE_NUMBERS
             r8
             a16
@@ -260,10 +257,8 @@
             \!
             % [Voice 11 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 11 measure 5] %! COMMENT_MEASURE_NUMBERS
             bf,4..
             \mp
@@ -334,10 +329,8 @@
             }
             % [Voice 11 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 11 measure 10] %! COMMENT_MEASURE_NUMBERS
                 af,16
@@ -379,10 +372,8 @@
             r4
             % [Voice 11 measure 12] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 11 measure 13] %! COMMENT_MEASURE_NUMBERS
             r4
             bqf,8
@@ -403,13 +394,12 @@
             % [Voice 11 measure 14] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 2/3 {
-                \ottava 1
+                \clef "tenorvarC"
                 bf'16
                 \pp
 
                 \<
                 [
-                \ottava 0
                 c'8.
 
                 g8
@@ -423,6 +413,7 @@
             \!
             % [Voice 11 measure 15] %! COMMENT_MEASURE_NUMBERS
             r2.
+            \clef "bass"
             f,4..
             \mp
 
@@ -485,11 +476,9 @@
             \<
             % [Voice 11 measure 19] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             \!
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 11 measure 20] %! COMMENT_MEASURE_NUMBERS
             d16
             \mf
@@ -533,13 +522,12 @@
                 \<
                 c'4.
 
-                \ottava 1
+                \clef "tenorvarC"
                 bf'4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
-                \ottava 0
             }
             r4
             \!
@@ -563,18 +551,13 @@
             r2
             % [Voice 11 measure 26] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 11 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 11 measure 28] %! COMMENT_MEASURE_NUMBERS
-            \clef "tenorvarC"
             af'2
             \mp
             \<
@@ -588,10 +571,8 @@
             r4
             % [Voice 11 measure 29] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 11 measure 30] %! COMMENT_MEASURE_NUMBERS
             \clef "treble"
             e''8
@@ -716,10 +697,8 @@
             \!
             % [Voice 11 measure 36] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 11 measure 37] %! COMMENT_MEASURE_NUMBERS
             r2
             a4
@@ -731,10 +710,8 @@
             \!
             % [Voice 11 measure 38] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 11 measure 39] %! COMMENT_MEASURE_NUMBERS
             bf,2...
             \mp
@@ -744,11 +721,12 @@
             r16
             \!
             % [Voice 11 measure 40] %! COMMENT_MEASURE_NUMBERS
-            \clef "treble"
+            \clef "tenorvarC"
             bf'8
             \pp
 
             \<
+            \clef "treble"
             e''4.
 
             bf'4
@@ -761,7 +739,6 @@
             % [Voice 11 measure 41] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 2/3 {
-                \clef "bass"
                 c'16
                 \pp
 
@@ -769,6 +746,7 @@
                 [
                 g8.
 
+                \clef "bass"
                 af,8
                 \ff
 
@@ -836,17 +814,17 @@
 
             }
             % [Voice 11 measure 45] %! COMMENT_MEASURE_NUMBERS
-            \ottava 1
+            \clef "tenorvarC"
             bf'8
 
             ]
-            \ottava 0
             c'4.
 
             g4
 
             \times 2/3 {
                 % [Voice 11 measure 46] %! COMMENT_MEASURE_NUMBERS
+                \clef "bass"
                 af,16
 
                 [

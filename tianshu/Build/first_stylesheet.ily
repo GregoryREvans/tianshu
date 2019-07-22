@@ -3,7 +3,7 @@
 \version "2.19.83"
 \language "english"
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 12)
+#(set-global-staff-size 15)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
@@ -62,7 +62,7 @@
         \override TimeSignature.Y-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #6
+        \override TimeSignature.font-size = #5.5
         \override TimeSignature.self-alignment-X = #center
 		\override TimeSignature.whiteout = ##t
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))
@@ -74,8 +74,8 @@
 		\remove Mark_engraver
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
-		\override BarLine.hair-thickness = #0.9
-		\override BarLine.thick-thickness = #2.7
+		\override BarLine.hair-thickness = #2
+		\override BarLine.thick-thickness = #10
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
 		\override Beam.beam-thickness = #0.8
@@ -93,7 +93,7 @@
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 27) (minimum-distance . 27) (padding . 3))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 23) (minimum-distance . 23) (padding . 3))
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.slope = #0.3
 		\override StemTremolo.shape = #'beam-like
@@ -107,7 +107,7 @@
 		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
-		proportionalNotationDuration = #(ly:make-moment 1 42)
+		proportionalNotationDuration = #(ly:make-moment 1 36)
         tupletFullLength = ##t
     }
 	\context {

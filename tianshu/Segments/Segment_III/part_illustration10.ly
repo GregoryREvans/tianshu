@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=60
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -228,11 +229,9 @@
             }
             % [Voice 10 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             \!
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 10 measure 3] %! COMMENT_MEASURE_NUMBERS
             r2
             e2
@@ -318,11 +317,9 @@
             ]
             % [Voice 10 measure 11] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 12] %! COMMENT_MEASURE_NUMBERS
             r4
             e2
@@ -347,10 +344,8 @@
             \!
             % [Voice 10 measure 14] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 10 measure 15] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 16/17 {
@@ -472,10 +467,8 @@
             \!
             % [Voice 10 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 28] %! COMMENT_MEASURE_NUMBERS
             e4
             \mf
@@ -508,10 +501,8 @@
             \!
             % [Voice 10 measure 30] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 31] %! COMMENT_MEASURE_NUMBERS
             aqs8
             \mp
@@ -598,10 +589,8 @@
             \!
             % [Voice 10 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 10 measure 38] %! COMMENT_MEASURE_NUMBERS
             d'2.
             \mf
@@ -678,10 +667,8 @@
             r4
             % [Voice 10 measure 45] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 10 measure 46] %! COMMENT_MEASURE_NUMBERS
             r4
             fs'2
@@ -715,7 +702,6 @@
             \!
             r4
             % [Voice 10 measure 49] %! COMMENT_MEASURE_NUMBERS
-            \clef "varC"
             af'2...
             \f
             - \marcato

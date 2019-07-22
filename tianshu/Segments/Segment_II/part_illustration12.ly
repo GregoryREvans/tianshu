@@ -18,6 +18,7 @@
         \context TimeSignatureContext = "Global Context 1"
         {
             % [Global Context 1 measure 1] %! COMMENT_MEASURE_NUMBERS
+            \tempo 4=90
             \time 5/4
             s1 * 5/4
             % [Global Context 1 measure 2] %! COMMENT_MEASURE_NUMBERS
@@ -213,24 +214,24 @@
                 \tempo 4=90
                 \clef "bass"
                 r4
-                bf,8
+                bf8
                 \mf
                 - \tenuto
                 \>
                 [
-                aqs,8
+                aqs8
                 - \tenuto
-                a,8
+                a8
                 - \tenuto
-                aqf,8
+                aqf8
                 - \tenuto
-                af,8
+                af8
                 - \tenuto
-                gqs,8
+                gqs8
                 - \tenuto
-                g,8
+                g8
                 - \tenuto
-                gqf,8
+                gqf8
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -241,13 +242,11 @@
             }
             % [Voice 12 measure 2] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/4
             R1 * 1/4
-            \stopStaff \startStaff
             % [Voice 12 measure 3] %! COMMENT_MEASURE_NUMBERS
             r4
-            f,4..
+            f4..
             \mf
 
             - \tweak stencil #constante-hairpin
@@ -257,19 +256,17 @@
             r4
             % [Voice 12 measure 4] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 12 measure 5] %! COMMENT_MEASURE_NUMBERS
-                f,4
+                f4
                 \pp
 
                 \<
-                a,,2.
+                a,2.
 
-                f,2
+                f2
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -280,7 +277,7 @@
             \!
             \times 2/3 {
                 r4
-                fs,8
+                fs8
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -288,26 +285,20 @@
             }
             % [Voice 12 measure 7] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 12 measure 8] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 12 measure 9] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 12 measure 10] %! COMMENT_MEASURE_NUMBERS
             r2.
-            g,,4..
+            g,4..
             \mp
 
             - \tweak stencil #constante-hairpin
@@ -319,7 +310,7 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 4/3 {
                 r4
-                fqs,8
+                fqs8
                 \mf
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -327,25 +318,21 @@
             }
             % [Voice 12 measure 12] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 12 measure 13] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 12 measure 14] %! COMMENT_MEASURE_NUMBERS
-            a,,8
+            a,8
             \pp
 
             \<
-            f,4.
+            f4.
 
-            af,4
+            af4
             \ff
 
             - \tweak stencil #constante-hairpin
@@ -354,7 +341,7 @@
             \!
             % [Voice 12 measure 15] %! COMMENT_MEASURE_NUMBERS
             r4
-            f,8.
+            f8.
             \mf
 
             - \tweak stencil #constante-hairpin
@@ -368,18 +355,18 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 6/7 {
                 r4
-                f,8
+                f8
                 \mf
                 - \tenuto
                 \>
                 [
-                eqs,8
+                eqs8
                 - \tenuto
-                e,8
+                e8
                 - \tenuto
-                eqf,8
+                eqf8
                 - \tenuto
-                ef,8
+                ef8
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -388,28 +375,28 @@
             }
             % [Voice 12 measure 17] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 12 measure 18] %! COMMENT_MEASURE_NUMBERS
             r4
             \times 2/3 {
-                g8
+                \clef "tenorvarC"
+                g'8
                 \pp
 
                 \<
-                af,4.
+                af4.
 
-                f,4
+                f4
                 \ff
 
                 - \tweak stencil #constante-hairpin
                 \<
             }
             % [Voice 12 measure 19] %! COMMENT_MEASURE_NUMBERS
-            g,,4..
+            \clef "bass"
+            g,4..
             \mp
 
             - \tweak stencil #constante-hairpin
@@ -418,12 +405,12 @@
             \!
             % [Voice 12 measure 20] %! COMMENT_MEASURE_NUMBERS
             r16
-            f,8.
+            f8.
             \mf
 
             ~
             [
-            f,8.
+            f8.
             - \tweak stencil #constante-hairpin
             \<
             ]
@@ -432,20 +419,18 @@
             r4
             % [Voice 12 measure 21] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             R1 * 1/2
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 12 measure 22] %! COMMENT_MEASURE_NUMBERS
-                a,,16
+                a,16
                 \pp
 
                 \<
                 [
-                f,8.
+                f8.
 
-                af,8
+                af8
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -455,11 +440,11 @@
             r2
             \!
             % [Voice 12 measure 23] %! COMMENT_MEASURE_NUMBERS
-            bf,2
+            bf2
             \mp
             \<
             ~
-            bf,8.
+            bf8.
             \mf
             - \tweak stencil #constante-hairpin
             \<
@@ -468,28 +453,26 @@
             r4
             % [Voice 12 measure 24] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 12 measure 25] %! COMMENT_MEASURE_NUMBERS
             r4
-            dqs,8
+            dqs8
             \mf
             - \tenuto
             \>
             [
-            d,8
+            d8
             - \tenuto
-            dqf,8
+            dqf8
             - \tenuto
-            cs,8
+            cs8
             - \tenuto
-            cqs,8
+            cqs8
             - \tenuto
-            c,8
+            c8
             - \tenuto
-            bqs,,8
+            bqs,8
             \p
             - \tenuto
             - \tweak stencil #constante-hairpin
@@ -499,7 +482,8 @@
             \!
             % [Voice 12 measure 26] %! COMMENT_MEASURE_NUMBERS
             r4
-            a4..
+            \clef "tenorvarC"
+            a'4..
             \mp
 
             - \tweak stencil #constante-hairpin
@@ -508,19 +492,18 @@
             \!
             % [Voice 12 measure 27] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             R1 * 3/8
-            \stopStaff \startStaff
             \times 2/3 {
                 % [Voice 12 measure 28] %! COMMENT_MEASURE_NUMBERS
-                f,4
+                f4
                 \pp
 
                 \<
-                a,,2.
+                \clef "bass"
+                a,2.
 
-                f,2
+                f2
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -528,14 +511,12 @@
             }
             % [Voice 12 measure 29] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 3/8
             \!
             R1 * 3/8
-            \stopStaff \startStaff
             % [Voice 12 measure 30] %! COMMENT_MEASURE_NUMBERS
             r2
-            bf,8.
+            bf8.
             \mf
 
             - \tweak stencil #constante-hairpin
@@ -546,18 +527,18 @@
             r2
             \times 2/3 {
                 r2
-                bqs,,4
+                bqs,4
                 \mf
                 - \tenuto
                 \>
             }
             % [Voice 12 measure 32] %! COMMENT_MEASURE_NUMBERS
-            c,8
+            c8
             - \tenuto
             [
-            cqs,8
+            cqs8
             - \tenuto
-            cs,8
+            cs8
             \p
             - \tenuto
             - \tweak stencil #constante-hairpin
@@ -566,14 +547,14 @@
             r2..
             \!
             % [Voice 12 measure 33] %! COMMENT_MEASURE_NUMBERS
-            dqf,8
+            dqf8
             \mf
             - \tenuto
             \>
             [
-            d,8
+            d8
             - \tenuto
-            dqs,8
+            dqs8
             \p
             - \tenuto
             - \tweak stencil #constante-hairpin
@@ -585,12 +566,12 @@
             \tweak text #tuplet-number::calc-fraction-text
             \times 4/3 {
                 % [Voice 12 measure 34] %! COMMENT_MEASURE_NUMBERS
-                ef,8
+                ef8
                 \mf
                 - \tenuto
                 \>
                 [
-                eqf,8
+                eqf8
                 \p
                 - \tenuto
                 - \tweak stencil #constante-hairpin
@@ -602,45 +583,41 @@
             r4
             % [Voice 12 measure 35] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 12 measure 36] %! COMMENT_MEASURE_NUMBERS
             r2
-            f,4
+            f4
             \mp
             ~
-            f,4..
+            f4..
             \<
             r16
             \!
             % [Voice 12 measure 37] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 5/8
             R1 * 5/8
-            \stopStaff \startStaff
             % [Voice 12 measure 38] %! COMMENT_MEASURE_NUMBERS
             r4
-            g,,2
+            g,2
             \mp
 
             ~
-            g,,4..
+            g,4..
             - \tweak stencil #constante-hairpin
             \<
             r16
             \!
             % [Voice 12 measure 39] %! COMMENT_MEASURE_NUMBERS
             r16
-            f,8.
+            f8.
             \mf
 
             ~
-            f,2
+            f2
             ~
-            f,8.
+            f8.
             - \tweak stencil #constante-hairpin
             \<
             r16
@@ -648,22 +625,22 @@
             % [Voice 12 measure 40] %! COMMENT_MEASURE_NUMBERS
             r2
             \times 2/3 {
-                a,,8
+                a,8
                 \pp
 
                 \<
-                f,4.
+                f4.
 
-                a,,4
+                a,4
 
             }
             \times 2/3 {
                 % [Voice 12 measure 41] %! COMMENT_MEASURE_NUMBERS
-                f,8
+                f8
 
-                a,,4.
+                a,4.
 
-                f,4
+                f4
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -673,13 +650,13 @@
             \!
             \times 2/3 {
                 % [Voice 12 measure 42] %! COMMENT_MEASURE_NUMBERS
-                af,8
+                af8
                 \pp
 
                 \<
-                f,4.
+                f4.
 
-                af,4
+                af4
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -689,13 +666,14 @@
             \!
             % [Voice 12 measure 43] %! COMMENT_MEASURE_NUMBERS
             r4
-            g8
+            \clef "tenorvarC"
+            g'8
             \pp
 
             \<
-            af,4.
+            af4.
 
-            f,4
+            f4
             \ff
 
             - \tweak stencil #constante-hairpin
@@ -704,22 +682,24 @@
             r2
             \!
             \times 2/3 {
-                af,8
+                af8
                 \pp
 
                 \<
-                f,4.
+                f4.
 
-                a,,4
+                \clef "bass"
+                a,4
 
             }
             \times 2/3 {
                 % [Voice 12 measure 45] %! COMMENT_MEASURE_NUMBERS
-                f,8
+                f8
 
-                af,4.
+                af4.
 
-                g4
+                \clef "tenorvarC"
+                g'4
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -730,13 +710,14 @@
             % [Voice 12 measure 46] %! COMMENT_MEASURE_NUMBERS
             r2
             \times 2/3 {
-                c'8
+                \clef "treble"
+                c''8
                 \pp
 
                 \<
-                g4.
+                g'4.
 
-                c'4
+                c''4
                 \ff
 
                 - \tweak stencil #constante-hairpin
@@ -744,27 +725,26 @@
             }
             % [Voice 12 measure 47] %! COMMENT_MEASURE_NUMBERS
             \once \override Rest.transparent = ##t
-            \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
             r1 * 1/2
             \!
             R1 * 1/2
-            \stopStaff \startStaff
             % [Voice 12 measure 48] %! COMMENT_MEASURE_NUMBERS
-            g8
+            g'8
             \pp
 
             \<
-            c'4.
+            c''4.
 
-            g4
+            g'4
 
             \times 2/3 {
                 % [Voice 12 measure 49] %! COMMENT_MEASURE_NUMBERS
-                c'4
+                c''4
 
-                g2.
+                g'2.
 
-                f,2
+                \clef "bass"
+                f2
                 \ff
 
                 - \tweak stencil #constante-hairpin

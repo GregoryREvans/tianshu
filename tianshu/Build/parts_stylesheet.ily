@@ -3,17 +3,17 @@
 \version "2.19.83"
 \language "english"
 #(set-default-paper-size "letterportrait")
-#(set-global-staff-size 11)
+#(set-global-staff-size 13)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	dedication = \markup \override #'(font-name . "Didot") \fontsize #6.5 \italic {"T     i     ā     n     s     h     ū"}
-	title =  \markup { \epsfile #Y #30 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/tianshu_title.eps" }
-	subtitle = \markup { \epsfile #Y #7.7 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/subtitle.eps" }
-	subsubtitle = \markup \override #'(font-name . "Didot") \center-column {\fontsize #2.3 \line{"f   o   r       t   w   e   l   v   e       p   l   a   y   e   r   s"} \fontsize #0.05 \line{";   o r  ,  m a d  w r i t i n g s  i n  a  B o o k  f r o m  t h e  S k y"}}
+	dedication = \markup \override #'(font-name . "Didot") \fontsize #3.7 \italic {"T    i    ā    n    s    h    ū"}
+	title =  \markup { \epsfile #X #37 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/tianshu_title.eps" }
+	subtitle = \markup { \epsfile #X #37 #"/Users/evansdsg2/Scores/tianshu/tianshu/Build/subtitle.eps" }
+	subsubtitle = \markup \override #'(font-name . "Didot") \center-column {\fontsize #2.5 \line{"f o r     t w e l v e     p l a y e r s"} \fontsize #0.05 \line{"; or, mad writings in a Book from the Sky"}}
 	composer = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
@@ -75,7 +75,7 @@
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
 		\override BarLine.hair-thickness = #0.9
-		\override BarLine.thick-thickness = #2.7
+		\override BarLine.thick-thickness = #5
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
 		\override Beam.beam-thickness = #0.8
@@ -100,14 +100,14 @@
 		\override StemTremolo.beam-thickness = #0.3
 		\override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
-        \override TupletBracket.padding = #1.5
+        \override TupletBracket.padding = #3
 		\override TupletBracket.staff-padding = #4
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
 		\override TupletBracket.direction = #up
 		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
-		proportionalNotationDuration = #(ly:make-moment 1 38)
+		proportionalNotationDuration = #(ly:make-moment 1 31)
         tupletFullLength = ##t
     }
 	\context {
@@ -117,6 +117,7 @@
     \context {
         \Staff
         \remove Time_signature_engraver
+		fontSize = #-1
     }
     \context {
         \RhythmicStaff
@@ -128,6 +129,7 @@
 }
 
 \paper {
+	system-system-spacing = #'((basic-distance . 11) (minimum-distance . 11) (padding . 2))
 
 	indent = 2\mm
 	short-indent = 2\mm

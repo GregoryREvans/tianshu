@@ -24,7 +24,7 @@
 	%\accidentalStyle neo-modern
 	%\accidentalStyle dodecaphonic
 	%ragged-last = ##t
-    %ragged-right = ##t
+    ragged-right = ##t
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -100,14 +100,14 @@
 		\override StemTremolo.beam-thickness = #0.3
 		\override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
-        \override TupletBracket.padding = #1.5
+        \override TupletBracket.padding = #3
 		\override TupletBracket.staff-padding = #4
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
 		\override TupletBracket.direction = #up
 		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		autoBeaming = ##f
-		proportionalNotationDuration = #(ly:make-moment 1 36)
+		proportionalNotationDuration = #(ly:make-moment 1 28)
         tupletFullLength = ##t
     }
 	\context {
@@ -117,6 +117,7 @@
     \context {
         \Staff
         \remove Time_signature_engraver
+		fontSize = #-1
     }
     \context {
         \RhythmicStaff

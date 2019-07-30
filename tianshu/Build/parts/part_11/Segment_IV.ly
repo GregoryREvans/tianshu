@@ -328,7 +328,7 @@
             % [Voice 11 measure 11] %! COMMENT_MEASURE_NUMBERS
             r8
             \!
-            \clef "treble"
+            \clef "tenorvarC"
             c''16
             \ff
 
@@ -338,7 +338,6 @@
 
             ~
             e'8.
-            \clef "bass"
             f16
             \mf
 
@@ -381,7 +380,6 @@
             [
             d'16
             - \tenuto
-            \clef "treble"
             c''8
             \pp
             - \tenuto
@@ -393,7 +391,6 @@
             % [Voice 11 measure 15] %! COMMENT_MEASURE_NUMBERS
             r2.
             \times 8/9 {
-                \clef "bass"
                 d16
                 \ff
 
@@ -418,7 +415,6 @@
             \ff
 
             \>
-            \clef "treble"
             c''4
             \mf
 
@@ -428,7 +424,6 @@
             \!
             \times 4/5 {
                 % [Voice 11 measure 17] %! COMMENT_MEASURE_NUMBERS
-                \clef "bass"
                 e4
                 \mf
 
@@ -513,7 +508,6 @@
             % [Voice 11 measure 22] %! COMMENT_MEASURE_NUMBERS
             r8
             \!
-            \clef "treble"
             c''16
             \ff
 
@@ -529,7 +523,6 @@
 
             ~
             e'8.
-            \clef "bass"
             f16
             \mf
 
@@ -539,7 +532,6 @@
             % [Voice 11 measure 23] %! COMMENT_MEASURE_NUMBERS
             r4
             \!
-            \clef "treble"
             c''8.
             \p
             - \tenuto
@@ -559,11 +551,11 @@
             % [Voice 11 measure 24] %! COMMENT_MEASURE_NUMBERS
             r2
             \times 4/5 {
-                \clef "bass"
                 d16
                 \ff
 
                 \>
+                \clef "bass"
                 g,4
                 \mf
 
@@ -648,7 +640,7 @@
                 d'8
                 - \tweak stencil #constante-hairpin
                 \<
-                \clef "treble"
+                \clef "tenorvarC"
                 c''16
                 - \tenuto
                 d'16
@@ -730,7 +722,7 @@
             r4
             \!
             % [Voice 11 measure 35] %! COMMENT_MEASURE_NUMBERS
-            \clef "treble"
+            \clef "tenorvarC"
             c''8
             \ff
 
@@ -738,13 +730,13 @@
             [
             e'16
 
-            \clef "bass"
             f16
 
             ~
             f8.
             d16
 
+            \clef "bass"
             g,16
 
             d8.
@@ -884,7 +876,7 @@
             g16
             d'16
             - \tenuto
-            \clef "treble"
+            \clef "tenorvarC"
             c''8
             - \tenuto
             ~
@@ -906,9 +898,9 @@
             - \tweak stencil #constante-hairpin
             \<
             [
-            \clef "bass"
             e16
             - \tenuto
+            \clef "bass"
             f,16
             - \tenuto
             e16
@@ -1011,7 +1003,7 @@
             - \tenuto
             ~
             d'16
-            \clef "treble"
+            \clef "tenorvarC"
             c''16
             ~
             ]

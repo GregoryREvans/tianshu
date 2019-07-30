@@ -7700,7 +7700,6 @@
                     % [Voice 12 measure 46] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \times 2/3 {
-                        \clef "treble"
                         c''8
                         \pp
 
@@ -7733,7 +7732,6 @@
 
                         g'2.
 
-                        \clef "bass"
                         f2
                         \ff
 
